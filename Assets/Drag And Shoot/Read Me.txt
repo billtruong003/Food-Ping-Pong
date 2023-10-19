@@ -1,0 +1,11 @@
+This Asset Made By VEOdev.
+
+IMPORTANT : 
+1 - Make sure the camera is orthographic
+2 - Make sure to have material in the line renderer
+3 - Watch the tutorial showcase on my youtube channel "VEOdev"
+
+- If you like the asset please rate us in the asset store 
+
+For any question feel free to contact me :
+merwanveo1@gmail.com
