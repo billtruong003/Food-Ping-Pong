@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class DragShoot : MonoBehaviour
 {
-    [Header("Drag&Shoot")]
+
     private Vector2 dragStartPosition;
     private Vector3 dragEndPosition;
     private Vector3 playerPosition;
     private Rigidbody2D rb;
     private bool isDragging = false;
+    [Header("Drag n Shoot")]
     [SerializeField] private float maxDragDistance = 5.0f;
     [SerializeField] private float shootForce = 10.0f;
     [SerializeField] private dragState state = dragState.NONE;
