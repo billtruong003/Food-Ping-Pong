@@ -15,10 +15,11 @@ public class BounceCollide : MonoBehaviour
     private void Update()
     {
         lastVel = rb.velocity;
+        // Debug.Log(lastVel.normalized);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        var speed = lastVel.magnitude;
+        float speed = lastVel.magnitude;
         var direction = Vector3.Reflect(lastVel.normalized, collision.contacts[0].normal);
         Debug.Log(speed);
         if (speed > 1)
@@ -29,5 +30,11 @@ public class BounceCollide : MonoBehaviour
         {
             rb.velocity = direction * Mathf.Min(0, speed);
         }
+        StartCoroutine(StopBall());
+    }
+    private IEnumerator StopBall()
+    {
+        yield return new WaitForSeconds(1f);
+
     }
 }
