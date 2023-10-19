@@ -6,9 +6,10 @@ using UnityEngine;
 public class DragShoot : MonoBehaviour
 {
 
-    private Vector2 dragStartPosition;
+    private Vector3 dragStartPosition;
     private Vector3 dragEndPosition;
     private Vector3 playerPosition;
+    private Vector3 mousePosition;
     private Rigidbody2D rb;
     private bool isDragging = false;
     [Header("Drag n Shoot")]
@@ -19,6 +20,8 @@ public class DragShoot : MonoBehaviour
     [SerializeField] private GameObject directionPointer;
     [SerializeField] private Vector3 rotateLook;
     [SerializeField] private Vector3 rotateToLookAt;
+    [Header("Draw")]
+    [SerializeField] private LineRenderer line;
     enum dragState
     {
         NONE,
@@ -30,6 +33,7 @@ public class DragShoot : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         state = dragState.CAN_DRAG;
+        line = GetComponent<LineRenderer>();
     }
 
     private void Update()
@@ -46,7 +50,7 @@ public class DragShoot : MonoBehaviour
                 directionPointer.SetActive(true);
 
             // Lấy vị trí của chuột trên màn hình
-            Vector3 mousePosition = Input.mousePosition;
+            mousePosition = Input.mousePosition;
             mousePosition.z = transform.position.z - Camera.main.transform.position.z;
 
             // Chuyển đổi vị trí chuột sang vị trí trong không gian thế giới
@@ -58,14 +62,38 @@ public class DragShoot : MonoBehaviour
 
             // Đặt góc quay cho đối tượng
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            
+            // Vẽ line
+            line.enabled = true;
+
+            // Vẽ đuôi cho vật
+            float lengthLine = Vector3.Distance(transform.position, rotateLook);
+            
+            
+            // newPoint *= (maxDragDistance / 2);
+            line.SetPosition(0, transform.position);
+            if (lengthLine > maxDragDistance)
+            {
+                Vector3 dir = (rotateLook - transform.position).normalized;
+                Vector3 newPoint = (transform.position + dir * maxDragDistance);
+                line.SetPosition(1, newPoint);
+            }
+            else
+            {
+                line.SetPosition(1, rotateLook);
+            }
+
         }
         else
         {
-            directionPointer.SetActive(false);
+            if (directionPointer.activeInHierarchy)
+                directionPointer.SetActive(false);
         }
     }
     private void DragAndShoot()
     {
+        
+        
         if (state != dragState.CAN_DRAG)
         {
             return;
@@ -79,6 +107,7 @@ public class DragShoot : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0) && isDragging)
         {
+            line.enabled = false;
 
             // Kết thúc kéo và bắn
             isDragging = false;
