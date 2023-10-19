@@ -15,6 +15,7 @@ public class DragShoot : MonoBehaviour
     [SerializeField] private float shootForce = 10.0f;
     [SerializeField] private dragState state = dragState.NONE;
     [Header("Rotate")]
+    [SerializeField] private GameObject directionPointer;
     [SerializeField] private Vector3 rotateLook;
     [SerializeField] private Vector3 rotateToLookAt;
     enum dragState
@@ -37,8 +38,12 @@ public class DragShoot : MonoBehaviour
     }
     private void RotateToRightDir()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) & state == dragState.CAN_DRAG)
         {
+            // Nếu pointer ko active trong hierachie thì mới chạy
+            if (!directionPointer.activeInHierarchy)
+                directionPointer.SetActive(true);
+
             // Lấy vị trí của chuột trên màn hình
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = transform.position.z - Camera.main.transform.position.z;
@@ -52,6 +57,10 @@ public class DragShoot : MonoBehaviour
 
             // Đặt góc quay cho đối tượng
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+        else
+        {
+            directionPointer.SetActive(false);
         }
     }
     private void DragAndShoot()

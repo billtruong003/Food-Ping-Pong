@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class BounceCollide : MonoBehaviour
 {
+    // Each time bouncing will reduce speed by percent for example 1 will not change speed and 0 will make the speed to 0
+    [SerializeField]
+    [Range(0.5f, 1)]
+    private float bouncinessFriction;
     private Vector3 lastVel;
-
     private Rigidbody2D rb;
 
     void Start()
@@ -24,7 +27,7 @@ public class BounceCollide : MonoBehaviour
         Debug.Log(speed);
         if (speed > 1)
         {
-            rb.velocity = direction * (speed * 0.5f);
+            rb.velocity = direction * (speed * bouncinessFriction);
         }
         else
         {
