@@ -20,7 +20,6 @@ public class DragShoot : MonoBehaviour
     [SerializeField] private GameObject directionPointer;
     [SerializeField] private Vector3 rotateLook;
     [SerializeField] private Vector3 rotateToLookAt;
-    [SerializeField] private float rotationSpeed = 5.0f;
     [Header("Draw")]
     [SerializeField] private LineRenderer line;
     enum dragState
