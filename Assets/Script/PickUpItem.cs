@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class FoodPickup : MonoBehaviour
+public class PickUpItem : MonoBehaviour
 {
     [SerializeField] private ParticleSystem pickUpVFX;
     Animator anim;
@@ -11,14 +10,11 @@ public class FoodPickup : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-    void OnTriggerEnter2D(Collider2D col)
+    public void HandlePickUp()
     {
-        if (col.gameObject.CompareTag("Player"))
-        {
-            StartCoroutine(PickUpItem());
-        }
+        StartCoroutine(PickUp());
     }
-    private IEnumerator PickUpItem()
+    private IEnumerator PickUp()
     {
         pickUpVFX.Clear();
         pickUpVFX.Play();

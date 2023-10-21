@@ -115,7 +115,7 @@ public class DragShoot : MonoBehaviour
             dragEndPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             playerPosition = transform.position;
             // Tính toán hướng bắn
-            Vector2 shootDirection = (playerPosition - dragEndPosition).normalized;
+            Vector2 shootDirection = (dragStartPosition - dragEndPosition).normalized;
 
             // Tính toán lực bắn
             float dragDistance = Vector2.Distance(dragStartPosition, dragEndPosition);
