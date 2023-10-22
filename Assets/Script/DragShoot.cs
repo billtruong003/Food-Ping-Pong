@@ -22,6 +22,7 @@ public class DragShoot : MonoBehaviour
     [SerializeField] private Vector3 rotateToLookAt;
     [Header("Draw")]
     [SerializeField] private LineRenderer line;
+
     enum dragState
     {
         NONE,
@@ -41,6 +42,7 @@ public class DragShoot : MonoBehaviour
         DragAndShoot();
         RotateToRightDir();
     }
+
     private void FixedUpdate()
     {
         Vector2 velocityDirection = rb.velocity.normalized;
@@ -51,6 +53,7 @@ public class DragShoot : MonoBehaviour
             transform.right = -velocityDirection;
         }
     }
+
     private void RotateToRightDir()
     {
         if (Input.GetMouseButton(0) & state == dragState.CAN_DRAG)
@@ -91,6 +94,7 @@ public class DragShoot : MonoBehaviour
                 directionPointer.SetActive(false);
         }
     }
+
     private void DragAndShoot()
     {
 
@@ -130,6 +134,7 @@ public class DragShoot : MonoBehaviour
             StartCoroutine(Ready());
         }
     }
+    
     private IEnumerator Ready()
     {
         yield return new WaitUntil(() => (rb.velocity.magnitude < 1.5f));

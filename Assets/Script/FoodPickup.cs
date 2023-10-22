@@ -7,10 +7,12 @@ public class FoodPickup : MonoBehaviour
 {
     [SerializeField] private ParticleSystem pickUpVFX;
     Animator anim;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
     }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Player"))
@@ -18,6 +20,7 @@ public class FoodPickup : MonoBehaviour
             StartCoroutine(PickUpItem());
         }
     }
+    
     private IEnumerator PickUpItem()
     {
         pickUpVFX.Clear();

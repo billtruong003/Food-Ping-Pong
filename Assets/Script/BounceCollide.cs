@@ -20,11 +20,13 @@ public class BounceCollide : MonoBehaviour
         VFXManager = GetComponent<PlayerVFXManager>();
         rb = GetComponent<Rigidbody2D>();
     }
+
     private void Update()
     {
         lastVel = rb.velocity;
         // Debug.Log(lastVel.normalized);
     }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         VFXManager.BounceSpark();
@@ -41,9 +43,9 @@ public class BounceCollide : MonoBehaviour
         }
         StartCoroutine(StopBall());
     }
+
     private IEnumerator StopBall()
     {
         yield return new WaitForSeconds(1f);
-
     }
 }
