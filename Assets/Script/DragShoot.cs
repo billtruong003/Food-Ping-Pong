@@ -23,6 +23,10 @@ public class DragShoot : MonoBehaviour
     [Header("Draw")]
     [SerializeField] private LineRenderer line;
 
+    [Header("Condition")]
+    [SerializeField] private bool canDrag;
+
+
     enum dragState
     {
         NONE,
@@ -46,7 +50,7 @@ public class DragShoot : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 velocityDirection = rb.velocity.normalized;
-
+        canDrag = (GameManager.Instance.m_currentState == GameManager.GameState.PLAYER_STATE);
         if (velocityDirection != Vector2.zero)
         {
             // Đảm bảo đối tượng xoay về hướng rb.velocity
@@ -56,6 +60,8 @@ public class DragShoot : MonoBehaviour
 
     private void RotateToRightDir()
     {
+        if (!canDrag)
+            return;
         if (Input.GetMouseButton(0) & state == dragState.CAN_DRAG)
         {
             if (!directionPointer.activeInHierarchy)
@@ -97,12 +103,8 @@ public class DragShoot : MonoBehaviour
 
     private void DragAndShoot()
     {
-
-
-        if (state != dragState.CAN_DRAG)
-        {
+        if (state != dragState.CAN_DRAG || !canDrag)
             return;
-        }
         if (Input.GetMouseButtonDown(0) && !isDragging)
         {
             // Bắt đầu kéo
@@ -138,6 +140,7 @@ public class DragShoot : MonoBehaviour
 
     private IEnumerator Ready()
     {
+        GameManager.Instance.InitState(2);
         yield return new WaitForSeconds(1);
         yield return new WaitUntil(() => (rb.velocity.magnitude < 1.5f));
 
@@ -150,7 +153,7 @@ public class DragShoot : MonoBehaviour
         rb.velocity = Vector3.zero;
 
         Debug.Log("Stop");
-
+        GameManager.Instance.SpawnMaterial();
         state = dragState.CAN_DRAG;
     }
 

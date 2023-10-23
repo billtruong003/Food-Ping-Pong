@@ -191,7 +191,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d63774db53e2fee4b84a72da1c9f1096, type: 2}
+  - {fileID: 2100000, guid: bc14231efc40c384ea470e5c723215de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -314,6 +314,7 @@ MonoBehaviour:
   rotateLook: {x: 0, y: 0, z: 0}
   rotateToLookAt: {x: 0, y: 0, z: 0}
   line: {fileID: 0}
+  canDrag: 0
 --- !u!114 &8724852412609532782
 MonoBehaviour:
   m_ObjectHideFlags: 0
