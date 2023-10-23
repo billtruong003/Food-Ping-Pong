@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
         GameObject WeapPrefab = GameConfig.GetWeapon(m_player);
         GameObject Weap = Instantiate(WeapPrefab, SpawnPos);
         Weap.transform.localPosition = Vector3.zero;
-
     }
 
 }
