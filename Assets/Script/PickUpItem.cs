@@ -14,13 +14,6 @@ public class PickUpItem : MonoBehaviour
     {
         StartCoroutine(PickUp());
     }
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag("Player"))
-        {
-            StartCoroutine(PickUp());
-        }
-    }
     private IEnumerator PickUp()
     {
         pickUpVFX.Clear();

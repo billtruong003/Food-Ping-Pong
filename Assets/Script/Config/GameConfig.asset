@@ -10,21 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcd8bfa31968bc24181fc10c36268bdb, type: 3}
-  m_Name: MealConfig
+  m_Name: GameConfig
   m_EditorClassIdentifier: 
   PickUpContainer: {fileID: 0}
-  PickUpVFX: {fileID: 0}
   PickUpPrefab: {fileID: 0}
   DishesInformation:
   - Food: 
     FoodSpritePath: 
     Descriptions: 
-    RawMaterialPaths:
-    - 
-    - 
-    - 
+    RawMaterialName: []
+    ItemContains: 0
+    NoticeInfo: 
   RawMaterials:
-  - RawMaterials: {fileID: 0}
+  - RawMaterialName: 
+    RawMaterials: {fileID: 0}
   Obstacles:
   - ObstacleName: 
     ObstaclesPath: 
+  Weapons:
+  - WeaponName: Knife
+    WeaponPath: Weapon/Knife
+  - WeaponName: SawTooth
+    WeaponPath: Weapon/SawTooth
+  - WeaponName: Sword
+    WeaponPath: Weapon/Sword

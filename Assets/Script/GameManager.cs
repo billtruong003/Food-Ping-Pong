@@ -5,8 +5,9 @@ using NaughtyAttributes;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    [SerializeField] private GameObject m_player;
-    [SerializeField] private GameObject SpawnPos;
+    [SerializeField] private PickUpConfig GameConfig;
+    [SerializeField] private string m_player;
+    [SerializeField] private Transform SpawnPos;
     [SerializeField] private GameState m_currentState;
 
     public enum GameState
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        SpawnPlayer();
     }
     private IEnumerator GameStart()
     {
@@ -41,7 +42,9 @@ public class GameManager : MonoBehaviour
     }
     private void SpawnPlayer()
     {
-        GameObject player = Instantiate(m_player);
+        GameObject WeapPrefab = GameConfig.GetWeapon(m_player);
+        GameObject Weap = Instantiate(WeapPrefab, SpawnPos);
+        Weap.transform.localPosition = Vector3.zero;
 
     }
 

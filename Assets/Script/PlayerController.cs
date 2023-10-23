@@ -24,13 +24,16 @@ public class PlayerController : MonoBehaviour
 
         if (triggerPickup)
         {
+            Debug.Log("Trigger");
             PickUpItem pickUp = triggerPickup.GetComponent<PickUpItem>();
-            // pickUp.HandlePickup();
+            pickUp.HandlePickUp();
         }
     }
-    private void HandlePickup()
+    private void OnDrawGizmos()
     {
-        // Xử lý khi Player chạm vào vật phẩm
-        // Ví dụ: Tăng điểm số, ẩn vật phẩm, hoặc thực hiện hành động khác
+        Gizmos.color = Color.red;
+        Vector2 boxPosition = transform.position;
+        Gizmos.DrawWireCube(boxPosition, boxSize);
+        // Look at those silly Gizmos! They are so red and wirey!
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using NaughtyAttributes;
 
 [CreateAssetMenu(fileName = "MealConfig", menuName = "Food/Meals")]
 public class PickUpConfig : ScriptableObject
@@ -11,6 +12,8 @@ public class PickUpConfig : ScriptableObject
     [SerializeField] public List<Meal> DishesInformation;
     [SerializeField] public List<RawMaterial> RawMaterials;
     [SerializeField] public List<Obstacle> Obstacles;
+    [SerializeField] public List<Weapon> Weapons;
+    private const string WeapPath = "Weapon/";
 
     public void InitPickUp(Transform meal)
     {
@@ -18,7 +21,14 @@ public class PickUpConfig : ScriptableObject
         Transform parent = pickUpContainer.GetComponent<Animator>().transform.parent;
         meal.parent = parent;
         meal.name = "PickUp";
-
+    }
+    [Button]
+    private void FillWeapPath()
+    {
+        foreach (var weapon in Weapons)
+        {
+            weapon.WeaponPath = WeapPath + weapon.WeaponName;
+        }
     }
     public GameObject InitPickUpPrefab(int index)
     {
@@ -32,7 +42,17 @@ public class PickUpConfig : ScriptableObject
         int rndPickUp = UnityEngine.Random.Range(0, RawMaterials.Count);
         return rndPickUp;
     }
-
+    public GameObject GetWeapon(string weaponName)
+    {
+        foreach (var weap in Weapons)
+        {
+            if (weaponName == weap.WeaponName)
+            {
+                return weap.GetWeaponPrefab();
+            }
+        }
+        return null;
+    }
     [Serializable]
     public class Meal
     {
@@ -92,6 +112,18 @@ public class PickUpConfig : ScriptableObject
         {
             GameObject Obstacle = Resources.Load<GameObject>(ObstaclesPath);
             return Obstacle;
+        }
+    }
+    [Serializable]
+    public class Weapon
+    {
+        [Header("Player")]
+        public string WeaponName;
+        public string WeaponPath;
+        public GameObject GetWeaponPrefab()
+        {
+            GameObject weapon = Resources.Load<GameObject>(WeaponPath);
+            return weapon;
         }
     }
 }

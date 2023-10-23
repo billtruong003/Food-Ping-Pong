@@ -108,6 +108,7 @@ public class DragShoot : MonoBehaviour
             // Bắt đầu kéo
             isDragging = true;
             dragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Debug.Log(dragStartPosition);
         }
 
         if (Input.GetMouseButtonUp(0) && isDragging)
@@ -119,7 +120,7 @@ public class DragShoot : MonoBehaviour
             dragEndPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             playerPosition = transform.position;
             // Tính toán hướng bắn
-            Vector2 shootDirection = (dragStartPosition - dragEndPosition).normalized;
+            Vector2 shootDirection = (playerPosition - dragEndPosition).normalized;
 
             // Tính toán lực bắn
             float dragDistance = Vector2.Distance(dragStartPosition, dragEndPosition);
@@ -134,9 +135,10 @@ public class DragShoot : MonoBehaviour
             StartCoroutine(Ready());
         }
     }
-    
+
     private IEnumerator Ready()
     {
+        yield return new WaitForSeconds(1);
         yield return new WaitUntil(() => (rb.velocity.magnitude < 1.5f));
 
         while (rb.velocity.magnitude > 0.4f) // Kiểm tra nếu tốc độ còn đủ lớn để giảm dần
