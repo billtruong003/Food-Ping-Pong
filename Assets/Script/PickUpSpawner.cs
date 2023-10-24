@@ -16,13 +16,15 @@ public class PickUpSpawner : MonoBehaviour
     {
         StartCoroutine(Cor_SpawnPickUp(timeSpawn));
     }
+
     private IEnumerator Cor_SpawnPickUp(int numSpawn)
     {
         for (int i = 0; i < numSpawn; i++)
         {
             positionX = Random.Range(LimitTopLeft.x, LimitDownRight.x);
             positionY = Random.Range(LimitTopLeft.y, LimitDownRight.y);
-            GameObject pickUp = Instantiate(PickUpPrefab, PickUpContainer.GetChild(0));
+            GameObject pickUp = GameManager.Instance.GetRawMaterial();
+            Instantiate(pickUp, PickUpContainer.GetChild(0));
             pickUp.transform.localScale = Vector3.one;
             pickUp.transform.localPosition = new Vector3(positionX, positionY);
             LevelManager.Instance.IncreasePickUp();

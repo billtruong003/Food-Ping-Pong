@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public GameState m_currentState;
     [SerializeField] PickUpSpawner pickUpSpawner;
-    [SerializeField] private PickUpConfig GameConfig;
+    [SerializeField] private PickUpConfig gameConfig;
     [SerializeField] private string m_player;
     [SerializeField] private Transform SpawnPos;
     [SerializeField] private int timeSpawn;
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     private void SpawnPlayer()
     {
-        GameObject WeapPrefab = GameConfig.GetWeapon(m_player);
+        GameObject WeapPrefab = gameConfig.GetWeapon(m_player);
         GameObject Weap = Instantiate(WeapPrefab, SpawnPos);
         Weap.transform.localPosition = Vector3.zero;
     }
@@ -59,6 +59,13 @@ public class GameManager : MonoBehaviour
     {
         m_currentState = GameState.RESPAWN_STATE;
         pickUpSpawner.SpawnPickUp(timeSpawn);
+    }
+
+    public GameObject GetRawMaterial()
+    {
+        int rawMatNum = Random.Range(0, gameConfig.RawMaterials.Count);
+        GameObject rawMat = gameConfig.GetPickUpMaterial(rawMatNum);
+        return rawMat;
     }
 
     public void InitState(int id)

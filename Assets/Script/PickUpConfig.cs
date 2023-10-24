@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using NaughtyAttributes;
+using Unity.VisualScripting;
 
 [CreateAssetMenu(fileName = "MealConfig", menuName = "Food/Meals")]
 public class PickUpConfig : ScriptableObject
@@ -14,14 +15,18 @@ public class PickUpConfig : ScriptableObject
     [SerializeField] public List<Obstacle> Obstacles;
     [SerializeField] public List<Weapon> Weapons;
     private const string WeapPath = "Weapon/";
+    private const string MatPath = "RawMaterial/";
+    private const string Food = "Food/";
 
-    public void InitPickUp(Transform meal)
+    public GameObject GetPickUpMaterial(int index)
     {
-        GameObject pickUpContainer = Instantiate(PickUpContainer);
-        Transform parent = pickUpContainer.GetComponent<Animator>().transform.parent;
-        meal.parent = parent;
-        meal.name = "PickUp";
+        PickUpItem pickUpName = PickUpPrefab.GetComponent<PickUpItem>();
+        pickUpName.SetMatSprite(RawMaterials[index].GetSprite());
+        pickUpName.SetMatName(RawMaterials[index].GetName());
+
+        return pickUpName.gameObject;
     }
+
     [Button]
     private void FillWeapPath()
     {
@@ -30,6 +35,7 @@ public class PickUpConfig : ScriptableObject
             weapon.WeaponPath = WeapPath + weapon.WeaponName;
         }
     }
+
     public GameObject InitPickUpPrefab(int index)
     {
         GameObject pickUpPrefab = Instantiate(PickUpPrefab);
@@ -37,11 +43,13 @@ public class PickUpConfig : ScriptableObject
         pickUpSprite.sprite = RawMaterials[index].GetSprite();
         return pickUpPrefab;
     }
+
     public int GetRandomPickUp()
     {
         int rndPickUp = UnityEngine.Random.Range(0, RawMaterials.Count);
         return rndPickUp;
     }
+
     public GameObject GetWeapon(string weaponName)
     {
         foreach (var weap in Weapons)
@@ -53,6 +61,7 @@ public class PickUpConfig : ScriptableObject
         }
         return null;
     }
+
     [Serializable]
     public class Meal
     {
@@ -85,6 +94,7 @@ public class PickUpConfig : ScriptableObject
             }
         }
     }
+
     [Serializable]
     public class RawMaterial
     {
@@ -101,6 +111,7 @@ public class PickUpConfig : ScriptableObject
             return RawMaterialName;
         }
     }
+
     [Serializable]
     public class Obstacle
     {
@@ -114,6 +125,7 @@ public class PickUpConfig : ScriptableObject
             return Obstacle;
         }
     }
+
     [Serializable]
     public class Weapon
     {

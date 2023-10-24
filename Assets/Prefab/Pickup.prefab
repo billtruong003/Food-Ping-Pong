@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3471249700931427473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.19, y: 10.71, z: 0}
+  m_LocalPosition: {x: 3.0492084, y: 9.165434, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -87,6 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpVFX: {fileID: 3471249700625998157}
   TriggerPickup: 0
+  RawMaterialSprite: {fileID: 0}
 --- !u!1 &3471249701096067148
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +161,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 1847463989, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  m_Sprite: {fileID: -1347541644, guid: a03c2610221b14940b818fb271b448fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
