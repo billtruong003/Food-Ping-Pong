@@ -19,6 +19,7 @@ public class PickUpSpawner : MonoBehaviour
 
     private IEnumerator Cor_SpawnPickUp(int numSpawn)
     {
+        yield return new WaitUntil(() => GameManager.Instance != null);
         for (int i = 0; i < numSpawn; i++)
         {
             positionX = Random.Range(LimitTopLeft.x, LimitDownRight.x);

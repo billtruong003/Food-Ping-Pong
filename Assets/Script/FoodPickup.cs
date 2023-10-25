@@ -20,7 +20,7 @@ public class FoodPickup : MonoBehaviour
             StartCoroutine(PickUpItem());
         }
     }
-    
+
     private IEnumerator PickUpItem()
     {
         pickUpVFX.Clear();
