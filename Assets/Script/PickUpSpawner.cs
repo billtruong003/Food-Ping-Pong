@@ -5,10 +5,11 @@ using NaughtyAttributes;
 
 public class PickUpSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject PickUpPrefab;
     [SerializeField] private Transform PickUpContainer;
     [SerializeField] private Vector2 LimitTopLeft;
     [SerializeField] private Vector2 LimitDownRight;
+    [SerializeField] private bool CheatSpawn;
+    [SerializeField] private int NumberSpawnCheat;
     private float positionX;
     private float positionY;
 
@@ -20,6 +21,9 @@ public class PickUpSpawner : MonoBehaviour
     private IEnumerator Cor_SpawnPickUp(int numSpawn)
     {
         yield return new WaitUntil(() => GameManager.Instance != null);
+        if (CheatSpawn)
+            numSpawn = NumberSpawnCheat;
+
         for (int i = 0; i < numSpawn; i++)
         {
             positionX = Random.Range(LimitTopLeft.x, LimitDownRight.x);

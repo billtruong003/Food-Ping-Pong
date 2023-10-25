@@ -30,6 +30,7 @@ public class PickUpItem : MonoBehaviour
     {
         if (triggerPickUp)
             return;
+        UIManager.Instance.CheckInventory(materialName);
         StartCoroutine(PickUp());
         triggerPickUp = true;
     }
@@ -37,6 +38,7 @@ public class PickUpItem : MonoBehaviour
     private IEnumerator PickUp()
     {
         LevelManager.Instance.DecreasePickUp();
+        pickUpVFX.Stop();
         pickUpVFX.Clear();
         pickUpVFX.Play();
         anim.SetTrigger("Pickup");

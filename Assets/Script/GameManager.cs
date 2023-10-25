@@ -38,8 +38,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        LevelManager.Instance.ClearInventory();
         SpawnPlayer();
-        timeSpawn = Random.Range(2, 5);
         SpawnMaterial();
     }
 
@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
     public void SpawnMaterial()
     {
         m_currentState = GameState.RESPAWN_STATE;
+        timeSpawn = Random.Range(2, 5);
         pickUpSpawner.SpawnPickUp(timeSpawn);
     }
 
@@ -66,6 +67,10 @@ public class GameManager : MonoBehaviour
         int rawMatNum = Random.Range(0, gameConfig.RawMaterials.Count);
         GameObject rawMat = gameConfig.GetPickUpMaterial(rawMatNum);
         return rawMat;
+    }
+    public Sprite GetSpriteMaterial(string name)
+    {
+        return gameConfig.GetRawMaterial(name);
     }
 
     public void InitState(int id)

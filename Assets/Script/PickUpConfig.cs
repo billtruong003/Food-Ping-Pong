@@ -9,22 +9,34 @@ using Unity.VisualScripting;
 public class PickUpConfig : ScriptableObject
 {
     [SerializeField] public GameObject PickUpContainer;
-    [SerializeField] public GameObject PickUpPrefab;
     [SerializeField] public List<Meal> DishesInformation;
     [SerializeField] public List<RawMaterial> RawMaterials;
     [SerializeField] public List<Obstacle> Obstacles;
     [SerializeField] public List<Weapon> Weapons;
+    private const string pickUpPath = "Pickup";
     private const string WeapPath = "Weapon/";
     private const string MatPath = "RawMaterial/";
     private const string Food = "Food/";
 
     public GameObject GetPickUpMaterial(int index)
     {
-        PickUpItem pickUpName = PickUpPrefab.GetComponent<PickUpItem>();
+        Transform pickUpPref = Resources.Load<Transform>(pickUpPath);
+        PickUpItem pickUpName = pickUpPref.GetComponent<PickUpItem>();
         pickUpName.SetMatSprite(RawMaterials[index].GetSprite());
         pickUpName.SetMatName(RawMaterials[index].GetName());
 
         return pickUpName.gameObject;
+    }
+    public Sprite GetRawMaterial(string name)
+    {
+        foreach (var rawMaterial in RawMaterials)
+        {
+            if (rawMaterial.GetName() == name)
+            {
+                return rawMaterial.GetSprite();
+            }
+        }
+        return RawMaterials[0].GetSprite();
     }
 
     [Button]
@@ -34,14 +46,6 @@ public class PickUpConfig : ScriptableObject
         {
             weapon.WeaponPath = WeapPath + weapon.WeaponName;
         }
-    }
-
-    public GameObject InitPickUpPrefab(int index)
-    {
-        GameObject pickUpPrefab = Instantiate(PickUpPrefab);
-        SpriteRenderer pickUpSprite = pickUpPrefab.GetComponent<SpriteRenderer>();
-        pickUpSprite.sprite = RawMaterials[index].GetSprite();
-        return pickUpPrefab;
     }
 
     public int GetRandomPickUp()

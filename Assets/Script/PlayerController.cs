@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
 
         if (triggerPickup)
         {
-            Debug.Log("Trigger");
             PickUpItem pickUp = triggerPickup.GetComponent<PickUpItem>();
             pickUp.HandlePickUp();
         }
