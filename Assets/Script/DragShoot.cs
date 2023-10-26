@@ -60,9 +60,9 @@ public class DragShoot : MonoBehaviour
 
     private void RotateToRightDir()
     {
-        if (!canDrag)
+        if (!canDrag || UIManager.Instance.IsPointerOverUIElement())
             return;
-        if (Input.GetMouseButton(0) & state == dragState.CAN_DRAG)
+        if (Input.GetMouseButton(0) && state == dragState.CAN_DRAG)
         {
             if (!directionPointer.activeInHierarchy)
                 directionPointer.SetActive(true);
@@ -103,8 +103,9 @@ public class DragShoot : MonoBehaviour
 
     private void DragAndShoot()
     {
-        if (state != dragState.CAN_DRAG || !canDrag)
+        if (state != dragState.CAN_DRAG || !canDrag || UIManager.Instance.IsPointerOverUIElement())
             return;
+
         if (Input.GetMouseButtonDown(0) && !isDragging)
         {
             // Bắt đầu kéo

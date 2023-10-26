@@ -61,7 +61,6 @@ public class GameManager : MonoBehaviour
         timeSpawn = Random.Range(2, 5);
         pickUpSpawner.SpawnPickUp(timeSpawn);
     }
-
     public GameObject GetRawMaterial()
     {
         int rawMatNum = Random.Range(0, gameConfig.RawMaterials.Count);
@@ -70,7 +69,11 @@ public class GameManager : MonoBehaviour
     }
     public Sprite GetSpriteMaterial(string name)
     {
-        return gameConfig.GetRawMaterial(name);
+        return gameConfig.GetSpriteMat(name);
+    }
+    public string GetDescriptionMaterial(string name)
+    {
+        return gameConfig.GetMatDescription(name);
     }
 
     public void InitState(int id)

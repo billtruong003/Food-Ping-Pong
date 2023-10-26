@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using NaughtyAttributes;
-using Unity.VisualScripting;
 
 [CreateAssetMenu(fileName = "MealConfig", menuName = "Food/Meals")]
 public class PickUpConfig : ScriptableObject
 {
-    [SerializeField] public GameObject PickUpContainer;
     [SerializeField] public List<Meal> DishesInformation;
     [SerializeField] public List<RawMaterial> RawMaterials;
     [SerializeField] public List<Obstacle> Obstacles;
@@ -27,7 +25,7 @@ public class PickUpConfig : ScriptableObject
 
         return pickUpName.gameObject;
     }
-    public Sprite GetRawMaterial(string name)
+    public Sprite GetSpriteMat(string name)
     {
         foreach (var rawMaterial in RawMaterials)
         {
@@ -37,6 +35,17 @@ public class PickUpConfig : ScriptableObject
             }
         }
         return RawMaterials[0].GetSprite();
+    }
+    public string GetMatDescription(string name)
+    {
+        foreach (var rawMaterial in RawMaterials)
+        {
+            if (rawMaterial.GetName() == name)
+            {
+                return rawMaterial.GetDescription();
+            }
+        }
+        return RawMaterials[0].GetDescription();
     }
 
     [Button]
@@ -104,15 +113,21 @@ public class PickUpConfig : ScriptableObject
     {
         [Header("Raw Material")]
         public string RawMaterialName;
+        [TextArea]
+        public string Description;
         public Sprite RawMaterials;
 
         public Sprite GetSprite()
         {
-            return RawMaterials;
+            return this.RawMaterials;
         }
         public string GetName()
         {
-            return RawMaterialName;
+            return this.RawMaterialName;
+        }
+        public string GetDescription()
+        {
+            return this.Description;
         }
     }
 

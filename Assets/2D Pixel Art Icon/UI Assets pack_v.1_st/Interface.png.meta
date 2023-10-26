@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -71,8 +71,8 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -139,7 +139,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Interface_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 132
+        width: 40
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cc3314fbb83d64eb937b19c5258580
+      internalID: 887467297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3546437e060815f41a066b63c323f0d4
+      internalID: 910296190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 164
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7294957a86a7b9e4ca740cc38ab51a27
+      internalID: -728229577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 162
+        width: 8
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020b864c06ec93146b89c60934bdd67e
+      internalID: -665312835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 132
+        width: 16
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d3c8c467076f04a84698015c492237
+      internalID: -1241545574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 2, z: 2, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203bbc8f61430254c8a9b145a0fe9eed
+      internalID: 1458245082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_6
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 148
+        width: 44
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2b65313a857c1449a32532ccbf60a9
+      internalID: 358613064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_7
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 128
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f32590fdb2e804ea3c1c5a1c098e6a
+      internalID: -288832906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_8
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 37
+        width: 40
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402ee334b962e804b845fee6e751244c
+      internalID: 7203254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_9
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 37
+        width: 40
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df969ccf4841c95419d66bc6780671db
+      internalID: 1802669199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_10
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 80
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f2aa971e32074e468056f7004437759
+      internalID: 1474646084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 112
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab8cdb775876374c84ee335e661c63d
+      internalID: 817974448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_12
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 50
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 760b0d7336b8b2847a47599f0cc5ad6c
+      internalID: 716197267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd994bad92d1ef47a624fa37e19cc4e
+      internalID: -2122243194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_14
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 32
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e63c475c02fd1346b418c310ccbddee
+      internalID: -1913970534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interface_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 132
+        width: 48
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 2, y: 0, z: 2, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c4c6d4dca60bd478bdb267e3afdb1f
+      internalID: 761357563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -150,7 +486,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Interface_0: 887467297
+      Interface_1: 910296190
+      Interface_10: 1474646084
+      Interface_11: 817974448
+      Interface_12: 716197267
+      Interface_13: -2122243194
+      Interface_14: -1913970534
+      Interface_15: 761357563
+      Interface_2: -728229577
+      Interface_3: -665312835
+      Interface_4: -1241545574
+      Interface_5: 1458245082
+      Interface_6: 358613064
+      Interface_7: -288832906
+      Interface_8: 7203254
+      Interface_9: 1802669199
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

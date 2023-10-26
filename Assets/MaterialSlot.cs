@@ -7,9 +7,12 @@ using UnityEngine.UI;
 
 public class MaterialSlot : MonoBehaviour
 {
+    [Header("Material Info")]
     [SerializeField] private string materialName;
+    [SerializeField] private InfoController infoController;
     [SerializeField] private Image materialSprite;
     public string MatName => materialName;
+    public GameObject infoObject => infoController.gameObject;
 
     [Header("Count Material")]
     [SerializeField] private TextMeshProUGUI countNumb;
@@ -50,15 +53,8 @@ public class MaterialSlot : MonoBehaviour
         }
 
     }
-    // Start is called before the first frame update
-    void Start()
+    public void ShowInfo(string description)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        infoController.UpdateInfo(materialSprite.sprite, materialName, description);
     }
 }

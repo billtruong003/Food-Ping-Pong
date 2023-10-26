@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd8bfa31968bc24181fc10c36268bdb, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  PickUpContainer: {fileID: 0}
-  PickUpPrefab: {fileID: 3471249700931427473, guid: 34ba2ca79fe366c4da5aa4dc4fa5a93d, type: 3}
   DishesInformation:
   - Food: 
     FoodSpritePath: 
@@ -25,12 +23,16 @@ MonoBehaviour:
     NoticeInfo: 
   RawMaterials:
   - RawMaterialName: Apple
+    Description: Secondary students hate this fruit because it's inventing gravity.
     RawMaterials: {fileID: 1847463989, guid: a03c2610221b14940b818fb271b448fa, type: 3}
   - RawMaterialName: Avocado
+    Description: Just a cute avocado
     RawMaterials: {fileID: -1347541644, guid: a03c2610221b14940b818fb271b448fa, type: 3}
   - RawMaterialName: Banana
+    Description: Dani make a game with me controller
     RawMaterials: {fileID: 793172594, guid: a03c2610221b14940b818fb271b448fa, type: 3}
   - RawMaterialName: Coconut
+    Description: Just a coconut head
     RawMaterials: {fileID: -1586687842, guid: a03c2610221b14940b818fb271b448fa, type: 3}
   Obstacles:
   - ObstacleName: 
