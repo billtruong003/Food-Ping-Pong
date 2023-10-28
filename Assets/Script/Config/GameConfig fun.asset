@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcd8bfa31968bc24181fc10c36268bdb, type: 3}
+  m_Name: GameConfig fun
+  m_EditorClassIdentifier: 
+  DishesInformation:
+  - Food: Fruit
+    FoodSpritePath: Food/Fruit
+    Descriptions: This is a test meal that I made
+    Recipes:
+    - RawMaterialName: Apple
+      ItemContains: 3
+    - RawMaterialName: Banana
+      ItemContains: 3
+    - RawMaterialName: Coconut
+      ItemContains: 3
+    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
+  - Food: Fruit
+    FoodSpritePath: Food/Fruit
+    Descriptions: This is a test meal that I made
+    Recipes:
+    - RawMaterialName: Apple
+      ItemContains: 3
+    - RawMaterialName: Banana
+      ItemContains: 3
+    - RawMaterialName: Coconut
+      ItemContains: 3
+    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
+  - Food: Fruit
+    FoodSpritePath: Food/Fruit
+    Descriptions: This is a test meal that I made
+    Recipes:
+    - RawMaterialName: Apple
+      ItemContains: 3
+    - RawMaterialName: Banana
+      ItemContains: 3
+    - RawMaterialName: Coconut
+      ItemContains: 3
+    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
+  RawMaterials:
+  - RawMaterialName: Rice Powder
+    Description: ASIAN's must have in the kitchen!
+    RawMaterials: {fileID: 279880206, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Beef
+    Description: Moooooooooo~~~
+    RawMaterials: {fileID: 328948840, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Chicken
+    Description: Who want Chicken Nuggets!!!
+    RawMaterials: {fileID: 1623084466, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Pork
+    Description: Oink-Oink-Oink...
+    RawMaterials: {fileID: -901984206, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Sticky Rice
+    Description: ' Every Vietnamese breakfast, ever!'
+    RawMaterials: {fileID: -42543865, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Wheat Flour
+    Description: Somebody said "Banh Mi"???
+    RawMaterials: {fileID: -1469711134, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Noodles
+    Description: ' Everybody''s favorite junk food...'
+    RawMaterials: {fileID: -1621311933, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Rice
+    Description: Daily meal in Vietnamese!!!
+    RawMaterials: {fileID: 691921514, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Fresh Greens
+    Description: Vegetables but GREEN
+    RawMaterials: {fileID: -1530139417, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Cucumber
+    Description: Longer than your child ;)
+    RawMaterials: {fileID: -764464033, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Cabbage
+    Description: It's salad ti... Wait, do you evenly eat this??
+    RawMaterials: {fileID: -2112588754, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Root Vegetables
+    Description: Vegetables but NOT GREEN
+    RawMaterials: {fileID: -449778191, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Seaweed
+    Description: Weed under the sea~~~
+    RawMaterials: {fileID: -1025055632, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Vegetable Oil
+    Description: Hehe boys~~~
+    RawMaterials: {fileID: -1530139417, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  - RawMaterialName: Sugarcane
+    Description: Sweet not psycho~~~
+    RawMaterials: {fileID: -1530139417, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+  Obstacles:
+  - ObstacleName: 
+    ObstaclesPath: 
+  Weapons:
+  - WeaponName: KN001
+    WeaponID: 0
+    WeaponPath: Weapon/KN001
+  - WeaponName: KN002
+    WeaponID: 1
+    WeaponPath: Weapon/KN002
+  - WeaponName: KN003
+    WeaponID: 2
+    WeaponPath: Weapon/KN003
