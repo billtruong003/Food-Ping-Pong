@@ -59,6 +59,15 @@ MonoBehaviour:
   - RawMaterialName: Coconut
     Description: Just a coconut head
     RawMaterials: {fileID: -1586687842, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  - RawMaterialName: Salt
+    Description: Just a coconut head
+    RawMaterials: {fileID: 1841629188, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+  - RawMaterialName: SeaWeed
+    Description: Just a coconut head
+    RawMaterials: {fileID: 979838927, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+  - RawMaterialName: Meat
+    Description: Just a coconut head
+    RawMaterials: {fileID: -2099908997, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   Obstacles:
   - ObstacleName: 
     ObstaclesPath: 

@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour
         NONE,
         PLAYER_STATE,
         RESPAWN_STATE,
-        END_STATE,
+        GAME_OVER,
+
     }
 
     private void Awake()
@@ -40,13 +41,17 @@ public class GameManager : MonoBehaviour
         LevelManager.Instance.ClearInventory();
         SpawnPlayer();
         SpawnMaterial();
+        InitWeapTurn();
     }
 
     private IEnumerator GameStart()
     {
         yield return null;
     }
-
+    private void InitWeapTurn()
+    {
+        LevelManager.Instance.SetTurn();
+    }
     private void SpawnPlayer()
     {
         GameObject WeapPrefab = gameConfig.GetWeapon(m_player);
@@ -90,7 +95,7 @@ public class GameManager : MonoBehaviour
                 m_currentState = GameState.RESPAWN_STATE;
                 break;
             case (2):
-                m_currentState = GameState.END_STATE;
+                m_currentState = GameState.GAME_OVER;
                 break;
         }
 

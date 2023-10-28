@@ -13,6 +13,9 @@ public class LevelManager : MonoBehaviour
     [Header("Spawn Order")]
     [SerializeField] private Transform orderContainer;
     [SerializeField] private GameObject orderItem;
+    [Header("Weapon Count")]
+    [SerializeField] private int WeaponTurn;
+    [SerializeField] private int PlayerTurnLeft;
 
     private void Awake()
     {
@@ -26,10 +29,14 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void SetTurn()
+    {
+        WeaponTurn = 3;
+        PlayerTurnLeft = 3;
+    }
     private void Start()
     {
         SpawnFoodItem();
-
     }
     public void InventoryAdd(string material)
     {
@@ -76,12 +83,25 @@ public class LevelManager : MonoBehaviour
     }
     private void InitTurn()
     {
-        int turnNum = Random.Range(2, 4);
+        int turnNum = Random.Range(2, 5);
         turn = turnNum;
     }
     public void DecreaseTurn()
     {
         turn--;
+        WeaponTurn--;
+        if (WeaponTurn == 0)
+        {
+            PlayerTurnLeft--;
+            if (PlayerTurnLeft == 0)
+            {
+                Debug.Log("Game Over");
+            }
+            else
+            {
+                WeaponTurn = 3;
+            }
+        }
         if (turn != 0)
             return;
 

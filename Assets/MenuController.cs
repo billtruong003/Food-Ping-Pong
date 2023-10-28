@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
-    public void LoadScene(string sceneName)
+    public void LoadScene(sceneName sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        // GameSceneController.Instance.LoadScene(sceneName);
     }
 }
