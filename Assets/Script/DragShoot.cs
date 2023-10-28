@@ -86,6 +86,7 @@ public class DragShoot : MonoBehaviour
             {
                 Vector3 dir = (rotateLook - transform.position).normalized;
                 Vector3 newPoint = (transform.position + dir * maxDragDistance);
+
                 line.SetPosition(1, newPoint);
             }
             else
@@ -100,7 +101,6 @@ public class DragShoot : MonoBehaviour
                 directionPointer.SetActive(false);
         }
     }
-
     private void DragAndShoot()
     {
         if (state != dragState.CAN_DRAG || !canDrag || UIManager.Instance.IsPointerOverUIElement())
@@ -111,6 +111,7 @@ public class DragShoot : MonoBehaviour
             // Bắt đầu kéo
             isDragging = true;
             dragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
             Debug.Log(dragStartPosition);
         }
 
@@ -121,6 +122,7 @@ public class DragShoot : MonoBehaviour
             // Kết thúc kéo và bắn
             isDragging = false;
             dragEndPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            line.SetPosition(1, new Vector3(dragEndPosition.x, dragEndPosition.y));
             playerPosition = transform.position;
             // Tính toán hướng bắn
             Vector2 shootDirection = (playerPosition - dragEndPosition).normalized;
@@ -155,6 +157,7 @@ public class DragShoot : MonoBehaviour
 
         Debug.Log("Stop");
         GameManager.Instance.SpawnMaterial();
+        LevelManager.Instance.DecreaseTurn();
         state = dragState.CAN_DRAG;
     }
 

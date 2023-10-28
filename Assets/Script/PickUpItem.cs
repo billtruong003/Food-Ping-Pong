@@ -37,7 +37,6 @@ public class PickUpItem : MonoBehaviour
 
     private IEnumerator PickUp()
     {
-        LevelManager.Instance.DecreasePickUp();
         pickUpVFX.Stop();
         pickUpVFX.Clear();
         pickUpVFX.Play();

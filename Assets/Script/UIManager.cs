@@ -6,10 +6,7 @@ public class UIManager : MonoBehaviour
 {
 
     public static UIManager Instance;
-    [SerializeField] PickUpSpawner pickUpSpawner;
-    [SerializeField] private PickUpConfig gameConfig;
-    [SerializeField] private GameObject inventList;
-    [SerializeField] private GameObject inventMenu;
+    [SerializeField] private Transform PopUpDescription;
     [SerializeField] private Transform inventorySlot;
     int UILayer = 5;
     bool isHoverUI;

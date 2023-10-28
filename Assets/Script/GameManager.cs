@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public GameState m_currentState;
     [SerializeField] PickUpSpawner pickUpSpawner;
     [SerializeField] private PickUpConfig gameConfig;
-    [SerializeField] private string m_player;
+    [SerializeField] private WeapID m_player;
     [SerializeField] private Transform SpawnPos;
     [SerializeField] private int timeSpawn;
 
@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     public enum GameState
     {
         NONE,
-        UI_STATE,
         PLAYER_STATE,
         RESPAWN_STATE,
         END_STATE,
@@ -75,6 +74,10 @@ public class GameManager : MonoBehaviour
     {
         return gameConfig.GetMatDescription(name);
     }
+    public Meal GetMeal()
+    {
+        return gameConfig.GetRandomMeal();
+    }
 
     public void InitState(int id)
     {
@@ -84,12 +87,9 @@ public class GameManager : MonoBehaviour
                 m_currentState = GameState.PLAYER_STATE;
                 break;
             case (1):
-                m_currentState = GameState.UI_STATE;
-                break;
-            case (2):
                 m_currentState = GameState.RESPAWN_STATE;
                 break;
-            case (3):
+            case (2):
                 m_currentState = GameState.END_STATE;
                 break;
         }

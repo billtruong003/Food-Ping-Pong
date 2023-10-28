@@ -32,7 +32,6 @@ public class PickUpSpawner : MonoBehaviour
             Instantiate(pickUp, PickUpContainer.GetChild(0));
             pickUp.transform.localScale = Vector3.one;
             pickUp.transform.localPosition = new Vector3(positionX, positionY);
-            LevelManager.Instance.IncreasePickUp();
             yield return new WaitForSeconds(0.5f);
         }
         GameManager.Instance.InitState(0);

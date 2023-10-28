@@ -13,14 +13,39 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   DishesInformation:
-  - Food: 
-    FoodSpritePath: 
-    Descriptions: 
-    RawMaterialName:
-    - Apple
-    - Apple
-    ItemContains: 0
-    NoticeInfo: 
+  - Food: Fruit
+    FoodSpritePath: Food/Fruit
+    Descriptions: This is a test meal that I made
+    Recipes:
+    - RawMaterialName: Apple
+      ItemContains: 3
+    - RawMaterialName: Banana
+      ItemContains: 3
+    - RawMaterialName: Coconut
+      ItemContains: 3
+    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
+  - Food: Fruit
+    FoodSpritePath: Food/Fruit
+    Descriptions: This is a test meal that I made
+    Recipes:
+    - RawMaterialName: Apple
+      ItemContains: 3
+    - RawMaterialName: Banana
+      ItemContains: 3
+    - RawMaterialName: Coconut
+      ItemContains: 3
+    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
+  - Food: Fruit
+    FoodSpritePath: Food/Fruit
+    Descriptions: This is a test meal that I made
+    Recipes:
+    - RawMaterialName: Apple
+      ItemContains: 3
+    - RawMaterialName: Banana
+      ItemContains: 3
+    - RawMaterialName: Coconut
+      ItemContains: 3
+    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
   RawMaterials:
   - RawMaterialName: Apple
     Description: Secondary students hate this fruit because it's inventing gravity.
@@ -38,9 +63,12 @@ MonoBehaviour:
   - ObstacleName: 
     ObstaclesPath: 
   Weapons:
-  - WeaponName: Knife
-    WeaponPath: Weapon/Knife
-  - WeaponName: SawTooth
-    WeaponPath: Weapon/SawTooth
-  - WeaponName: Sword
-    WeaponPath: Weapon/Sword
+  - WeaponName: KN001
+    WeaponID: 0
+    WeaponPath: Weapon/KN001
+  - WeaponName: KN002
+    WeaponID: 1
+    WeaponPath: Weapon/KN002
+  - WeaponName: KN003
+    WeaponID: 2
+    WeaponPath: Weapon/KN003

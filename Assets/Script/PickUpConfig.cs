@@ -25,6 +25,11 @@ public class PickUpConfig : ScriptableObject
 
         return pickUpName.gameObject;
     }
+    public Meal GetRandomMeal()
+    {
+        int index = UnityEngine.Random.Range(0, DishesInformation.Count);
+        return DishesInformation[index];
+    }
     public Sprite GetSpriteMat(string name)
     {
         foreach (var rawMaterial in RawMaterials)
@@ -53,7 +58,16 @@ public class PickUpConfig : ScriptableObject
     {
         foreach (var weapon in Weapons)
         {
+            weapon.WeaponName = weapon.WeaponID.ToString();
             weapon.WeaponPath = WeapPath + weapon.WeaponName;
+        }
+    }
+    [Button]
+    private void FillFoodPath()
+    {
+        foreach (var meal in DishesInformation)
+        {
+            meal.FoodSpritePath = Food + meal.Food;
         }
     }
 
@@ -63,11 +77,11 @@ public class PickUpConfig : ScriptableObject
         return rndPickUp;
     }
 
-    public GameObject GetWeapon(string weaponName)
+    public GameObject GetWeapon(WeapID iD)
     {
         foreach (var weap in Weapons)
         {
-            if (weaponName == weap.WeaponName)
+            if (iD == weap.WeaponID)
             {
                 return weap.GetWeaponPrefab();
             }
@@ -75,86 +89,195 @@ public class PickUpConfig : ScriptableObject
         return null;
     }
 
-    [Serializable]
-    public class Meal
+
+}
+[Serializable]
+public class Meal
+{
+    [Header("Food")]
+    public string Food;
+    public string FoodSpritePath;
+    [Header("Infomation")]
+    [TextArea]
+    public string Descriptions;
+
+    [Header("Raw Material")]
+    public List<Recipe> Recipes;
+    public string NoticeInfo = "";
+    public Sprite GetFoodIcon()
     {
-        [Header("Food")]
-        public string Food;
-        public string FoodSpritePath;
-        [Header("Infomation")]
-        [TextArea]
-        public string Descriptions;
-
-        [Header("Raw Material")]
-        public List<string> RawMaterialName;
-        public int ItemContains = 0;
-        public string NoticeInfo = "";
-        public Sprite GetFoodIcon()
+        Sprite MealSprite = Resources.Load<Sprite>(FoodSpritePath);
+        return MealSprite;
+    }
+    public int GetNumRecipes()
+    {
+        return Recipes.Count;
+    }
+    public List<string> lstNameMat()
+    {
+        List<string> lstSprite = new List<string>();
+        foreach (Recipe item in Recipes)
         {
-            Sprite MealSprite = Resources.Load<Sprite>(FoodSpritePath);
-            return MealSprite;
+            lstSprite.Add(item.MaterialName());
         }
-
-        public void CheckRawMaterial(List<string> InventoryMaterial)
+        return lstSprite;
+    }
+    public List<Sprite> LstSpriteMat()
+    {
+        List<Sprite> lstSprite = new List<Sprite>();
+        foreach (Recipe item in Recipes)
         {
-            foreach (string item in RawMaterialName)
+            lstSprite.Add(GameManager.Instance.GetSpriteMaterial(item.MaterialName()));
+        }
+        return lstSprite;
+    }
+    public void UpdateNumRecipes()
+    {
+        foreach (Recipe item in Recipes)
+        {
+            item.UpdateItemHas(LevelManager.Instance.CheckInventory(item.MaterialName()));
+        }
+    }
+    public bool checkMatForCook()
+    {
+        foreach (Recipe item in Recipes)
+        {
+            if (!item.CheckCanCook())
+                return false;
+        }
+        return true;
+    }
+    public List<string> CookUse()
+    {
+        List<string> lstRecipes = new List<string>();
+        for (int i = 0; i < GetNumRecipes(); i++)
+        {
+            int materialNum = Recipes[i].GetItemNum();
+            Debug.Log($"num: {materialNum}");
+            for (int j = 0; j < materialNum; j++)
             {
-                if (InventoryMaterial.Contains(item))
-                {
-                    ItemContains += 1;
-                }
-                NoticeInfo = "Material: {ItemContaines}/{RawMaterialName.Count}";
+                lstRecipes.Add(Recipes[i].MaterialName());
             }
         }
+        return lstRecipes;
     }
-
     [Serializable]
-    public class RawMaterial
+    public class Recipe
     {
-        [Header("Raw Material")]
         public string RawMaterialName;
-        [TextArea]
-        public string Description;
-        public Sprite RawMaterials;
+        public int ItemContains = 0;
+        private int itemHas = 0;
+        private bool canCook = false;
 
-        public Sprite GetSprite()
+        public void UpdateItemHas(int itemInInventory)
         {
-            return this.RawMaterials;
+            itemHas = itemInInventory;
+            if (itemHas >= ItemContains)
+            {
+                UpdateCanCook(true);
+                return;
+            }
+            UpdateCanCook(false);
         }
-        public string GetName()
+        public bool CheckCanCook()
         {
-            return this.RawMaterialName;
+            return canCook;
         }
-        public string GetDescription()
+        public void UpdateCanCook(bool stat)
         {
-            return this.Description;
+            canCook = stat;
+        }
+        public int GetItemNum()
+        {
+            return ItemContains;
+        }
+        public string MaterialName()
+        {
+            return RawMaterialName;
+        }
+        public string GetItemCount()
+        {
+            return $"{itemHas}/{ItemContains}";
         }
     }
-
     [Serializable]
-    public class Obstacle
+    public class HiddenRecipe
     {
-        [Header("Obstacles")]
-        public string ObstacleName;
-        public string ObstaclesPath;
+        public string HiddenMaterialName;
+        public int ItemContains = 0;
 
-        public GameObject GetObstacle()
+        public string GetItemNum()
         {
-            GameObject Obstacle = Resources.Load<GameObject>(ObstaclesPath);
-            return Obstacle;
+            return ItemContains.ToString();
+        }
+        public string MaterialName()
+        {
+            return ItemContains.ToString();
         }
     }
+}
 
-    [Serializable]
-    public class Weapon
+[Serializable]
+public class RawMaterial
+{
+    [Header("Raw Material")]
+    public string RawMaterialName;
+    [TextArea]
+    public string Description;
+    public Sprite RawMaterials;
+
+    public Sprite GetSprite()
     {
-        [Header("Player")]
-        public string WeaponName;
-        public string WeaponPath;
-        public GameObject GetWeaponPrefab()
-        {
-            GameObject weapon = Resources.Load<GameObject>(WeaponPath);
-            return weapon;
-        }
+        return this.RawMaterials;
     }
+    public string GetName()
+    {
+        return this.RawMaterialName;
+    }
+    public string GetDescription()
+    {
+        return this.Description;
+    }
+}
+
+[Serializable]
+public class Obstacle
+{
+    [Header("Obstacles")]
+    public string ObstacleName;
+    public string ObstaclesPath;
+
+    public GameObject GetObstacle()
+    {
+        GameObject Obstacle = Resources.Load<GameObject>(ObstaclesPath);
+        return Obstacle;
+    }
+}
+
+[Serializable]
+public class Weapon
+{
+    [Header("Player")]
+    public string WeaponName;
+    public WeapID WeaponID;
+    public string WeaponPath;
+    public GameObject GetWeaponPrefab()
+    {
+        GameObject weapon = Resources.Load<GameObject>(WeaponPath);
+        return weapon;
+    }
+}
+
+[Serializable]
+public enum WeapID
+{
+    KN001,
+    KN002,
+    KN003,
+    KN004,
+    KN005,
+    KN006,
+    KN007,
+    KN008,
+    KN009,
 }
