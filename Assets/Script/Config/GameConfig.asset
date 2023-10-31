@@ -17,33 +17,33 @@ MonoBehaviour:
     FoodSpritePath: Food/Fruit
     Descriptions: This is a test meal that I made
     Recipes:
-    - RawMaterialName: Apple
+    - RawMaterialName: RicePowder
       ItemContains: 3
-    - RawMaterialName: Banana
+    - RawMaterialName: Beef
       ItemContains: 3
-    - RawMaterialName: Coconut
+    - RawMaterialName: Chicken
       ItemContains: 3
     NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: Fruit
+  - Food: Fruit1
     FoodSpritePath: Food/Fruit
     Descriptions: This is a test meal that I made
     Recipes:
-    - RawMaterialName: Apple
+    - RawMaterialName: Pork
       ItemContains: 3
-    - RawMaterialName: Banana
+    - RawMaterialName: Sticky Rice
       ItemContains: 3
-    - RawMaterialName: Coconut
+    - RawMaterialName: Wheat Flour
       ItemContains: 3
     NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: Fruit
+  - Food: Fruit2
     FoodSpritePath: Food/Fruit
     Descriptions: This is a test meal that I made
     Recipes:
-    - RawMaterialName: Apple
+    - RawMaterialName: Cucumber
       ItemContains: 3
-    - RawMaterialName: Banana
+    - RawMaterialName: Cabbage
       ItemContains: 3
-    - RawMaterialName: Coconut
+    - RawMaterialName: Seaweed
       ItemContains: 3
     NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
   RawMaterials:
@@ -74,7 +74,7 @@ MonoBehaviour:
   - RawMaterialName: Noodles
     Description: ' The stringy superstars of the culinary world. These strands of
       joy are ready to slurp, twirl, or entangle themselves in your favorite sauce.'
-    RawMaterials: {fileID: -1621311933, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: 21300000, guid: 1f7c4918b528bbb40aaa982bc99660c3, type: 3}
   - RawMaterialName: Rice
     Description: 'The grain that unites all nations, loved by millions and sometimes
       taken for granted. Rice: making the world a tastier place one grain at a time.'
@@ -82,7 +82,7 @@ MonoBehaviour:
   - RawMaterialName: Fresh Greens
     Description: Mother Nature's gift to your plate, a colorful, crispy, and guilt-free
       way to make your taste buds dance with delight.
-    RawMaterials: {fileID: -1530139417, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: 1626778189, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
   - RawMaterialName: Cucumber
     Description: The cool, refreshing hero of salads, sandwiches, and gazpacho. You
       can always count on cucumber to keep its cool, no matter the crunch.
