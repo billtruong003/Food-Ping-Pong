@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using NaughtyAttributes;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -33,6 +34,7 @@ public class LevelManager : MonoBehaviour
     {
         WeaponTurn = 3;
         PlayerTurnLeft = 3;
+        UIManager.Instance.SetCountWeaponTurn(PlayerTurnLeft);
     }
     private void Start()
     {
@@ -88,28 +90,39 @@ public class LevelManager : MonoBehaviour
     }
     public void DecreaseTurn()
     {
+        UIManager.Instance.DecreaseWeaponCount(WeaponTurn);
         turn--;
         WeaponTurn--;
         if (WeaponTurn == 0)
         {
             PlayerTurnLeft--;
-            if (PlayerTurnLeft == 0)
+            if (PlayerTurnLeft < 0)
             {
+                MainManager.Instance.InitState(2);
                 Debug.Log("Game Over");
+                return;
             }
             else
             {
                 WeaponTurn = 3;
+                UIManager.Instance.ResetWeaponCount();
             }
+            UIManager.Instance.SetCountWeaponTurn(PlayerTurnLeft);
         }
         if (turn != 0)
             return;
 
         SpawnFoodItem();
     }
+    public void ResetTurn()
+    {
+        PlayerTurnLeft++;
+        WeaponTurn = 3;
+        UIManager.Instance.ResetWeaponCount();
+    }
     private void SpawnFoodItem()
     {
-        Meal meal = GameManager.Instance.GetMeal();
+        Meal meal = MainManager.Instance.GetMeal();
         GameObject order = Instantiate(orderItem, orderContainer);
         RecipeInfo MealInfo = order.GetComponent<RecipeInfo>();
         MealInfo.SetMealInfo(meal);

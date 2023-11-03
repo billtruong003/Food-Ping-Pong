@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3471249700931427475}
   - component: {fileID: 3471249700931427485}
   - component: {fileID: 3471249701770392525}
+  - component: {fileID: 3844752223268197818}
   m_Layer: 3
   m_Name: Pickup
   m_TagString: Untagged
@@ -89,6 +90,30 @@ MonoBehaviour:
   matSprite: {fileID: 3471249701096067150}
   triggerPickUp: 0
   materialName: Avocado
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!50 &3844752223268197818
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3471249700931427473}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 7
 --- !u!1 &3471249701096067148
 GameObject:
   m_ObjectHideFlags: 0

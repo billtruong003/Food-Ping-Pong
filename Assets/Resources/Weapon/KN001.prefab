@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 8724852414468748069}
   - component: {fileID: 8724852414468748074}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Weap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

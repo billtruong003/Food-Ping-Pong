@@ -127,7 +127,7 @@ public class Meal
         List<Sprite> lstSprite = new List<Sprite>();
         foreach (Recipe item in Recipes)
         {
-            lstSprite.Add(GameManager.Instance.GetSpriteMaterial(item.MaterialName()));
+            lstSprite.Add(MainManager.Instance.GetSpriteMaterial(item.MaterialName()));
         }
         return lstSprite;
     }
