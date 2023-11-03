@@ -13,414 +13,356 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   DishesInformation:
-  - Food: Kimchi
-    FoodSpritePath: Food/Fruit
-    Descriptions: A staple of Korean cuisine, kimchi is a fermented vegetable dish,
-      typically made with napa cabbage and a spicy chili paste. Its tangy, fiery
-      flavor and probiotic benefits make it a unique and essential part of Korean
-      meals.
-    Recipes:
-    - RawMaterialName: Cabbage
-      ItemContains: 3
-    - RawMaterialName: Chili
-      ItemContains: 3
-    - RawMaterialName: Garlic
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Spicy but delish!!!
-  - Food: Hotteok
-    FoodSpritePath: Food/Fruit
-    Descriptions: These sweet Korean pancakes are a delightful street food. Filled
-      with a syrupy brown sugar and nut mixture, they're crispy on the outside and
-      gooey inside, offering a unique combination of textures and flavors.
-    Recipes:
-    - RawMaterialName: RicePowder
-      ItemContains: 3
-    - RawMaterialName: Beef
-      ItemContains: 3
-    - RawMaterialName: Chicken
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: Gimmari
-    FoodSpritePath: Food/Fruit
-    Descriptions: Gimmari, also called Korean seaweed rolls, feature a delectable
-      blend of glass noodles, vegetables, and seaweed, creating a crunchy, savory
-      treat. They're an excellent example of Korean snack culture.
-    Recipes:
-    - RawMaterialName: Pork
-      ItemContains: 3
-    - RawMaterialName: Sticky Rice
-      ItemContains: 3
-    - RawMaterialName: Wheat Flour
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
   - Food: Kimbap
     FoodSpritePath: Food/Fruit
-    Descriptions: Resembling sushi rolls, kimbap is a Korean seaweed-wrapped rice
-      dish filled with various ingredients like vegetables, meat, and pickles. Its
-      versatility and portability make it a unique and convenient meal option.
+    Descriptions: KOREAN SEAWEED RICE ROLLS
     Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: Naengmyeon
-    FoodSpritePath: Food/Fruit
-    Descriptions: A cold noodle dish popular during the summer, naengmyeon features
-      chewy buckwheat noodles in an icy broth. The contrast of cold noodles and savory,
-      vinegary flavors is both refreshing and distinctive.
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: Bossam
-    FoodSpritePath: Food/Fruit
-    Descriptions: This Korean dish consists of steamed pork belly, sliced thin and
-      served with a variety of condiments. The unique combination of tender meat
-      and the DIY aspect of assembling your own wraps make it a social dining experience.
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: Bulgogi
-    FoodSpritePath: Food/Fruit
-    Descriptions: Bulgogi is thinly sliced, marinated beef or pork, cooked to perfection.
-      Its sweet and savory marinade infuses the meat with a distinct umami flavor
-      that sets it apart from other grilled meats.
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: Samgyeopsal
-    FoodSpritePath: Food/Fruit
-    Descriptions: A beloved Korean barbecue choice, samgyeopsal features thick slices
-      of pork belly, grilled to crispy perfection. The self-grilling experience and
-      the combination of juicy meat and crispy skin make it exceptional.
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: Tteokbokki
-    FoodSpritePath: Food/Fruit
-    Descriptions: This iTteokbokki is a popular street food consisting of chewy rice
-      cakes smothered in a fiery and slightly sweet red chili sauce. Its spicy kick
-      and unique texture make it a favorite among Koreans. a test meal that I made
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: Bibim Guksu
-    FoodSpritePath: Food/Fruit
-    Descriptions: A cold noodle dish with a spicy, tangy sauce, bibim guksu is a
-      refreshing and zesty option for hot days. The fusion of flavors and the satisfying
-      chewiness of the noodles give it a distinctive appeal.
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: Sikhye
-    FoodSpritePath: Food/Fruit
-    Descriptions: A traditional Korean rice beverage, sikhye is sweet, malted, and
-      lightly carbonated. It's a unique and refreshing drink that complements spicy
-      Korean dishes.
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: Makgeolli
-    FoodSpritePath: Food/Fruit
-    Descriptions: This traditional Korean rice wine is unfiltered and slightly sweet
-      with a milky appearance. Its low alcohol content and unique taste make it a
-      popular choice among those looking for a milder, more refreshing alcoholic
-      beverage.
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "G\xE0 h\u1EA7m s\xE2m"
-    FoodSpritePath: Food/Fruit
-    Descriptions: "g\xE0 h\u1EA7m s\xE2m is a medicinal chicken soup with ginseng
-      and herbs. Its unique blend of flavors and health-promoting qualities make
-      it a special dish in Vietnamese cuisine."
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "d\u01B0a h\xE0nh"
-    FoodSpritePath: Food/Fruit
-    Descriptions: "D\u01B0a h\xE0nh is a Vietnamese condiment made from pickled onions,
-      often served alongside various dishes to provide a refreshing, tangy contrast.
-      Its zesty and crisp profile enhances the dining experience."
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "b\xE1nh ch\u01B0ng"
-    FoodSpritePath: Food/Fruit
-    Descriptions: This traditional Vietnamese rice cake is typically prepared during
-      the Lunar New Year. It's a unique square-shaped glutinous rice cake filled
-      with mung beans and pork, wrapped in banana leaves, and symbolizes good luck
-      and tradition.
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "nem r\xE1n (ch\u1EA3 gi\xF2)"
-    FoodSpritePath: Food/Fruit
-    Descriptions: "Also known as spring rolls or egg rolls, nem r\xE1n are crispy,
-      deep-fried rolls filled with a mixture of vegetables, meats, and vermicelli
-      noodles. The satisfying crunch and savory filling make them a beloved Vietnamese
-      appetizer."
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "c\u01A1m t\u1EA5m"
-    FoodSpritePath: Food/Fruit
-    Descriptions: "A classic Vietnamese dish, c\u01A1m t\u1EA5m features broken rice
-      topped with various grilled meats, usually served with a sweet and savory fish
-      sauce. Its use of broken rice gives it a unique texture."
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "ph\u1EDF b\xF2"
-    FoodSpritePath: Food/Fruit
-    Descriptions: "Ph\u1EDF b\xF2 is a famous Vietnamese noodle soup, featuring aromatic
-      beef broth, rice noodles, and thinly sliced beef. The complex blend of spices
-      and the ritual of customizing with herbs and condiments set it apart."
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "g\u1ECFi cu\u1ED1n"
-    FoodSpritePath: Food/Fruit
-    Descriptions: "Also known as fresh spring rolls, g\u1ECFi cu\u1ED1n are a healthier
-      alternative to fried spring rolls. They consist of shrimp, herbs, rice vermicelli,
-      and other ingredients rolled in translucent rice paper, offering a refreshing
-      crunch and light flavor."
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "th\u1ECBt xi\xEAn n\u01B0\u1EDBng"
-    FoodSpritePath: Food/Fruit
-    Descriptions: "Th\u1ECBt xi\xEAn n\u01B0\u1EDBng are skewers of marinated and
-      grilled meat, such as pork or beef. The smoky aroma and tender, flavorful meat
-      make them a favorite street food in Vietnam."
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "l\u1EA1p x\u01B0\u1EDFng "
-    FoodSpritePath: Food/Fruit
-    Descriptions: "L\u1EA1p x\u01B0\u1EDFng is a type of Vietnamese sausage, known
-      for its distinctive flavor and aroma due to the use of Chinese-style lap cheong
-      sausage. It's often used in various Vietnamese dishes for a unique, savory
-      touch."
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "b\xE1nh x\xE8o"
-    FoodSpritePath: Food/Fruit
-    Descriptions: "This is a test meaB\xE1nh x\xE8o is a crispy, savory Vietnamese
-      pancake filled with shrimp, pork, bean sprouts, and herbs. Its distinctive
-      golden color and the delightful crunch make it a popular street food."
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "g\xE0 ti\u1EC1m thu\u1ED1c b\u1EAFc"
-    FoodSpritePath: Food/Fruit
-    Descriptions: This Vietnamese herbal stew features chicken cooked with traditional
-      Chinese medicinal herbs. The blend of flavors and the health-promoting qualities
-      of the herbs give this dish a unique character.
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "cao l\u1EA7u"
-    FoodSpritePath: Food/Fruit
-    Descriptions: "Cao l\u1EA7u is a regional noodle dish from Hoi An, Vietnam. It
-      combines thick noodles, savory pork, and local herbs, and is known for its
-      distinctive noodles, which are rumored to be made from well water in the area."
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "n\u01B0\u1EDBc m\xEDa"
-    FoodSpritePath: Food/Fruit
-    Descriptions: "N\u01B0\u1EDBc M\xEDa: N\u01B0\u1EDBc m\xEDa is a popular Vietnamese
-      sugarcane juice. Freshly squeezed sugarcane is mixed with a variety of flavors
-      like kumquat or calamansi, resulting in a sweet and refreshing beverage."
-    Recipes:
-    - RawMaterialName: Apple
-      ItemContains: 3
-    - RawMaterialName: Banana
-      ItemContains: 3
-    - RawMaterialName: Coconut
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
-  - Food: "r\u01B0\u1EE3u g\u1EA1o"
-    FoodSpritePath: Food/Fruit
-    Descriptions: "R\u01B0\u1EE3u g\u1EA1o is a traditional Vietnamese rice wine.
-      It's made through fermentation and distillation, and its potency and unique
-      flavor make it a notable choice among Vietnamese alcoholic beverages."
-    Recipes:
-    - RawMaterialName: Cucumber
-      ItemContains: 3
-    - RawMaterialName: Cabbage
-      ItemContains: 3
+    - RawMaterialName: Rice
+      ItemContains: 1
+    - RawMaterialName: Pork
+      ItemContains: 1
+    - RawMaterialName: Egg
+      ItemContains: 1
     - RawMaterialName: Seaweed
-      ItemContains: 3
-    NoticeInfo: Are you coconut head? You dont have enough recipe to cook!
+      ItemContains: 1
+    - RawMaterialName: Carrot
+      ItemContains: 1
+    NoticeInfo: Kimbap, one of Korea's most popular snacks, can have all sorts of
+      fillings; this very classic version is a great place to start.
+  - Food: Kimchi
+    FoodSpritePath: Food/Fruit
+    Descriptions: NAPA CABBAGE KIMCHI
+    Recipes:
+    - RawMaterialName: Cabbage
+      ItemContains: 1
+    - RawMaterialName: Carrot
+      ItemContains: 1
+    - RawMaterialName: Pepper
+      ItemContains: 1
+    - RawMaterialName: Salt
+      ItemContains: 1
+    - RawMaterialName: Sauce
+      ItemContains: 1
+    NoticeInfo: "Everything you need to know about how to make kimchi! With this
+      small batch recipe, you\u2019ll find it not that difficult to make good authentic
+      kimchi at home."
+  - Food: 'Tteokbokki '
+    FoodSpritePath: Food/Fruit
+    Descriptions: SPICY STIR-FRIED RICE CAKES
+    Recipes:
+    - RawMaterialName: Rice
+      ItemContains: 1
+    - RawMaterialName: Egg
+      ItemContains: 1
+    - RawMaterialName: Cheese
+      ItemContains: 1
+    - RawMaterialName: Cabbage
+      ItemContains: 1
+    - RawMaterialName: Pepper
+      ItemContains: 1
+    NoticeInfo: You can make it at home with this easy tteokbokki recipe. The spicy,
+      slightly sweet, and chewy rice cakes are simply addictive!
+  - Food: Bibimbap
+    FoodSpritePath: Food/Fruit
+    Descriptions: KOREAN RICE WITH MIXED VEGETABLES
+    Recipes:
+    - RawMaterialName: Rice
+      ItemContains: 1
+    - RawMaterialName: Shrimp
+      ItemContains: 1
+    - RawMaterialName: Seaweed
+      ItemContains: 1
+    - RawMaterialName: Cabbage
+      ItemContains: 1
+    - RawMaterialName: Mushroom
+      ItemContains: 1
+    NoticeInfo: A wholesome rice bowl of classic bibimbap vegetables, beef and a
+      gochujang sauce! You can omit the meat and egg for vegetarian or vegan bibimbap.
+  - Food: Tempura
+    FoodSpritePath: Food/Fruit
+    Descriptions: JAPANESE FOOD LIGHTLY BATTERED AND DEEP FRIED
+    Recipes:
+    - RawMaterialName: Egg
+      ItemContains: 1
+    - RawMaterialName: Shrimp
+      ItemContains: 1
+    - RawMaterialName: Cheese
+      ItemContains: 1
+    - RawMaterialName: Onion
+      ItemContains: 1
+    - RawMaterialName: Salt
+      ItemContains: 1
+    NoticeInfo: Juicy plump shrimp, thinly sliced Japanese sweet potato, creamy eggplant,
+      and fragrant shiso leaves get dunked in batter and deep-fried to light, irresistible
+      crunch
+  - Food: Onigiri
+    FoodSpritePath: Food/Fruit
+    Descriptions: JAPANESE RICE BALL SNACK
+    Recipes:
+    - RawMaterialName: Rice
+      ItemContains: 1
+    - RawMaterialName: Pork
+      ItemContains: 1
+    - RawMaterialName: Seaweed
+      ItemContains: 1
+    - RawMaterialName: Sauce
+      ItemContains: 1
+    - RawMaterialName: Salt
+      ItemContains: 1
+    NoticeInfo: These are the cutest little rice ball snacks! We love onigiri because
+      they are so easy to adapt to your own flavour combinations, and a great way
+      to use up leftover ingredients.
+  - Food: Ramen
+    FoodSpritePath: Food/Fruit
+    Descriptions: JAPANESE FAVORITE YELLOW NOODLES
+    Recipes:
+    - RawMaterialName: Flour
+      ItemContains: 1
+    - RawMaterialName: Beef
+      ItemContains: 1
+    - RawMaterialName: Egg
+      ItemContains: 1
+    - RawMaterialName: Shrimp
+      ItemContains: 1
+    - RawMaterialName: Mushroom
+      ItemContains: 1
+    NoticeInfo: Not only have ramen noodles become part of our cultural lexicon in
+      their ubiquitous dried mass-produced packets that sustained a generation of
+      latch-key kids and college students, but they also grew to a burgeoning restaurant
+      sub-culture of scavenger-hunt ramen shop tours and enthusiastic slurping.
+  - Food: Pho
+    FoodSpritePath: Food/Fruit
+    Descriptions: VIETNAMESE FAVORITE BEEF NOODLES SOUP
+    Recipes:
+    - RawMaterialName: Rice
+      ItemContains: 1
+    - RawMaterialName: Beef
+      ItemContains: 1
+    - RawMaterialName: Onion
+      ItemContains: 1
+    - RawMaterialName: Pepper
+      ItemContains: 1
+    - RawMaterialName: Salt
+      ItemContains: 1
+    NoticeInfo: Experience the magic of one of the greatest noodle soups in the world
+      with this easy to follow traditional Vietnamese Pho recipe!
+  - Food: Banh Mi
+    FoodSpritePath: Food/Fruit
+    Descriptions: VIETNAMESE FAVORITE FILLED SANDWICH ( NOT BREAD)
+    Recipes:
+    - RawMaterialName: Flour
+      ItemContains: 1
+    - RawMaterialName: Pork
+      ItemContains: 1
+    - RawMaterialName: Egg
+      ItemContains: 1
+    - RawMaterialName: Pepper
+      ItemContains: 1
+    - RawMaterialName: Carrot
+      ItemContains: 1
+    NoticeInfo: "The b\xE1nh m\xEC th\u1ECBt is so much more than a sandwich. It's
+      cross-cultural pollination and conflict, crunch and squish, fire and fragrance
+      all in a handy handful."
+  - Food: Banh Xeo
+    FoodSpritePath: Food/Fruit
+    Descriptions: VIETNAMESE SIZZLING CRISPY AND SAVORY CREPES
+    Recipes:
+    - RawMaterialName: Flour
+      ItemContains: 1
+    - RawMaterialName: Pork
+      ItemContains: 1
+    - RawMaterialName: Shrimp
+      ItemContains: 1
+    - RawMaterialName: Onion
+      ItemContains: 1
+    - RawMaterialName: Sauce
+      ItemContains: 1
+    NoticeInfo: "It\u2019s got that irresistible crispy, yet delicate, golden brown
+      crust. And the inside of the b\xE1nh x\xE8o is filled with delicious flavors:
+      pork and shrimp, and sprinklings of mung bean, onions and bean sprouts."
+  - Food: Goi Cuon
+    FoodSpritePath: Food/Fruit
+    Descriptions: VIETNAMESE FRESH SPRING ROLLS
+    Recipes:
+    - RawMaterialName: Rice
+      ItemContains: 1
+    - RawMaterialName: Pork
+      ItemContains: 1
+    - RawMaterialName: Shrimp
+      ItemContains: 1
+    - RawMaterialName: Carrot
+      ItemContains: 1
+    - RawMaterialName: Sauce
+      ItemContains: 1
+    NoticeInfo: "This traditional Vietnamese Spring Roll recipe (g\u1ECFi cu\u1ED1n)
+      is full of fresh veggies, herbs, soft slices of pork, and shrimp all brought
+      together with a super flavorful hoisin and peanut dipping sauce."
+  - Food: Pizza
+    FoodSpritePath: Food/Fruit
+    Descriptions: ITALIAN'S BEST DISH OF ALL THE TIME
+    Recipes:
+    - RawMaterialName: Flour
+      ItemContains: 1
+    - RawMaterialName: Beef
+      ItemContains: 1
+    - RawMaterialName: Cheese
+      ItemContains: 1
+    - RawMaterialName: Mushroom
+      ItemContains: 1
+    - RawMaterialName: Onion
+      ItemContains: 1
+    NoticeInfo: This is a great recipe when you don't want to wait for the dough
+      to rise. You just mix it and allow it to rest for 5 minutes and then it's ready
+      to go! It yields a soft, chewy crust.
+  - Food: Salad
+    FoodSpritePath: Food/Fruit
+    Descriptions: EVERY VEGETARIAN'S FRIEND WITH BENEFIT
+    Recipes:
+    - RawMaterialName: Cabbage
+      ItemContains: 1
+    - RawMaterialName: Carrot
+      ItemContains: 1
+    - RawMaterialName: Onion
+      ItemContains: 1
+    - RawMaterialName: Mushroom
+      ItemContains: 1
+    - RawMaterialName: Seaweed
+      ItemContains: 1
+    NoticeInfo: Salads are the perfect opportunity to combine delicious, fresh flavors
+      and nutrient-dense ingredients. Building the best salad for you means thinking
+      about crafting a filling, balanced meal that appeals to your tastes.
+  - Food: Bo Kho
+    FoodSpritePath: Food/Fruit
+    Descriptions: VIETNAMESE BRAISED BEEF STEW WITH RICE
+    Recipes:
+    - RawMaterialName: Rice
+      ItemContains: 1
+    - RawMaterialName: Beef
+      ItemContains: 1
+    - RawMaterialName: Carrot
+      ItemContains: 1
+    - RawMaterialName: Pepper
+      ItemContains: 1
+    - RawMaterialName: Sauce
+      ItemContains: 1
+    NoticeInfo: When the meat is fork tender, carrots are added to complete the dish.
+      If you wish, include turnips or daikon radish or potatoes. Serve it with rice,
+      rice noodles or a freshly baked baguette.
+  - Food: Gyoza
+    FoodSpritePath: Food/Fruit
+    Descriptions: JAPANESE FAVORITE'S DUMPLING
+    Recipes:
+    - RawMaterialName: Flour
+      ItemContains: 1
+    - RawMaterialName: Pork
+      ItemContains: 1
+    - RawMaterialName: Cabbage
+      ItemContains: 1
+    - RawMaterialName: Carrot
+      ItemContains: 1
+    - RawMaterialName: Sauce
+      ItemContains: 1
+    NoticeInfo: Gyoza are Japanese pan-fried dumplings that are crispy and golden
+      on the bottom and juicy on the inside. You can find these mouthwatering dumplings
+      being served at specialty shops, izakaya, ramen shops, grocery stores or even
+      at festivals.
+  - Food: Banh Bao
+    FoodSpritePath: Food/Fruit
+    Descriptions: VIETNAMESE'S FAVORITE DUMPLING
+    Recipes:
+    - RawMaterialName: Flour
+      ItemContains: 1
+    - RawMaterialName: Pork
+      ItemContains: 1
+    - RawMaterialName: Mushroom
+      ItemContains: 1
+    - RawMaterialName: Cabbage
+      ItemContains: 1
+    - RawMaterialName: Salt
+      ItemContains: 1
+    NoticeInfo: "A Vietnamese Banh Bao is the PERFECT breakfast meal or afternoon
+      snack for everyone. Freezer-friendly and great for lunch boxes, you\u2019ll
+      love how easily they reheat. The best part? Each one still tastes just as amazing
+      as day one!"
+  - Food: Taco
+    FoodSpritePath: Food/Fruit
+    Descriptions: MAKE TACOS AT HOME FOR TACO TUESDAY
+    Recipes:
+    - RawMaterialName: Flour
+      ItemContains: 1
+    - RawMaterialName: Beef
+      ItemContains: 1
+    - RawMaterialName: Shrimp
+      ItemContains: 1
+    - RawMaterialName: Cabbage
+      ItemContains: 1
+    - RawMaterialName: Cheese
+      ItemContains: 1
+    NoticeInfo: Easy, quick, authentic carne asada street tacos you can now make
+      right at home! Top with onion, cilantro + fresh lime juice! SO GOOD!
+  - Food: Hamburger
+    FoodSpritePath: Food/Fruit
+    Descriptions: EVERYBODY LOVE HAMBURGER!!!
+    Recipes:
+    - RawMaterialName: Flour
+      ItemContains: 1
+    - RawMaterialName: Beef
+      ItemContains: 1
+    - RawMaterialName: Egg
+      ItemContains: 1
+    - RawMaterialName: Salt
+      ItemContains: 1
+    - RawMaterialName: Cheese
+      ItemContains: 1
+    NoticeInfo: These burger patties are made with ground beef and an easy bread
+      crumb mixture. Nothing beats a simple hamburger on a warm summer evening. Pile
+      these burgers with your favorite condiments and pop open a cool drink!
   RawMaterials:
-  - RawMaterialName: Rice Powder
-    Description: The fluffy, powdery substance that magically transforms into rice
-      when you add water. A staple ingredient for all aspiring kitchen wizards.
-    RawMaterials: {fileID: 279880206, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
-  - RawMaterialName: Beef
-    Description: Moo-licious slices of bovine delight, perfect for turning any meal
-      into a carnivore's dream. Get ready to have a cow!
-    RawMaterials: {fileID: 328948840, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
-  - RawMaterialName: Chicken
-    Description: The feathered friend that sacrificed itself to become a crispy,
-      tender, and cluck-tastic addition to your plate.
-    RawMaterials: {fileID: 1623084466, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
-  - RawMaterialName: Pork
-    Description: Swine divine! This succulent and savory meat is your ticket to flavor
-      town, where every bite is an oink-worthy adventure.
-    RawMaterials: {fileID: -901984206, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
-  - RawMaterialName: Sticky Rice
-    Description: ' The clingy companion to your Asian dishes, known for its exceptional
-      ability to stick together and be the life of the party in sushi and dumplings.'
-    RawMaterials: {fileID: -42543865, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
-  - RawMaterialName: Wheat Flour
-    Description: ' The fine powder that transforms into bread, cake, and all things
-      baked. Wheat flour: because you knead it in your life.'
-    RawMaterials: {fileID: -1469711134, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
-  - RawMaterialName: Noodles
-    Description: ' The stringy superstars of the culinary world. These strands of
-      joy are ready to slurp, twirl, or entangle themselves in your favorite sauce.'
-    RawMaterials: {fileID: 21300000, guid: 1f7c4918b528bbb40aaa982bc99660c3, type: 3}
   - RawMaterialName: Rice
-    Description: 'The grain that unites all nations, loved by millions and sometimes
-      taken for granted. Rice: making the world a tastier place one grain at a time.'
-    RawMaterials: {fileID: 691921514, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
-  - RawMaterialName: Fresh Greens
-    Description: Mother Nature's gift to your plate, a colorful, crispy, and guilt-free
-      way to make your taste buds dance with delight.
-    RawMaterials: {fileID: 1626778189, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
-  - RawMaterialName: Cucumber
-    Description: The cool, refreshing hero of salads, sandwiches, and gazpacho. You
-      can always count on cucumber to keep its cool, no matter the crunch.
-    RawMaterials: {fileID: -764464033, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
-  - RawMaterialName: Cabbage
-    Description: 'The leafy green that makes coleslaw a thing and adds a crunch to
-      your tacos. Cabbage: where every leaf is a potential wrap star.'
-    RawMaterials: {fileID: -2112588754, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
-  - RawMaterialName: Root Vegetables
-    Description: The underground gems that give soups, stews, and roasts their earthy
-      goodness. These veggies root for your taste buds!
-    RawMaterials: {fileID: -449778191, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    Description: Farmer's friends in the dark age
+    RawMaterials: {fileID: 978586216, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+  - RawMaterialName: Salt
+    Description: Salty but good
+    RawMaterials: {fileID: 148611157, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Seaweed
-    Description: The ocean's answer to edible paper. Seaweed adds a hint of the sea
-      to your sushi and a delightful crunch to your snacks.
-    RawMaterials: {fileID: -1025055632, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
-  - RawMaterialName: Vegetable Oil
-    Description: "The slippery, golden liquid that helps your food avoid sticking
-      to the pan. It's the unsung hero of frying, saut\xE9ing, and salad dressing."
-    RawMaterials: {fileID: -1530139417, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
-  - RawMaterialName: Sugarcane
-    Description: " The tall, sweet, and juicy grass that makes sugar production an
-      art form. Sip on its nectar or let it sweeten your desserts \u2013 sugarcane's
-      got the \"sweet\" moves."
-    RawMaterials: {fileID: -1530139417, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    Description: Weed under the sea~~~
+    RawMaterials: {fileID: 979838927, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+  - RawMaterialName: Cabbage
+    Description: It's salad ti... Wait, do you evenly eat this??
+    RawMaterials: {fileID: -335141842, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+  - RawMaterialName: Flour
+    Description: Somebody said "Banh Mi"???
+    RawMaterials: {fileID: 1841629188, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+  - RawMaterialName: Beef
+    Description: Moooooooooo~~~
+    RawMaterials: {fileID: -413980820, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+  - RawMaterialName: Pork
+    Description: Oink-Oink-Oink...
+    RawMaterials: {fileID: -2099908997, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+  - RawMaterialName: Egg
+    Description: Eggy
+    RawMaterials: {fileID: 21300000, guid: 9eaa6d95a1d94ed41866b52732c3f08b, type: 3}
+  - RawMaterialName: Carrot
+    Description: Vegetables but NOT GREEN
+    RawMaterials: {fileID: 478441648, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+  - RawMaterialName: Pepper
+    Description: Spicy Ingredient For Spicy Foods
+    RawMaterials: {fileID: 21300000, guid: 0699585d82b9b5f49bee6abb309077c4, type: 3}
+  - RawMaterialName: Sauce
+    Description: 
+    RawMaterials: {fileID: 21300000, guid: d2abe2baa59a0ea4993d1e5f9bf97cd3, type: 3}
+  - RawMaterialName: Cheese
+    Description: 
+    RawMaterials: {fileID: 21300000, guid: 31ce55c2474361d4fab07984f18f9145, type: 3}
+  - RawMaterialName: Shrimp
+    Description: 
+    RawMaterials: {fileID: 21300000, guid: 124f35aff40297349ab8c605a1dbfec6, type: 3}
+  - RawMaterialName: Mushroom
+    Description: 
+    RawMaterials: {fileID: 21300000, guid: a480ec4b99902534c8e7b392d640d20a, type: 3}
+  - RawMaterialName: Onion
+    Description: 
+    RawMaterials: {fileID: 21300000, guid: 8fdcf9a56ea7d8a4fb2f76292efe48bf, type: 3}
   Obstacles:
   - ObstacleName: 
     ObstaclesPath: 
