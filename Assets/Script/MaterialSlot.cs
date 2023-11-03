@@ -29,7 +29,7 @@ public class MaterialSlot : MonoBehaviour
         materialCount = 0;
         MaterialAdded();
 
-        Sprite spriteMat = GameManager.Instance.GetSpriteMaterial(name);
+        Sprite spriteMat = MainManager.Instance.GetSpriteMaterial(name);
         materialSprite.sprite = spriteMat;
 
         materialSprite.gameObject.SetActive(true);

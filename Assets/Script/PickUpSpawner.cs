@@ -25,16 +25,16 @@ public class PickUpSpawner : MonoBehaviour
 
     private IEnumerator Cor_SpawnPickUp(int numSpawn)
     {
-        yield return new WaitUntil(() => GameManager.Instance != null);
+        yield return new WaitUntil(() => MainManager.Instance != null);
 
         positionX = Random.Range(LimitTopLeft.x, LimitDownRight.x);
         positionY = Random.Range(LimitTopLeft.y, LimitDownRight.y);
-        GameObject pickUp = GameManager.Instance.GetRawMaterial();
+        GameObject pickUp = MainManager.Instance.GetRawMaterial();
         Instantiate(pickUp, PickUpContainer.GetChild(0));
         pickUp.transform.localScale = Vector3.one;
         pickUp.transform.localPosition = new Vector3(positionX, positionY);
         yield return new WaitForSeconds(0.5f);
 
-        GameManager.Instance.InitState(0);
+        MainManager.Instance.InitState(0);
     }
 }

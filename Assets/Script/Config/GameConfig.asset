@@ -363,27 +363,27 @@ MonoBehaviour:
   - RawMaterialName: Rice Powder
     Description: The fluffy, powdery substance that magically transforms into rice
       when you add water. A staple ingredient for all aspiring kitchen wizards.
-    RawMaterials: {fileID: 279880206, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: 1841629188, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Beef
     Description: Moo-licious slices of bovine delight, perfect for turning any meal
       into a carnivore's dream. Get ready to have a cow!
-    RawMaterials: {fileID: 328948840, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: -2099908997, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Chicken
     Description: The feathered friend that sacrificed itself to become a crispy,
       tender, and cluck-tastic addition to your plate.
-    RawMaterials: {fileID: 1623084466, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: -586206857, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Pork
     Description: Swine divine! This succulent and savory meat is your ticket to flavor
       town, where every bite is an oink-worthy adventure.
-    RawMaterials: {fileID: -901984206, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: -413980820, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Sticky Rice
     Description: ' The clingy companion to your Asian dishes, known for its exceptional
       ability to stick together and be the life of the party in sushi and dumplings.'
-    RawMaterials: {fileID: -42543865, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: 978586216, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Wheat Flour
     Description: ' The fine powder that transforms into bread, cake, and all things
       baked. Wheat flour: because you knead it in your life.'
-    RawMaterials: {fileID: -1469711134, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: 148611157, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Noodles
     Description: ' The stringy superstars of the culinary world. These strands of
       joy are ready to slurp, twirl, or entangle themselves in your favorite sauce.'
@@ -391,36 +391,41 @@ MonoBehaviour:
   - RawMaterialName: Rice
     Description: 'The grain that unites all nations, loved by millions and sometimes
       taken for granted. Rice: making the world a tastier place one grain at a time.'
-    RawMaterials: {fileID: 691921514, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: -613816139, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Fresh Greens
     Description: Mother Nature's gift to your plate, a colorful, crispy, and guilt-free
       way to make your taste buds dance with delight.
-    RawMaterials: {fileID: 1626778189, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: -335141842, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Cucumber
     Description: The cool, refreshing hero of salads, sandwiches, and gazpacho. You
       can always count on cucumber to keep its cool, no matter the crunch.
-    RawMaterials: {fileID: -764464033, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: 21300078, guid: 142ff8784e552734f9d6a895491d0ae8, type: 3}
   - RawMaterialName: Cabbage
     Description: 'The leafy green that makes coleslaw a thing and adds a crunch to
       your tacos. Cabbage: where every leaf is a potential wrap star.'
-    RawMaterials: {fileID: -2112588754, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: 968196311, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Root Vegetables
     Description: The underground gems that give soups, stews, and roasts their earthy
       goodness. These veggies root for your taste buds!
-    RawMaterials: {fileID: -449778191, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: 478441648, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Seaweed
     Description: The ocean's answer to edible paper. Seaweed adds a hint of the sea
       to your sushi and a delightful crunch to your snacks.
-    RawMaterials: {fileID: -1025055632, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: 979838927, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Vegetable Oil
     Description: "The slippery, golden liquid that helps your food avoid sticking
       to the pan. It's the unsung hero of frying, saut\xE9ing, and salad dressing."
-    RawMaterials: {fileID: -1530139417, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: 21300000, guid: 62a0911e0415bc744a661abd0b1f62bc, type: 3}
   - RawMaterialName: Sugarcane
     Description: " The tall, sweet, and juicy grass that makes sugar production an
       art form. Sip on its nectar or let it sweeten your desserts \u2013 sugarcane's
       got the \"sweet\" moves."
-    RawMaterials: {fileID: -1530139417, guid: e4ef6ab828aa8a9408316cc42cbb159c, type: 3}
+    RawMaterials: {fileID: 21300000, guid: c3770cc05a12c184d96529ca6a6faee8, type: 3}
+  - RawMaterialName: Salt
+    Description: My salty little grains, tiny and 'salty,' adding a pinch of humor
+      to your dishes. Sprinkle salt with confidence on everything, because sometimes,
+      life needs a bit of 'saltiness' to spice it up!
+    RawMaterials: {fileID: 21300000, guid: f22fa93b547b54e44bb8f958903196f3, type: 3}
   Obstacles:
   - ObstacleName: 
     ObstaclesPath: 
