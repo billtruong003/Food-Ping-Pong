@@ -114,6 +114,14 @@ public class LevelManager : MonoBehaviour
 
         SpawnFoodItem();
     }
+    public void PlusTurn()
+    {
+        Debug.Log("Cộng turn");
+        PlayerTurnLeft++;
+        WeaponTurn = 3;
+        UIManager.Instance.ResetWeaponCount();
+        UIManager.Instance.SetCountWeaponTurn(PlayerTurnLeft);
+    }
     public void ResetTurn()
     {
         PlayerTurnLeft++;

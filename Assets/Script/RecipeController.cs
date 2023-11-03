@@ -49,6 +49,7 @@ public class RecipeController : MonoBehaviour
     public void Cook()
     {
         //more logic here
+        LevelManager.Instance.PlusTurn();
         LevelManager.Instance.CookApply(lstMaterial);
         Destroy(cookItem);
     }

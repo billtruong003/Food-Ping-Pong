@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private List<Image> weaponCount;
     [SerializeField] private Image infoWeapon;
     [SerializeField] private TextMeshProUGUI countNum;
+    [SerializeField] private GameOver gameOver;
     private readonly int uiLayer = 5;
     private bool isHoverUI;
 
@@ -44,7 +45,11 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+    public void GameOver()
+    {
+        gameOver.TriggerGameOject();
 
+    }
     public void ShowDescriptionMat(MaterialSlot matInfo)
     {
         if (matInfo.MatName == "")

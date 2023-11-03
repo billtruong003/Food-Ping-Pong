@@ -8,7 +8,6 @@ public class GameOver : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI money;
 
-    [Button]
     public void MoneyUpdate(int totalMoney)
     {
         string formattedMoney = totalMoney.ToString("N0");
@@ -16,15 +15,8 @@ public class GameOver : MonoBehaviour
         Debug.Log(formattedMoney);
         money.text = formattedMoney;
     }
-    // Start is called before the first frame update
-    void Start()
+    public void TriggerGameOject()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        gameObject.SetActive(true);
     }
 }
