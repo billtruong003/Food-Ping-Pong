@@ -19,4 +19,5 @@ public class GameOver : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
+    // public void
 }
