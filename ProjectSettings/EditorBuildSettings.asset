@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GamePlay.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/ChooseWeap.unity
+    guid: ee21503ee5a33d64ba7a45c57e4e23ae
   m_configObjects: {}
