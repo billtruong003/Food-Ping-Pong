@@ -43,6 +43,8 @@ public class DragShoot : MonoBehaviour
 
     private void Update()
     {
+        if (MainManager.Instance.GetGameOver())
+            return;
         DragAndShoot();
         RotateToRightDir();
     }

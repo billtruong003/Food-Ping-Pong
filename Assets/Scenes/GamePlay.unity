@@ -1694,7 +1694,7 @@ MonoBehaviour:
   - {fileID: 1453119152}
   infoWeapon: {fileID: 1416396258}
   countNum: {fileID: 368814901}
-  gameOver: {fileID: 0}
+  gameOver: {fileID: 875252731}
 --- !u!1 &208018329
 GameObject:
   m_ObjectHideFlags: 0
@@ -6558,7 +6558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &875252727
 RectTransform:
   m_ObjectHideFlags: 0

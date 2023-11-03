@@ -132,6 +132,7 @@ public class MainManager : MonoBehaviour
             case (2):
                 m_currentState = GameState.GAME_OVER;
                 gameOver = true;
+                UIManager.Instance.GameOver();
                 break;
             case (3):
                 m_currentState = GameState.UI_STATE;

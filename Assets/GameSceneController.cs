@@ -10,6 +10,7 @@ public class GameSceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -43,6 +44,7 @@ public enum sceneName
     NONE,
     MENU,
     GAMEPLAY,
+    CHOOSE_WEAPON,
     SETTING,
     CREDIT,
 
