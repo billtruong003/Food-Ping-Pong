@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class DataPersist : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static DataPersist Instance;
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

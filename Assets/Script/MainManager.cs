@@ -141,7 +141,6 @@ public class MainManager : MonoBehaviour
                 m_currentState = GameState.PLAYER_SHOOTING;
                 break;
         }
-
     }
 
 

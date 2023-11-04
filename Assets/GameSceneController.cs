@@ -7,33 +7,42 @@ using UnityEngine.SceneManagement;
 public class GameSceneController : MonoBehaviour
 {
     [SerializeField] private string currentScene;
-    // Start is called before the first frame update
-    void Start()
+    public static GameSceneController Instance;
+    private void Awake()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     public void LoadScene(sceneName scene)
     {
         string sceneLoad = GetSceneName(scene);
+        SceneManager.LoadScene(sceneLoad, LoadSceneMode.Single);
     }
     public string GetSceneName(sceneName scene)
     {
         switch (scene)
         {
             case (sceneName.MENU):
-                return "Menu";
+                return "MenuGame";
             case (sceneName.GAMEPLAY):
                 return "GamePlay";
             case (sceneName.SETTING):
-                return "Setting";
+                return "SettingScene";
             case (sceneName.CREDIT):
-                return "Credit";
+                return "CreditScene";
+            case (sceneName.WEAPON):
+                return "ChooseWeap";
+            case (sceneName.SHOP):
+                return "ShopScene";
+            case (sceneName.GAMEOVER):
+                return "ShopScene";    
         }
         return currentScene;
     }
@@ -44,8 +53,9 @@ public enum sceneName
     NONE,
     MENU,
     GAMEPLAY,
-    CHOOSE_WEAPON,
+    WEAPON,
     SETTING,
     CREDIT,
-
+    SHOP,
+    GAMEOVER
 }
