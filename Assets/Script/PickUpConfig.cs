@@ -268,16 +268,3 @@ public class Weapon
     }
 }
 
-[Serializable]
-public enum WeapID
-{
-    KN001,
-    KN002,
-    KN003,
-    KN004,
-    KN005,
-    KN006,
-    KN007,
-    KN008,
-    KN009,
-}

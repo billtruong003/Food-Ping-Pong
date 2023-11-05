@@ -1,14 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
 
 public class PlayerData : MonoBehaviour
 {
     public static PlayerData Instance;
+    [SerializeField] private PlayerDataSO playerData;
 
-    private PlayerDataSO playerData;
-
-
+    public void AddMoney(int money)
+    {
+        playerData.AddMoney(money);
+    }
+    public string GetMoney()
+    {
+        return playerData.GetMoney();
+    }
     private void Awake()
     {
         if (Instance == null)
@@ -20,16 +27,5 @@ public class PlayerData : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
+
 public class RecipeController : MonoBehaviour
 {
     [SerializeField] private GameObject cookItem;
@@ -10,18 +11,51 @@ public class RecipeController : MonoBehaviour
     [SerializeField] private Button cook;
     [SerializeField] private Transform recipeContainer;
     [SerializeField] private FoodDescription foodDescription;
+
     private List<string> lstMaterial;
     private ItemRecipe itemRecipe;
 
     public void CookInfoUpdate(Meal info)
     {
-
         ResetCookInfo();
+        UpdateRecipeList(info);
+    }
+
+    public void SetCookItem(GameObject item)
+    {
+        cookItem = item;
+    }
+
+    public void Cook()
+    {
+        LevelManager.Instance.PlusTurn();
+        LevelManager.Instance.CookApply(lstMaterial);
+        Destroy(cookItem);
+    }
+
+    public void ResetCookInfo()
+    {
+        cookInfo.gameObject.SetActive(false);
+        cookInfo.parent.gameObject.SetActive(false);
+        foreach (Transform item in recipeContainer)
+        {
+            item.gameObject.SetActive(false);
+        }
+    }
+
+    public void AppearDescription(string name, string description)
+    {
+        foodDescription.DescriptionUpdate(name, description);
+    }
+
+    private void UpdateRecipeList(Meal info)
+    {
         info.UpdateNumRecipes();
         lstMaterial = info.CookUse();
         List<Sprite> lstSpriteMat = info.LstSpriteMat();
         List<string> lstNameMat = info.lstNameMat();
         List<bool> enoughMat = new List<bool>();
+
         for (int i = 0; i < info.GetNumRecipes(); i++)
         {
             itemRecipe = recipeContainer.GetChild(i).GetComponent<ItemRecipe>();
@@ -32,38 +66,17 @@ public class RecipeController : MonoBehaviour
             itemRecipe.transform.gameObject.SetActive(true);
             enoughMat.Add(enough);
         }
+
         cookInfo.parent.gameObject.SetActive(true);
         cookInfo.gameObject.SetActive(true);
 
         if (enoughMat.Contains(false))
         {
             cook.interactable = false;
-            return;
         }
-        cook.interactable = true;
-    }
-    public void SetCookItem(GameObject item)
-    {
-        cookItem = item;
-    }
-    public void Cook()
-    {
-        //more logic here
-        LevelManager.Instance.PlusTurn();
-        LevelManager.Instance.CookApply(lstMaterial);
-        Destroy(cookItem);
-    }
-    public void ResetCookInfo()
-    {
-        cookInfo.gameObject.SetActive(false);
-        cookInfo.parent.gameObject.SetActive(false);
-        foreach (Transform item in recipeContainer)
+        else
         {
-            item.gameObject.SetActive(false);
+            cook.interactable = true;
         }
-    }
-    public void AppearDescription(string name, string description)
-    {
-        foodDescription.DescriptionUpdate(name, description);
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine;
 public class GameOver : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI money;
-
+    [SerializeField] private MenuController sceneController;
     public void MoneyUpdate(int totalMoney)
     {
         string formattedMoney = totalMoney.ToString("N0");
@@ -19,5 +19,12 @@ public class GameOver : MonoBehaviour
     {
         gameObject.SetActive(true);
     }
-    // public void
+    public void LoadMenu()
+    {
+        sceneController.InitScene("Menu");
+    }
+    public void ReloadScene()
+    {
+        sceneController.ReloadScene();
+    }
 }

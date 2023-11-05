@@ -160,6 +160,8 @@ public class DragShoot : MonoBehaviour
         Debug.Log("Stop");
         MainManager.Instance.SpawnMaterial();
         LevelManager.Instance.DecreaseTurn();
+        UIManager.Instance.PopUpText($"Turn {LevelManager.Instance.GetGameTurn()}");
+        yield return new WaitForSeconds(1f);
         state = dragState.CAN_DRAG;
     }
 

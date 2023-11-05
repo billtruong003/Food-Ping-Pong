@@ -15,8 +15,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Transform orderContainer;
     [SerializeField] private GameObject orderItem;
     [Header("Weapon Count")]
-    [SerializeField] private int WeaponTurn;
-    [SerializeField] private int PlayerTurnLeft;
+    [SerializeField] private int weaponTurn;
+    [SerializeField] private int playerTurnLeft;
+    [SerializeField] private int gameTurn = 1;
 
     private void Awake()
     {
@@ -32,9 +33,13 @@ public class LevelManager : MonoBehaviour
     }
     public void SetTurn()
     {
-        WeaponTurn = 3;
-        PlayerTurnLeft = 3;
-        UIManager.Instance.SetCountWeaponTurn(PlayerTurnLeft);
+        weaponTurn = 3;
+        playerTurnLeft = 3;
+        UIManager.Instance.SetCountWeaponTurn(playerTurnLeft);
+    }
+    public int GetGameTurn()
+    {
+        return gameTurn;
     }
     private void Start()
     {
@@ -90,13 +95,14 @@ public class LevelManager : MonoBehaviour
     }
     public void DecreaseTurn()
     {
-        UIManager.Instance.DecreaseWeaponCount(WeaponTurn);
+        UIManager.Instance.DecreaseWeaponCount(weaponTurn);
+        gameTurn++;
         turn--;
-        WeaponTurn--;
-        if (WeaponTurn == 0)
+        weaponTurn--;
+        if (weaponTurn == 0)
         {
-            PlayerTurnLeft--;
-            if (PlayerTurnLeft < 0)
+            playerTurnLeft--;
+            if (playerTurnLeft < 0)
             {
                 MainManager.Instance.InitState(2);
                 Debug.Log("Game Over");
@@ -104,10 +110,10 @@ public class LevelManager : MonoBehaviour
             }
             else
             {
-                WeaponTurn = 3;
+                weaponTurn = 3;
                 UIManager.Instance.ResetWeaponCount();
             }
-            UIManager.Instance.SetCountWeaponTurn(PlayerTurnLeft);
+            UIManager.Instance.SetCountWeaponTurn(playerTurnLeft);
         }
         if (turn != 0)
             return;
@@ -117,15 +123,15 @@ public class LevelManager : MonoBehaviour
     public void PlusTurn()
     {
         Debug.Log("Cộng turn");
-        PlayerTurnLeft++;
-        WeaponTurn = 3;
+        playerTurnLeft++;
+        weaponTurn = 3;
         UIManager.Instance.ResetWeaponCount();
-        UIManager.Instance.SetCountWeaponTurn(PlayerTurnLeft);
+        UIManager.Instance.SetCountWeaponTurn(playerTurnLeft);
     }
     public void ResetTurn()
     {
-        PlayerTurnLeft++;
-        WeaponTurn = 3;
+        playerTurnLeft++;
+        weaponTurn = 3;
         UIManager.Instance.ResetWeaponCount();
     }
     private void SpawnFoodItem()

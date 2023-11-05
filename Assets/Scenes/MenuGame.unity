@@ -316,7 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 217553189}
   - component: {fileID: 217553191}
-  - component: {fileID: 217553190}
+  - component: {fileID: 217553192}
   m_Layer: 0
   m_Name: DataObject
   m_TagString: Untagged
@@ -339,18 +339,6 @@ Transform:
   m_Father: {fileID: 1886770724}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &217553190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217553188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d9aeca89c1fd7e4399235c2602b6381, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &217553191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +352,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: 
+--- !u!114 &217553192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217553188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9aeca89c1fd7e4399235c2602b6381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: e8627caee27b88a458bb7507d9ef8637, type: 2}
 --- !u!1 &241320454
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +986,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Weapon
+          m_StringArgument: Gameplay
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &507615315
@@ -2665,6 +2666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589ccbeadcafaa045a1a3cc05a1bfb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  money: {fileID: 260021109}
 --- !u!1 &1555799381
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,7 +3497,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Shop
+          m_StringArgument: Weapon
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1883405046

@@ -61,7 +61,12 @@ public class MainManager : MonoBehaviour
     {
         yield return new WaitUntil(() => Player != null);
         UIManager.Instance.InitWeaponInfo(GetSpritePlayer());
-        yield return null;
+        yield return new WaitUntil(() => m_currentState == GameState.PLAYER_STATE);
+        m_currentState = GameState.UI_STATE;
+        yield return new WaitForSeconds(1);
+        UIManager.Instance.PopUpText($"Turn {LevelManager.Instance.GetGameTurn()}");
+        m_currentState = GameState.PLAYER_STATE;
+
     }
 
     private void InitWeapTurn()

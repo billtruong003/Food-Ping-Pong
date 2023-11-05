@@ -42,9 +42,14 @@ public class GameSceneController : MonoBehaviour
             case (sceneName.SHOP):
                 return "ShopScene";
             case (sceneName.GAMEOVER):
-                return "ShopScene";    
+                return "ShopScene";
         }
         return currentScene;
+    }
+    public void ReloadScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 }
 [Serializable]

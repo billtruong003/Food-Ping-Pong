@@ -16,7 +16,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private List<Image> weaponCount;
     [SerializeField] private Image infoWeapon;
     [SerializeField] private TextMeshProUGUI countNum;
+
     [SerializeField] private GameOver gameOver;
+
+    [SerializeField] private GameObject popUpText;
+    [SerializeField] private Transform popUpTxtContainer;
     private readonly int uiLayer = 5;
     private bool isHoverUI;
 
@@ -48,7 +52,18 @@ public class UIManager : MonoBehaviour
     public void GameOver()
     {
         gameOver.TriggerGameOject();
-
+    }
+    public void PopUpText(string txt = "")
+    {
+        StartCoroutine(Cor_PopUpText(txt));
+    }
+    public IEnumerator Cor_PopUpText(string txt)
+    {
+        GameObject txtPopUp = Instantiate(popUpText, popUpTxtContainer);
+        TextMeshProUGUI InfoText = txtPopUp.GetComponent<TextMeshProUGUI>();
+        InfoText.text = txt;
+        yield return new WaitForSeconds(1);
+        Destroy(txtPopUp);
     }
     public void ShowDescriptionMat(MaterialSlot matInfo)
     {
@@ -98,7 +113,6 @@ public class UIManager : MonoBehaviour
         {
             return;
         }
-        Debug.Log("Ngu");
         weaponCount[index - 1].transform.parent.GetComponent<Animator>().SetTrigger("Disappear");
     }
     public void ResetWeaponCount()

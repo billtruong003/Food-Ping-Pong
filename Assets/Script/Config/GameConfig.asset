@@ -320,10 +320,10 @@ MonoBehaviour:
   RawMaterials:
   - RawMaterialName: Rice
     Description: Farmer's friends in the dark age
-    RawMaterials: {fileID: 978586216, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+    RawMaterials: {fileID: -613816139, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Salt
     Description: Salty but good
-    RawMaterials: {fileID: 148611157, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+    RawMaterials: {fileID: 1841629188, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Seaweed
     Description: Weed under the sea~~~
     RawMaterials: {fileID: 979838927, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
@@ -332,7 +332,7 @@ MonoBehaviour:
     RawMaterials: {fileID: -335141842, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Flour
     Description: Somebody said "Banh Mi"???
-    RawMaterials: {fileID: 1841629188, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+    RawMaterials: {fileID: 978586216, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
   - RawMaterialName: Beef
     Description: Moooooooooo~~~
     RawMaterials: {fileID: -413980820, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
@@ -350,7 +350,7 @@ MonoBehaviour:
     RawMaterials: {fileID: 21300000, guid: 0699585d82b9b5f49bee6abb309077c4, type: 3}
   - RawMaterialName: Sauce
     Description: Fish sauce, soy bean,.etc.
-    RawMaterials: {fileID: 21300000, guid: d2abe2baa59a0ea4993d1e5f9bf97cd3, type: 3}
+    RawMaterials: {fileID: 21300000, guid: 878a86235aa94024ebe99557efe97bbb, type: 3}
   - RawMaterialName: Cheese
     Description: It's PIZZA TIME
     RawMaterials: {fileID: 21300000, guid: 31ce55c2474361d4fab07984f18f9145, type: 3}
@@ -359,7 +359,7 @@ MonoBehaviour:
     RawMaterials: {fileID: 21300000, guid: 124f35aff40297349ab8c605a1dbfec6, type: 3}
   - RawMaterialName: Mushroom
     Description: SAFE to eat
-    RawMaterials: {fileID: 21300000, guid: a480ec4b99902534c8e7b392d640d20a, type: 3}
+    RawMaterials: {fileID: 21300000, guid: e56cefabf3fb3464890aeadfcaa3f7f3, type: 3}
   - RawMaterialName: Onion
     Description: I'm NOT CRYING
     RawMaterials: {fileID: 21300000, guid: 8fdcf9a56ea7d8a4fb2f76292efe48bf, type: 3}
