@@ -8,7 +8,7 @@ public class PlayerVFXManager : MonoBehaviour
     [SerializeField] private ParticleSystem BounceSparkVFX;
     public void BounceSpark()
     {
-        BounceSparkVFX.Clear();
+        // BounceSparkVFX.Clear();
         BounceSparkVFX.Play();
     }
 }

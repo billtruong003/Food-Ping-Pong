@@ -15,6 +15,7 @@ MonoBehaviour:
   DishesInformation:
   - Food: Kimbap
     FoodSpritePath: Food/Kimbap
+    Money: 200
     Descriptions: KOREAN SEAWEED RICE ROLLS
     Recipes:
     - RawMaterialName: Rice
@@ -31,6 +32,7 @@ MonoBehaviour:
       fillings; this very classic version is a great place to start.
   - Food: Kimchi
     FoodSpritePath: Food/Kimchi
+    Money: 200
     Descriptions: NAPA CABBAGE KIMCHI
     Recipes:
     - RawMaterialName: Cabbage
@@ -48,6 +50,7 @@ MonoBehaviour:
       kimchi at home."
   - Food: 'Tteokbokki '
     FoodSpritePath: 'Food/Tteokbokki '
+    Money: 200
     Descriptions: SPICY STIR-FRIED RICE CAKES
     Recipes:
     - RawMaterialName: Rice
@@ -64,6 +67,7 @@ MonoBehaviour:
       slightly sweet, and chewy rice cakes are simply addictive!
   - Food: Bibimbap
     FoodSpritePath: Food/Bibimbap
+    Money: 200
     Descriptions: KOREAN RICE WITH MIXED VEGETABLES
     Recipes:
     - RawMaterialName: Rice
@@ -80,6 +84,7 @@ MonoBehaviour:
       gochujang sauce! You can omit the meat and egg for vegetarian or vegan bibimbap.
   - Food: Tempura
     FoodSpritePath: Food/Tempura
+    Money: 200
     Descriptions: JAPANESE FOOD LIGHTLY BATTERED AND DEEP FRIED
     Recipes:
     - RawMaterialName: Egg
@@ -97,6 +102,7 @@ MonoBehaviour:
       crunch
   - Food: Onigiri
     FoodSpritePath: Food/Onigiri
+    Money: 200
     Descriptions: JAPANESE RICE BALL SNACK
     Recipes:
     - RawMaterialName: Rice
@@ -114,6 +120,7 @@ MonoBehaviour:
       to use up leftover ingredients.
   - Food: Ramen
     FoodSpritePath: Food/Ramen
+    Money: 200
     Descriptions: JAPANESE FAVORITE YELLOW NOODLES
     Recipes:
     - RawMaterialName: Flour
@@ -132,6 +139,7 @@ MonoBehaviour:
       sub-culture of scavenger-hunt ramen shop tours and enthusiastic slurping.
   - Food: Pho
     FoodSpritePath: Food/Pho
+    Money: 200
     Descriptions: VIETNAMESE FAVORITE BEEF NOODLES SOUP
     Recipes:
     - RawMaterialName: Rice
@@ -148,6 +156,7 @@ MonoBehaviour:
       with this easy to follow traditional Vietnamese Pho recipe!
   - Food: Banh Mi
     FoodSpritePath: Food/Banh Mi
+    Money: 200
     Descriptions: VIETNAMESE FAVORITE FILLED SANDWICH ( NOT BREAD)
     Recipes:
     - RawMaterialName: Flour
@@ -165,6 +174,7 @@ MonoBehaviour:
       all in a handy handful."
   - Food: Banh Xeo
     FoodSpritePath: Food/Banh Xeo
+    Money: 200
     Descriptions: VIETNAMESE SIZZLING CRISPY AND SAVORY CREPES
     Recipes:
     - RawMaterialName: Flour
@@ -182,6 +192,7 @@ MonoBehaviour:
       pork and shrimp, and sprinklings of mung bean, onions and bean sprouts."
   - Food: Goi Cuon
     FoodSpritePath: Food/Goi Cuon
+    Money: 200
     Descriptions: VIETNAMESE FRESH SPRING ROLLS
     Recipes:
     - RawMaterialName: Rice
@@ -199,6 +210,7 @@ MonoBehaviour:
       together with a super flavorful hoisin and peanut dipping sauce."
   - Food: Pizza
     FoodSpritePath: Food/Pizza
+    Money: 200
     Descriptions: ITALIAN'S BEST DISH OF ALL THE TIME
     Recipes:
     - RawMaterialName: Flour
@@ -216,6 +228,7 @@ MonoBehaviour:
       to go! It yields a soft, chewy crust.
   - Food: Salad
     FoodSpritePath: Food/Salad
+    Money: 200
     Descriptions: EVERY VEGETARIAN'S FRIEND WITH BENEFIT
     Recipes:
     - RawMaterialName: Cabbage
@@ -233,6 +246,7 @@ MonoBehaviour:
       about crafting a filling, balanced meal that appeals to your tastes.
   - Food: Bo Kho
     FoodSpritePath: Food/Bo Kho
+    Money: 200
     Descriptions: VIETNAMESE BRAISED BEEF STEW WITH RICE
     Recipes:
     - RawMaterialName: Rice
@@ -250,6 +264,7 @@ MonoBehaviour:
       rice noodles or a freshly baked baguette.
   - Food: Gyoza
     FoodSpritePath: Food/Gyoza
+    Money: 200
     Descriptions: JAPANESE FAVORITE'S DUMPLING
     Recipes:
     - RawMaterialName: Flour
@@ -268,6 +283,7 @@ MonoBehaviour:
       at festivals.
   - Food: Banh Bao
     FoodSpritePath: Food/Banh Bao
+    Money: 200
     Descriptions: VIETNAMESE'S FAVORITE DUMPLING
     Recipes:
     - RawMaterialName: Flour
@@ -286,6 +302,7 @@ MonoBehaviour:
       as day one!"
   - Food: Taco
     FoodSpritePath: Food/Taco
+    Money: 200
     Descriptions: MAKE TACOS AT HOME FOR TACO TUESDAY
     Recipes:
     - RawMaterialName: Flour
@@ -302,6 +319,7 @@ MonoBehaviour:
       right at home! Top with onion, cilantro + fresh lime juice! SO GOOD!
   - Food: Hamburger
     FoodSpritePath: Food/Hamburger
+    Money: 200
     Descriptions: EVERYBODY LOVE HAMBURGER!!!
     Recipes:
     - RawMaterialName: Flour

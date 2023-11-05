@@ -2953,7 +2953,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 802639396}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -3987,7 +3987,7 @@ MonoBehaviour:
   m_currentState: 2
   pickUpSpawner: {fileID: 1102799843}
   gameConfig: {fileID: 11400000, guid: 46dd6aad68ad1444ab18e33a85118521, type: 2}
-  m_player: 1
+  m_player: 3
   SpawnPos: {fileID: 136535311}
   timeSpawn: 0
   Player: {fileID: 0}
@@ -6551,8 +6551,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1294834087}
-  - {fileID: 368814900}
   - {fileID: 1416396257}
+  - {fileID: 368814900}
   m_Father: {fileID: 631477760}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17334,7 +17334,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 802639396}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20665,6 +20665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 589ccbeadcafaa045a1a3cc05a1bfb4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  money: {fileID: 0}
 --- !u!1 &1764689481
 GameObject:
   m_ObjectHideFlags: 0

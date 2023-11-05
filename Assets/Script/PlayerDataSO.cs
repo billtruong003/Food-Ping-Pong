@@ -20,6 +20,10 @@ public class PlayerDataSO : ScriptableObject
         formattedMoney = formattedMoney.Replace(",", ".");
         return $"{formattedMoney}VND";
     }
+    public void SetWeap(WeapID weap)
+    {
+        unlockedWeapons.Add(weap);
+    }
 
 
 }

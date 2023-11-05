@@ -98,6 +98,7 @@ public class Meal
     public string Food;
     public string FoodSpritePath;
     [Header("Infomation")]
+    public int Money;
     [TextArea]
     public string Descriptions;
 
