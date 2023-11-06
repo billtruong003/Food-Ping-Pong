@@ -311,7 +311,7 @@ MonoBehaviour:
   shootForce: 10
   state: 0
   directionPointer: {fileID: 8724852412957165108}
-  rotateLook: {x: 0, y: 0, z: 0}
+  currentMouseWorldPos: {x: 0, y: 0, z: 0}
   rotateToLookAt: {x: 0, y: 0, z: 0}
   line: {fileID: 0}
   canDrag: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473dc0ee9f374f44f9c3e02bcfcce2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bouncinessFriction: 0.8
+  bouncinessFriction: 0.698
   VFXManager: {fileID: 0}
 --- !u!114 &8724852412609532781
 MonoBehaviour:

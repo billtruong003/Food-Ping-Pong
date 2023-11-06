@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using NaughtyAttributes;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -148,6 +147,7 @@ public class LevelManager : MonoBehaviour
         GameObject order = Instantiate(orderItem, orderContainer);
         RecipeInfo MealInfo = order.GetComponent<RecipeInfo>();
         MealInfo.SetMealInfo(meal);
+        UIManager.Instance.NoticeCookShow();
         InitTurn();
     }
 }

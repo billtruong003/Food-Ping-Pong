@@ -54,6 +54,7 @@ public class PickUpItem : MonoBehaviour
         if (triggerPickUp)
             return;
         UIManager.Instance.CheckInventory(materialName);
+        UIManager.Instance.PopPickUp(matSprite.sprite);
         StartCoroutine(PickUp());
         triggerPickUp = true;
     }

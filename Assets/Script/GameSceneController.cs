@@ -20,6 +20,11 @@ public class GameSceneController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void Start()
+    {
+        Application.targetFrameRate = 120;
+        QualitySettings.vSyncCount = 0;
+    }
     public void LoadScene(sceneName scene)
     {
         string sceneLoad = GetSceneName(scene);

@@ -311,7 +311,7 @@ MonoBehaviour:
   shootForce: 10
   state: 0
   directionPointer: {fileID: 8724852412957165108}
-  rotateLook: {x: 0, y: 0, z: 0}
+  currentMouseWorldPos: {x: 0, y: 0, z: 0}
   rotateToLookAt: {x: 0, y: 0, z: 0}
   line: {fileID: 0}
   canDrag: 0

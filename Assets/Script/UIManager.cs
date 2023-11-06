@@ -20,7 +20,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameOver gameOver;
 
     [SerializeField] private GameObject popUpText;
+    [SerializeField] private GameObject popUpPickUp;
     [SerializeField] private Transform popUpTxtContainer;
+    [SerializeField] private Transform noticeCook;
+
     private readonly int uiLayer = 5;
     private bool isHoverUI;
 
@@ -74,7 +77,22 @@ public class UIManager : MonoBehaviour
         string description = MainManager.Instance.GetDescriptionMaterial(matInfo.MatName);
         matInfo.ShowInfo(description);
     }
-
+    public void PopPickUp(Sprite icon, string txt = "+1")
+    {
+        StartCoroutine(Cor_PopUpPickUp(icon, txt));
+    }
+    public IEnumerator Cor_PopUpPickUp(Sprite icon, string txt)
+    {
+        GameObject pickUpPlus = Instantiate(popUpPickUp, popUpTxtContainer);
+        Image InfoText = pickUpPlus.GetComponentInChildren<Image>();
+        InfoText.sprite = icon;
+        yield return new WaitForSeconds(2);
+        Destroy(pickUpPlus);
+    }
+    public void NoticeCookShow()
+    {
+        noticeCook.gameObject.SetActive(true);
+    }
     public void CheckInventory(string matName)
     {
         foreach (Transform slot in inventorySlot)

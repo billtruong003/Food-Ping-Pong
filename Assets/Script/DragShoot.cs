@@ -18,7 +18,7 @@ public class DragShoot : MonoBehaviour
     [SerializeField] private dragState state = dragState.NONE;
     [Header("Rotate")]
     [SerializeField] private GameObject directionPointer;
-    [SerializeField] private Vector3 rotateLook;
+    [SerializeField] private Vector3 currentMouseWorldPos;
     [SerializeField] private Vector3 rotateToLookAt;
     [Header("Draw")]
     [SerializeField] private LineRenderer line;
@@ -62,38 +62,43 @@ public class DragShoot : MonoBehaviour
 
     private void RotateToRightDir()
     {
-        if (!canDrag || UIManager.Instance.IsPointerOverUIElement())
+        if (!canDrag)
             return;
         if (Input.GetMouseButton(0) && state == dragState.CAN_DRAG)
         {
+            if (UIManager.Instance.IsPointerOverUIElement())
+                return;
             if (!directionPointer.activeInHierarchy)
                 directionPointer.SetActive(true);
 
             mousePosition = Input.mousePosition;
             mousePosition.z = transform.position.z - Camera.main.transform.position.z;
 
-            rotateLook = Camera.main.ScreenToWorldPoint(mousePosition);
+            currentMouseWorldPos = Camera.main.ScreenToWorldPoint(mousePosition);
 
-            Vector3 direction = rotateLook - transform.position;
+            Vector3 direction = (currentMouseWorldPos - dragStartPosition).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
             line.enabled = true;
 
-            float lengthLine = Vector3.Distance(transform.position, rotateLook);
+            float lengthLine = Vector3.Distance(dragStartPosition, currentMouseWorldPos);
 
             line.SetPosition(0, transform.position);
             if (lengthLine > maxDragDistance)
             {
-                Vector3 dir = (rotateLook - transform.position).normalized;
-                Vector3 newPoint = (transform.position + dir * maxDragDistance);
-
+                Vector3 dir = (currentMouseWorldPos - dragStartPosition).normalized;
+                Vector3 newPoint = (dir * maxDragDistance) + transform.position;
+                Debug.Log(newPoint);
                 line.SetPosition(1, newPoint);
             }
             else
             {
-                line.SetPosition(1, rotateLook);
+                Vector3 dir = (currentMouseWorldPos - dragStartPosition).normalized;
+                Vector3 newPoint = (dir * maxDragDistance) + transform.position;
+                Debug.Log(newPoint);
+                line.SetPosition(1, newPoint);
             }
 
         }
@@ -115,32 +120,37 @@ public class DragShoot : MonoBehaviour
             dragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             Debug.Log(dragStartPosition);
+            StartCoroutine(Shoot());
         }
 
-        if (Input.GetMouseButtonUp(0) && isDragging)
-        {
-            line.enabled = false;
 
-            // Kết thúc kéo và bắn
-            isDragging = false;
-            dragEndPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            line.SetPosition(1, new Vector3(dragEndPosition.x, dragEndPosition.y));
-            playerPosition = transform.position;
-            // Tính toán hướng bắn
-            Vector2 shootDirection = (playerPosition - dragEndPosition).normalized;
+    }
+    private IEnumerator Shoot()
+    {
+        yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
 
-            // Tính toán lực bắn
-            float dragDistance = Vector2.Distance(dragStartPosition, dragEndPosition);
-            float clampedDragDistance = Mathf.Clamp(dragDistance, 0, maxDragDistance);
-            float force = clampedDragDistance * shootForce;
+        line.enabled = false;
 
-            // Áp dụng lực bắn
-            rb.velocity = shootDirection * force;
+        // Kết thúc kéo và bắn
+        isDragging = false;
+        dragEndPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        line.SetPosition(1, new Vector3(dragEndPosition.x, dragEndPosition.y));
+        playerPosition = transform.position;
+        // Tính toán hướng bắn
+        Vector2 shootDirection = (dragStartPosition - dragEndPosition).normalized;
 
-            state = dragState.CANT_DRAG;
-            Debug.Log(clampedDragDistance);
-            StartCoroutine(Ready());
-        }
+        // Tính toán lực bắn
+        float dragDistance = Vector2.Distance(dragStartPosition, dragEndPosition);
+        float clampedDragDistance = Mathf.Clamp(dragDistance, 0, maxDragDistance);
+        float force = clampedDragDistance * shootForce;
+
+        // Áp dụng lực bắn
+        rb.velocity = shootDirection * force;
+
+        state = dragState.CANT_DRAG;
+        Debug.Log(clampedDragDistance);
+        StartCoroutine(Ready());
+
     }
 
     private IEnumerator Ready()
@@ -149,9 +159,9 @@ public class DragShoot : MonoBehaviour
         yield return new WaitForSeconds(1);
         yield return new WaitUntil(() => (rb.velocity.magnitude < 1.5f));
 
-        while (rb.velocity.magnitude > 0.4f) // Kiểm tra nếu tốc độ còn đủ lớn để giảm dần
+        while (rb.velocity.magnitude > 0.5f)
         {
-            rb.velocity = rb.velocity * 0.5f; // Giảm dần tốc độ
+            rb.velocity = rb.velocity * 0.5f;
             yield return new WaitForSeconds(0.3f);
             yield return null;
         }
