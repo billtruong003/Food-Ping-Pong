@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -36,6 +37,10 @@ public class RecipeInfo : MonoBehaviour
 
         mealIMG.sprite = mealInfo.GetFoodIcon();
         foodName.text = mealName;
+    }
+    public int GetPrice()
+    {
+        return mealInfo.Money;
     }
     public void ShowDescription()
     {

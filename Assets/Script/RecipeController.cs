@@ -28,9 +28,25 @@ public class RecipeController : MonoBehaviour
 
     public void Cook()
     {
+        RecipeInfo recipeInfo = cookItem.GetComponent<RecipeInfo>();
+        LevelManager.Instance.AddMoney(recipeInfo.GetPrice());
         LevelManager.Instance.PlusTurn();
-        LevelManager.Instance.CookApply(lstMaterial);
+        LevelManager.Instance.CookApply(ProcessListString());
         Destroy(cookItem);
+    }
+    public List<string> ProcessListString()
+    {
+        int multiplier = (int)((LevelManager.Instance.GetGameTurn() / 20) + 1);
+        List<string> multipliedList = new List<string>();
+
+        foreach (string item in lstMaterial)
+        {
+            for (int i = 0; i < multiplier; i++)
+            {
+                multipliedList.Add(item);
+            }
+        }
+        return multipliedList;
     }
 
     public void ResetCookInfo()

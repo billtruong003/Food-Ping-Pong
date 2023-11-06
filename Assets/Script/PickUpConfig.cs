@@ -173,7 +173,7 @@ public class Meal
         public void UpdateItemHas(int itemInInventory)
         {
             itemHas = itemInInventory;
-            if (itemHas >= ItemContains)
+            if (itemHas >= (ItemContains * CalculateItemNeed()))
             {
                 UpdateCanCook(true);
                 return;
@@ -198,7 +198,11 @@ public class Meal
         }
         public string GetItemCount()
         {
-            return $"{itemHas}/{ItemContains}";
+            return $"{itemHas}/{ItemContains * CalculateItemNeed()}";
+        }
+        public int CalculateItemNeed()
+        {
+            return (int)((LevelManager.Instance.GetGameTurn() / 20) + 1);
         }
     }
     [Serializable]

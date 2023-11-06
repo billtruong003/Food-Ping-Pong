@@ -18,6 +18,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private int weaponTurn;
     [SerializeField] private int playerTurnLeft;
     [SerializeField] private int gameTurn = 1;
+    [Header("Money")]
+    [SerializeField] private int money;
 
     private void Awake()
     {
@@ -36,6 +38,14 @@ public class LevelManager : MonoBehaviour
         weaponTurn = 3;
         playerTurnLeft = 3;
         UIManager.Instance.SetCountWeaponTurn(playerTurnLeft);
+    }
+    public void AddMoney(int money)
+    {
+        this.money += money;
+    }
+    public int GetMoney()
+    {
+        return this.money;
     }
     public int GetGameTurn()
     {
@@ -123,9 +133,7 @@ public class LevelManager : MonoBehaviour
     public void PlusTurn()
     {
         Debug.Log("Cộng turn");
-        playerTurnLeft++;
-        weaponTurn = 3;
-        UIManager.Instance.ResetWeaponCount();
+        ResetTurn();
         UIManager.Instance.SetCountWeaponTurn(playerTurnLeft);
     }
     public void ResetTurn()

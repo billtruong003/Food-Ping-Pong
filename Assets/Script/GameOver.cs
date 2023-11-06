@@ -17,7 +17,14 @@ public class GameOver : MonoBehaviour
     }
     public void TriggerGameOject()
     {
+        MoneyUpdate(LevelManager.Instance.GetMoney());
         gameObject.SetActive(true);
+        StartCoroutine(SetUpData());
+    }
+    public IEnumerator SetUpData()
+    {
+        yield return new WaitUntil(() => PlayerData.Instance != null);
+        PlayerData.Instance.AddMoney(LevelManager.Instance.GetMoney());
     }
     public void LoadMenu()
     {
