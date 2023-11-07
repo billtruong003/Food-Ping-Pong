@@ -59,7 +59,28 @@ public class DragShoot : MonoBehaviour
             transform.right = -velocityDirection;
         }
     }
+    private void SetLinePull()
+    {
+        line.enabled = true;
 
+        float lengthLine = Vector3.Distance(dragStartPosition, currentMouseWorldPos);
+
+        line.SetPosition(0, transform.position);
+        if (lengthLine > maxDragDistance)
+        {
+            Vector3 dir = (currentMouseWorldPos - dragStartPosition).normalized;
+            Vector2 newPoint = (dir * maxDragDistance) + transform.position;
+            Debug.Log(newPoint);
+            line.SetPosition(1, newPoint);
+        }
+        else
+        {
+            Vector3 dir = (currentMouseWorldPos - dragStartPosition).normalized;
+            Vector2 newPoint = (dir * maxDragDistance) + transform.position;
+            Debug.Log(newPoint);
+            line.SetPosition(1, newPoint);
+        }
+    }
     private void RotateToRightDir()
     {
         if (!canDrag)
