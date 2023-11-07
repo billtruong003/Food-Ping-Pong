@@ -6,11 +6,20 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI money;
-
+    
     private void Start()
     {
         MoneyUpdate();
     }
+    public static MenuController Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
+    private void OnDestroy() {
+        Instance = null;
+    }
+    
     private IEnumerator Cor_MoneyUpdate()
     {
         yield return new WaitUntil(() => PlayerData.Instance != null);
@@ -73,5 +82,4 @@ public class MenuController : MonoBehaviour
                 break;
         }
     }
-
 }

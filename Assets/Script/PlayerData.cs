@@ -6,6 +6,13 @@ using NaughtyAttributes;
 public class PlayerData : MonoBehaviour
 {
     public static PlayerData Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
+    private void OnDestroy() {
+        Instance = null;
+    }
     [SerializeField] private PlayerDataSO playerData;
 
     public void AddMoney(int money)
@@ -15,17 +22,5 @@ public class PlayerData : MonoBehaviour
     public string GetMoney()
     {
         return playerData.GetMoney();
-    }
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 }

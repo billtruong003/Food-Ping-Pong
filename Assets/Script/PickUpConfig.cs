@@ -11,7 +11,7 @@ public class PickUpConfig : ScriptableObject
     [SerializeField] public List<RawMaterial> RawMaterials;
     [SerializeField] public List<Obstacle> Obstacles;
     [SerializeField] public List<Weapon> Weapons;
-    private const string pickUpPath = "Pickup";
+    private const string pickUpPath = "Food/Pickup";
     private const string WeapPath = "Weapon/";
     private const string MatPath = "RawMaterial/";
     private const string Food = "Food/";
@@ -62,14 +62,6 @@ public class PickUpConfig : ScriptableObject
             weapon.WeaponPath = WeapPath + weapon.WeaponName;
         }
     }
-    [Button]
-    private void FillFoodPath()
-    {
-        foreach (var meal in DishesInformation)
-        {
-            meal.FoodSpritePath = Food + meal.Food;
-        }
-    }
 
     public int GetRandomPickUp()
     {
@@ -96,7 +88,7 @@ public class Meal
 {
     [Header("Food")]
     public string Food;
-    public string FoodSpritePath;
+    public Sprite FoodSprite;
     [Header("Infomation")]
     public int Money;
     [TextArea]
@@ -107,8 +99,7 @@ public class Meal
     public string NoticeInfo = "";
     public Sprite GetFoodIcon()
     {
-        Sprite MealSprite = Resources.Load<Sprite>(FoodSpritePath);
-        return MealSprite;
+        return FoodSprite;
     }
     public int GetNumRecipes()
     {

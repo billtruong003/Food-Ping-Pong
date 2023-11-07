@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DishesInformation:
   - Food: Kimbap
-    FoodSpritePath: Food/Kimbap
+    FoodSprite: {fileID: 1121571035, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: KOREAN SEAWEED RICE ROLLS
     Recipes:
@@ -31,7 +31,7 @@ MonoBehaviour:
     NoticeInfo: Kimbap, one of Korea's most popular snacks, can have all sorts of
       fillings; this very classic version is a great place to start.
   - Food: Kimchi
-    FoodSpritePath: Food/Kimchi
+    FoodSprite: {fileID: 922537784, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: NAPA CABBAGE KIMCHI
     Recipes:
@@ -49,7 +49,7 @@ MonoBehaviour:
       small batch recipe, you\u2019ll find it not that difficult to make good authentic
       kimchi at home."
   - Food: 'Tteokbokki '
-    FoodSpritePath: 'Food/Tteokbokki '
+    FoodSprite: {fileID: 1945050220, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: SPICY STIR-FRIED RICE CAKES
     Recipes:
@@ -66,7 +66,7 @@ MonoBehaviour:
     NoticeInfo: You can make it at home with this easy tteokbokki recipe. The spicy,
       slightly sweet, and chewy rice cakes are simply addictive!
   - Food: Bibimbap
-    FoodSpritePath: Food/Bibimbap
+    FoodSprite: {fileID: -454065370, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: KOREAN RICE WITH MIXED VEGETABLES
     Recipes:
@@ -83,7 +83,7 @@ MonoBehaviour:
     NoticeInfo: A wholesome rice bowl of classic bibimbap vegetables, beef and a
       gochujang sauce! You can omit the meat and egg for vegetarian or vegan bibimbap.
   - Food: Tempura
-    FoodSpritePath: Food/Tempura
+    FoodSprite: {fileID: 1506584666, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: JAPANESE FOOD LIGHTLY BATTERED AND DEEP FRIED
     Recipes:
@@ -101,7 +101,7 @@ MonoBehaviour:
       and fragrant shiso leaves get dunked in batter and deep-fried to light, irresistible
       crunch
   - Food: Onigiri
-    FoodSpritePath: Food/Onigiri
+    FoodSprite: {fileID: -924680071, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: JAPANESE RICE BALL SNACK
     Recipes:
@@ -119,7 +119,7 @@ MonoBehaviour:
       they are so easy to adapt to your own flavour combinations, and a great way
       to use up leftover ingredients.
   - Food: Ramen
-    FoodSpritePath: Food/Ramen
+    FoodSprite: {fileID: -2078301651, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: JAPANESE FAVORITE YELLOW NOODLES
     Recipes:
@@ -138,7 +138,7 @@ MonoBehaviour:
       latch-key kids and college students, but they also grew to a burgeoning restaurant
       sub-culture of scavenger-hunt ramen shop tours and enthusiastic slurping.
   - Food: Pho
-    FoodSpritePath: Food/Pho
+    FoodSprite: {fileID: -141580880, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: VIETNAMESE FAVORITE BEEF NOODLES SOUP
     Recipes:
@@ -155,7 +155,7 @@ MonoBehaviour:
     NoticeInfo: Experience the magic of one of the greatest noodle soups in the world
       with this easy to follow traditional Vietnamese Pho recipe!
   - Food: Banh Mi
-    FoodSpritePath: Food/Banh Mi
+    FoodSprite: {fileID: -339454838, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: VIETNAMESE FAVORITE FILLED SANDWICH ( NOT BREAD)
     Recipes:
@@ -173,7 +173,7 @@ MonoBehaviour:
       cross-cultural pollination and conflict, crunch and squish, fire and fragrance
       all in a handy handful."
   - Food: Banh Xeo
-    FoodSpritePath: Food/Banh Xeo
+    FoodSprite: {fileID: -1808663012, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: VIETNAMESE SIZZLING CRISPY AND SAVORY CREPES
     Recipes:
@@ -191,7 +191,7 @@ MonoBehaviour:
       crust. And the inside of the b\xE1nh x\xE8o is filled with delicious flavors:
       pork and shrimp, and sprinklings of mung bean, onions and bean sprouts."
   - Food: Goi Cuon
-    FoodSpritePath: Food/Goi Cuon
+    FoodSprite: {fileID: -708853900, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: VIETNAMESE FRESH SPRING ROLLS
     Recipes:
@@ -209,7 +209,7 @@ MonoBehaviour:
       is full of fresh veggies, herbs, soft slices of pork, and shrimp all brought
       together with a super flavorful hoisin and peanut dipping sauce."
   - Food: Pizza
-    FoodSpritePath: Food/Pizza
+    FoodSprite: {fileID: -1670371237, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: ITALIAN'S BEST DISH OF ALL THE TIME
     Recipes:
@@ -227,7 +227,7 @@ MonoBehaviour:
       to rise. You just mix it and allow it to rest for 5 minutes and then it's ready
       to go! It yields a soft, chewy crust.
   - Food: Salad
-    FoodSpritePath: Food/Salad
+    FoodSprite: {fileID: 0}
     Money: 200
     Descriptions: EVERY VEGETARIAN'S FRIEND WITH BENEFIT
     Recipes:
@@ -245,7 +245,7 @@ MonoBehaviour:
       and nutrient-dense ingredients. Building the best salad for you means thinking
       about crafting a filling, balanced meal that appeals to your tastes.
   - Food: Bo Kho
-    FoodSpritePath: Food/Bo Kho
+    FoodSprite: {fileID: 0}
     Money: 200
     Descriptions: VIETNAMESE BRAISED BEEF STEW WITH RICE
     Recipes:
@@ -263,7 +263,7 @@ MonoBehaviour:
       If you wish, include turnips or daikon radish or potatoes. Serve it with rice,
       rice noodles or a freshly baked baguette.
   - Food: Gyoza
-    FoodSpritePath: Food/Gyoza
+    FoodSprite: {fileID: 1950536377, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: JAPANESE FAVORITE'S DUMPLING
     Recipes:
@@ -282,7 +282,7 @@ MonoBehaviour:
       being served at specialty shops, izakaya, ramen shops, grocery stores or even
       at festivals.
   - Food: Banh Bao
-    FoodSpritePath: Food/Banh Bao
+    FoodSprite: {fileID: -1901935703, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: VIETNAMESE'S FAVORITE DUMPLING
     Recipes:
@@ -301,7 +301,7 @@ MonoBehaviour:
       love how easily they reheat. The best part? Each one still tastes just as amazing
       as day one!"
   - Food: Taco
-    FoodSpritePath: Food/Taco
+    FoodSprite: {fileID: 396774221, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: MAKE TACOS AT HOME FOR TACO TUESDAY
     Recipes:
@@ -318,7 +318,7 @@ MonoBehaviour:
     NoticeInfo: Easy, quick, authentic carne asada street tacos you can now make
       right at home! Top with onion, cilantro + fresh lime juice! SO GOOD!
   - Food: Hamburger
-    FoodSpritePath: Food/Hamburger
+    FoodSprite: {fileID: -1095996311, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
     Money: 200
     Descriptions: EVERYBODY LOVE HAMBURGER!!!
     Recipes:
@@ -338,49 +338,49 @@ MonoBehaviour:
   RawMaterials:
   - RawMaterialName: Rice
     Description: Farmer's friends in the dark age
-    RawMaterials: {fileID: -613816139, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+    RawMaterials: {fileID: 800123, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Salt
     Description: Salty but good
-    RawMaterials: {fileID: 1841629188, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+    RawMaterials: {fileID: -755070313, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Seaweed
     Description: Weed under the sea~~~
-    RawMaterials: {fileID: 979838927, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+    RawMaterials: {fileID: -529445326, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Cabbage
     Description: It's salad ti... Wait, do you evenly eat this??
-    RawMaterials: {fileID: -335141842, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+    RawMaterials: {fileID: 1428104196, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Flour
     Description: Somebody said "Banh Mi"???
-    RawMaterials: {fileID: 978586216, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+    RawMaterials: {fileID: -1390232295, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Beef
     Description: Moooooooooo~~~
-    RawMaterials: {fileID: -413980820, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+    RawMaterials: {fileID: 905663790, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Pork
     Description: Oink-Oink-Oink...
-    RawMaterials: {fileID: -2099908997, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+    RawMaterials: {fileID: 1584260138, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Egg
     Description: Too much protein
-    RawMaterials: {fileID: 21300000, guid: 9eaa6d95a1d94ed41866b52732c3f08b, type: 3}
+    RawMaterials: {fileID: -1455250956, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Carrot
     Description: Vegetables but NOT GREEN
-    RawMaterials: {fileID: 478441648, guid: 2d097ced2bdcc7442bf7a9f5c844fb98, type: 3}
+    RawMaterials: {fileID: -189127784, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Pepper
     Description: Spicy Ingredient For Spicy Foods
-    RawMaterials: {fileID: 21300000, guid: 0699585d82b9b5f49bee6abb309077c4, type: 3}
+    RawMaterials: {fileID: -323893998, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Sauce
     Description: Fish sauce, soy bean,.etc.
-    RawMaterials: {fileID: 21300000, guid: 878a86235aa94024ebe99557efe97bbb, type: 3}
+    RawMaterials: {fileID: 460876377, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Cheese
     Description: It's PIZZA TIME
-    RawMaterials: {fileID: 21300000, guid: 31ce55c2474361d4fab07984f18f9145, type: 3}
+    RawMaterials: {fileID: 1602793426, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Shrimp
     Description: Yummy seafood
-    RawMaterials: {fileID: 21300000, guid: 124f35aff40297349ab8c605a1dbfec6, type: 3}
+    RawMaterials: {fileID: -870695767, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Mushroom
     Description: SAFE to eat
-    RawMaterials: {fileID: 21300000, guid: e56cefabf3fb3464890aeadfcaa3f7f3, type: 3}
+    RawMaterials: {fileID: -414250109, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   - RawMaterialName: Onion
     Description: I'm NOT CRYING
-    RawMaterials: {fileID: 21300000, guid: 8fdcf9a56ea7d8a4fb2f76292efe48bf, type: 3}
+    RawMaterials: {fileID: -1320833547, guid: 2bb54c5947c761746bbf20b48663358c, type: 3}
   Obstacles:
   - ObstacleName: 
     ObstaclesPath: 
