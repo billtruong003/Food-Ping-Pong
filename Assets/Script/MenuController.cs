@@ -14,7 +14,6 @@ public class MenuController : MonoBehaviour
     private IEnumerator Cor_MoneyUpdate()
     {
         yield return new WaitUntil(() => PlayerData.Instance != null);
-        Debug.Log(PlayerData.Instance.GetMoney());
         money.text = PlayerData.Instance.GetMoney();
     }
     private void MoneyUpdate()

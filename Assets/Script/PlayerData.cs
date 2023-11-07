@@ -12,9 +12,37 @@ public class PlayerData : MonoBehaviour
     {
         playerData.AddMoney(money);
     }
+    public int GetMoneyInt()
+    {
+        return playerData.GetMoneyInt();
+    }
+    public void DecreaseMoney(int money)
+    {
+        playerData.DecreaseMoney(money);
+    }
     public string GetMoney()
     {
         return playerData.GetMoney();
+    }
+    public WeapID GetWeapInUse()
+    {
+        return playerData.GetPickedWeap();
+    }
+    public void SetWeapUse(WeapID id)
+    {
+        playerData.SetWeapUse(id);
+    }
+    public List<WeapID> GetWeapUnlocked()
+    {
+        return playerData.GetUnlockWeap();
+    }
+    public void unlockItem(WeapID weap)
+    {
+        playerData.UnlockWeap(weap);
+    }
+    public void ResetData()
+    {
+        playerData.ResetData();
     }
     private void Awake()
     {

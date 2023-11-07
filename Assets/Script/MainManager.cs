@@ -76,7 +76,13 @@ public class MainManager : MonoBehaviour
 
     private void SpawnPlayer()
     {
-        GameObject WeapPrefab = gameConfig.GetWeapon(m_player);
+        StartCoroutine(Cor_SpawnPlayer());
+    }
+    public IEnumerator Cor_SpawnPlayer()
+    {
+        yield return new WaitUntil(() => PlayerData.Instance != null);
+        WeapID playerID = PlayerData.Instance.GetWeapInUse();
+        GameObject WeapPrefab = gameConfig.GetWeapon(playerID);
         Player = Instantiate(WeapPrefab, SpawnPos);
         Player.transform.localPosition = Vector3.zero;
         StartCoroutine(GameStart());

@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb9377056f264074088cc49c4f6ab1ec, type: 3}
+  m_Name: ShopWeap
+  m_EditorClassIdentifier: 
+  shopItems:
+  - name: DIRK
+    price: OWNED
+    rarity: 1
+    weapID: 0
+    itemImg: {fileID: 21300000, guid: c12eb48e52bec2149a5ed6e75711356a, type: 2}
+  - name: ROLLING PIN
+    price: 10000
+    rarity: 2
+    weapID: 1
+    itemImg: {fileID: 21300000, guid: 1b612590722c8dd47a6ce10a6531ba56, type: 3}
+  - name: SCISSOR
+    price: 15000
+    rarity: 2
+    weapID: 2
+    itemImg: {fileID: 21300000, guid: 154554736f34ec64e91a5f332c63a072, type: 3}
+  - name: FRY PAN
+    price: 30000
+    rarity: 2
+    weapID: 3
+    itemImg: {fileID: 21300000, guid: 60c8b2ea5c66534499aa11157d1df073, type: 3}
+  - name: Spatula
+    price: 40000
+    rarity: 3
+    weapID: 4
+    itemImg: {fileID: 21300000, guid: 1ffa5fceaf82b8646b21929c46b519d3, type: 3}
+  - name: SAW BLADE SWORD
+    price: 50000
+    rarity: 3
+    weapID: 5
+    itemImg: {fileID: 21300000, guid: a0315bf0ef9d2524fbf96c5cdef582bc, type: 2}
+  - name: HOLY SWORD
+    price: 100000
+    rarity: 4
+    weapID: 6
+    itemImg: {fileID: 21300000, guid: c7cf8b96216bb45438b2f1744a4feda3, type: 2}
+  - name: FLAME BLADE
+    price: 100000
+    rarity: 4
+    weapID: 7
+    itemImg: {fileID: 21300000, guid: 963260852a633ad43ac7648fe4b5f57c, type: 2}
+  - name: CREDIT CARD
+    price: 300000
+    rarity: 0
+    weapID: 8
+    itemImg: {fileID: 21300000, guid: 8b07428cfdcad3d46ae1e6c1a4ae3ed3, type: 3}
+  unique:
+  - {r: 0.12954044, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0.53949636, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0.7129016, a: 1}
+  - {r: 1, g: 0.95137095, b: 0, a: 1}
+  normal: {r: 0.34420612, g: 0.40781853, b: 0.8584906, a: 1}
+  rare: {r: 0.5855404, g: 0, b: 0.7075472, a: 1}
+  sRare: {r: 1, g: 0.5913095, b: 0.3066038, a: 1}
+  superSRare: {r: 0.6981132, g: 0.034156933, b: 0, a: 1}

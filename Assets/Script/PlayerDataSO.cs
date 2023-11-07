@@ -14,15 +14,42 @@ public class PlayerDataSO : ScriptableObject
     {
         this.money += money;
     }
+    public int GetMoneyInt()
+    {
+        return money;
+    }
+    public void DecreaseMoney(int moneyDec)
+    {
+        money -= moneyDec;
+    }
     public string GetMoney()
     {
         string formattedMoney = money.ToString("N0");
         formattedMoney = formattedMoney.Replace(",", ".");
         return $"{formattedMoney}VND";
     }
-    public void SetWeap(WeapID weap)
+    public void UnlockWeap(WeapID weap)
     {
         unlockedWeapons.Add(weap);
+    }
+    public WeapID GetPickedWeap()
+    {
+        return pickedWeap;
+    }
+    public List<WeapID> GetUnlockWeap()
+    {
+        return unlockedWeapons;
+    }
+    public void SetWeapUse(WeapID weap)
+    {
+        pickedWeap = weap;
+    }
+    public void ResetData()
+    {
+        money = 0;
+        unlockedWeapons.Clear();
+        unlockedWeapons.Add(WeapID.KN001);
+        pickedWeap = WeapID.KN001;
     }
 
 
