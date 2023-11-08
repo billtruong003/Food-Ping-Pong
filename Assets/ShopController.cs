@@ -20,6 +20,32 @@ public class ShopController : MonoBehaviour
     [Button]
     private void UpdateInfoItems()
     {
+        StartCoroutine(UpdateInfo());
+    }
+
+    public void ChangePickedItem(WeapID id, WeapInfo script)
+    {
+        pickedItem.Unlocked();
+        pickedItem = script;
+        PlayerData.Instance.SetWeapUse(id);
+    }
+    private void Start()
+    {
+        UpdateInfoItems();
+    }
+    [Button]
+    private void ClearItem()
+    {
+        if (containerShopItem.childCount == 0)
+            return;
+        foreach (Transform child in containerShopItem)
+        {
+            DestroyImmediate(child.gameObject);
+        }
+    }
+    private IEnumerator UpdateInfo()
+    {
+        yield return new WaitUntil(() => PlayerData.Instance != null);
         for (int i = 0; i < weapConfig.GetItems(); i++)
         {
             int j = weapConfig.GetItems() - (1 + i);
@@ -36,31 +62,5 @@ public class ShopController : MonoBehaviour
             info.SetRareColor(weapConfig.GetColor(item.rarity));
             info.SetShopController(this);
         }
-    }
-    public void ChangePickedItem(WeapID id, WeapInfo script)
-    {
-        pickedItem.Unlocked();
-        pickedItem = script;
-        PlayerData.Instance.SetWeapUse(id);
-
-    }
-    private void Start()
-    {
-        UpdateInfoItems();
-    }
-    [Button]
-    private void ClearItem()
-    {
-        if (containerShopItem.childCount == 0)
-            return;
-        foreach (Transform child in containerShopItem)
-        {
-            DestroyImmediate(child.gameObject);
-        }
-    }
-    private IEnumerator CheckWeapInUse()
-    {
-        yield return new WaitUntil(() => PlayerData.Instance != null);
-
     }
 }

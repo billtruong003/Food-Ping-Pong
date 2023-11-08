@@ -21,11 +21,20 @@ public class MenuController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void Start()
+    {
+        MoneyUpdate();
+    }
 
     private IEnumerator Cor_MoneyUpdate()
     {
         yield return new WaitUntil(() => PlayerData.Instance != null);
-        money.text = PlayerData.Instance.GetMoney();
+
+        if (money != null)
+        {
+            money.text = PlayerData.Instance.GetMoney();
+        }
+
     }
     public void MoneyUpdate()
     {
