@@ -11,6 +11,10 @@ public class PlayerData : MonoBehaviour
     public void AddMoney(int money)
     {
         playerData.AddMoney(money);
+        if (MenuController.Instance != null)
+        {
+            MenuController.Instance.MoneyUpdate();
+        }
     }
     public int GetMoneyInt()
     {
@@ -19,6 +23,10 @@ public class PlayerData : MonoBehaviour
     public void DecreaseMoney(int money)
     {
         playerData.DecreaseMoney(money);
+        if (MenuController.Instance != null)
+        {
+            MenuController.Instance.MoneyUpdate();
+        }
     }
     public string GetMoney()
     {

@@ -1,12 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
+    public static MenuController Instance;
     [SerializeField] private TextMeshProUGUI money;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
     private void Start()
     {
         MoneyUpdate();
@@ -16,7 +26,7 @@ public class MenuController : MonoBehaviour
         yield return new WaitUntil(() => PlayerData.Instance != null);
         money.text = PlayerData.Instance.GetMoney();
     }
-    private void MoneyUpdate()
+    public void MoneyUpdate()
     {
         if (money == null)
         {

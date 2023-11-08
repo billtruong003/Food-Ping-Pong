@@ -145,7 +145,7 @@ public class WeapInfo : MonoBehaviour
             PopUpText();
             yield break;
         }
-
+        PlayerData.Instance.DecreaseMoney(int.Parse(price));
         PlayerData.Instance.unlockItem(idWeap);
         Unlocked();
     }
