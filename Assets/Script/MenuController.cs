@@ -9,18 +9,17 @@ public class MenuController : MonoBehaviour
     public static MenuController Instance;
     [SerializeField] private TextMeshProUGUI money;
 
-
     private void Awake()
     {
-        Instance = this;
-    }
-    private void OnDestroy()
-    {
-        Instance = null;
-    }
-    private void Start()
-    {
-        MoneyUpdate();
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator Cor_MoneyUpdate()
