@@ -10,10 +10,15 @@ public class GameSceneController : MonoBehaviour
     public static GameSceneController Instance;
     private void Awake()
     {
-        Instance = this;
-    }
-    private void OnDestroy() {
-        Instance = null;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     private void Start()
     {

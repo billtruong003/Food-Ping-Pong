@@ -20,19 +20,20 @@ public class SettingManager : MonoBehaviour
     //         Destroy(gameObject);
     //     }
     // }
-    [SerializeField] private TextMeshProUGUI soundVolume;
-    [SerializeField] private Slider sliderVolume;
-    public void ShowNumber (float value)
+    [SerializeField] private TextMeshProUGUI musicValue, soundValue;
+    // [SerializeField] private Slider musicVolume, soundVolume;
+    public void ShowMusic (float value)
     {
-        soundVolume.text = value.ToString() + "%";
-        // sliderVolume.onValueChanged.AddListener(val => SoundManager.Instance.SetVolume(val));
+        musicValue.text = value.ToString() + "%";
+        SoundManager.Instance.SetMusicVol(value);
     }
-    // public void AcceptQuality (int index)
+    public void ShowSound (float value)
+    {
+        soundValue.text = value.ToString() + "%";
+        SoundManager.Instance.SetSoundVol(value);
+    }
+    // public void ChangeMusicVol (float value)
     // {
-    //     // QualitySettings.SetQualityLevel(index);
+    //     SoundManager.Instance.SetMusicVol(value);
     // }
-    public void ChangeVolume (float volume)
-    {
-        SoundManager.Instance.SetVolume(volume);
-    }
 }

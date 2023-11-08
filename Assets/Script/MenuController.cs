@@ -14,10 +14,15 @@ public class MenuController : MonoBehaviour
     public static MenuController Instance;
     private void Awake()
     {
-        Instance = this;
-    }
-    private void OnDestroy() {
-        Instance = null;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     
     private IEnumerator Cor_MoneyUpdate()
