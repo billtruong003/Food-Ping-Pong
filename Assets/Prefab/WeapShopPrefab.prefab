@@ -965,7 +965,7 @@ MonoBehaviour:
   use: {fileID: 7041729359551297645}
   inUse: {fileID: 2339497156410644821}
   textContainer: {fileID: 5737413307374025640}
-  textPopUp: {fileID: 8786643594866472532, guid: 932dac766fc6fbd459e6b02786808d87, type: 3}
+  textPopUp: {fileID: 8786643594866472532, guid: e32c94b33dd115549a8c612f90ddc5d4, type: 3}
   idWeap: 0
   weapIcon: {fileID: 0}
   weaponName: 
