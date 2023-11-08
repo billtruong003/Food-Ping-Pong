@@ -11,13 +11,14 @@ public class BounceCollide : MonoBehaviour
     private float bouncinessFriction;
 
     [SerializeField]
-    private PlayerVFXManager VFXManager;
+    private PlayerVFXManager vFXManager;
     private Vector3 lastVel;
     private Rigidbody2D rb;
+    [SerializeField] private AudioClip wallCollideSound;
 
     void Start()
     {
-        VFXManager = GetComponent<PlayerVFXManager>();
+        vFXManager = GetComponent<PlayerVFXManager>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -29,7 +30,12 @@ public class BounceCollide : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        VFXManager.BounceSpark();
+        if (collision.collider.CompareTag("Wall"))
+        {
+            ShakeCam();
+            SoundManager.Instance.PlayWallCollide(wallCollideSound);
+        }
+        vFXManager.BounceSpark();
         float speed = lastVel.magnitude;
         var direction = Vector3.Reflect(lastVel.normalized, collision.contacts[0].normal);
         Debug.Log(speed);
@@ -41,9 +47,14 @@ public class BounceCollide : MonoBehaviour
         {
             rb.velocity = direction * Mathf.Min(0, speed);
         }
-        StartCoroutine(StopBall());
     }
-
+    private void ShakeCam()
+    {
+        if (MainManager.Instance != null)
+        {
+            MainManager.Instance.ShakeCamera();
+        }
+    }
     private IEnumerator StopBall()
     {
         yield return new WaitForSeconds(1f);

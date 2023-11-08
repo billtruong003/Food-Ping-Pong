@@ -59,28 +59,7 @@ public class DragShoot : MonoBehaviour
             transform.right = -velocityDirection;
         }
     }
-    private void SetLinePull()
-    {
-        line.enabled = true;
 
-        float lengthLine = Vector3.Distance(dragStartPosition, currentMouseWorldPos);
-
-        line.SetPosition(0, transform.position);
-        if (lengthLine > maxDragDistance)
-        {
-            Vector3 dir = (currentMouseWorldPos - dragStartPosition).normalized;
-            Vector2 newPoint = (dir * maxDragDistance) + transform.position;
-            Debug.Log(newPoint);
-            line.SetPosition(1, newPoint);
-        }
-        else
-        {
-            Vector3 dir = (currentMouseWorldPos - dragStartPosition).normalized;
-            Vector2 newPoint = (dir * maxDragDistance) + transform.position;
-            Debug.Log(newPoint);
-            line.SetPosition(1, newPoint);
-        }
-    }
     private void RotateToRightDir()
     {
         if (!canDrag)
@@ -139,7 +118,7 @@ public class DragShoot : MonoBehaviour
             // Bắt đầu kéo
             isDragging = true;
             dragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+            SoundManager.Instance.PlaySoundEffect(5);
             Debug.Log(dragStartPosition);
             StartCoroutine(Shoot());
         }
@@ -149,7 +128,7 @@ public class DragShoot : MonoBehaviour
     private IEnumerator Shoot()
     {
         yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
-
+        SoundManager.Instance.StopSFX();
         line.enabled = false;
 
         // Kết thúc kéo và bắn

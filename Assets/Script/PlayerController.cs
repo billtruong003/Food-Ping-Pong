@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 boxSize = new Vector2(1.0f, 1.0f);
     public LayerMask targetLayer;
 
+
     public void TriggerAnim(string action)
     {
         if (anim != null)
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
             pickUp.HandlePickUp();
         }
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

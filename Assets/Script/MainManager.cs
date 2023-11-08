@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MilkShake;
 using NaughtyAttributes;
-using Unity.VisualScripting;
 
 public class MainManager : MonoBehaviour
 {
@@ -15,6 +15,10 @@ public class MainManager : MonoBehaviour
     [SerializeField] private int timeSpawn;
     [SerializeField] public GameObject Player;
     [SerializeField] private bool CheatOpen;
+    [SerializeField] private ShakePreset shakeData;
+    private ShakeInstance shakeInstance;
+    private ShakeParameters shakeParameters;
+
     private GameState lastGameState;
     private bool gameOver = false;
 
@@ -31,6 +35,19 @@ public class MainManager : MonoBehaviour
     public bool GetGameOver()
     {
         return gameOver;
+    }
+    public void ShakeCamera()
+    {
+        if (shakeInstance == null)
+        {
+            shakeInstance = Shaker.ShakeAll(shakeData);
+        }
+        else
+        {
+            shakeInstance.Stop(shakeData.FadeOut, true);
+            shakeInstance = null;
+            shakeInstance = Shaker.ShakeAll(shakeData);
+        }
     }
     private void Awake()
     {

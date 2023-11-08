@@ -2,6 +2,7 @@ using System;
 using UnityEngine.Audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class SoundManager : MonoBehaviour
 {
@@ -19,10 +20,10 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public AudioSource[] SoundAudioSources;
-    public AudioSource[] MusicAudioSources;
-    public AudioClip[] SoundAudioClips;
-    public AudioClip[] MusicAudioClips;
+    public List<AudioSource> SoundAudioSources = new List<AudioSource>();
+    public List<AudioSource> MusicAudioSources = new List<AudioSource>();
+    public List<AudioClip> SoundAudioClips = new List<AudioClip>();
+    public List<AudioClip> MusicAudioClips = new List<AudioClip>();
 
     public void PlaySoundEffect(int index)
     {
@@ -32,13 +33,21 @@ public class SoundManager : MonoBehaviour
     {
         MusicAudioSources[0].PlayOneShot(MusicAudioClips[index]);
     }
+    public void PlayWallCollide(AudioClip wallCollide)
+    {
+        SoundAudioSources[0].PlayOneShot(wallCollide);
+    }
+    public void StopSFX()
+    {
+        SoundAudioSources[0].Stop();
+    }
     public void SetMusicVol(float volume)
     {
-        MusicAudioSources[0].volume = volume/100;
+        MusicAudioSources[0].volume = volume / 100;
     }
     public void SetSoundVol(float volume)
     {
-        SoundAudioSources[0].volume = volume/100;
+        SoundAudioSources[0].volume = volume / 100;
     }
     private void Start()
     {

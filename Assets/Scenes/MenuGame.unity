@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 163304160}
   - component: {fileID: 163304161}
   m_Layer: 0
-  m_Name: SoundMusic
+  m_Name: SoundController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,6 +287,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a9b37b6ecb295964cb8428ccb0245dae, type: 3}
   - {fileID: 8300000, guid: bfdc9bc5ade817a40a5caa0b25eb415c, type: 3}
   - {fileID: 8300000, guid: 66fec417a6ef0084183ebf6e63dbdb13, type: 3}
+  - {fileID: 8300000, guid: 347ee7e3995a8db4198372f8bec72192, type: 3}
   MusicAudioClips:
   - {fileID: 8300000, guid: 93f91114544b7514ba05b2d4f49a10db, type: 3}
 --- !u!1 &176168644

@@ -361,6 +361,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 8
+  shakeData: {fileID: 11400000, guid: 768b622b79315604d836149f7e957720, type: 2}
 --- !u!1 &8724852412957165108
 GameObject:
   m_ObjectHideFlags: 0
