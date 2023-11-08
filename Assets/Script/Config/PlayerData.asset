@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29805a66e157eec4e9c4914dd147a6ac, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  pickedWeap: 0
-  money: 0
-  unlockedWeapons: 00000000
+  pickedWeap: 8
+  money: 4199994
+  unlockedWeapons: 

@@ -9,6 +9,7 @@ public class GameSceneController : MonoBehaviour
     public static GameSceneController Instance;
     [SerializeField] private string currentScene;
     public GameObject LoadingScreen;
+    private float lastSoundVol;
     private void Awake()
     {
         if (Instance == null)
@@ -60,11 +61,63 @@ public class GameSceneController : MonoBehaviour
         }
         return currentScene;
     }
+    public void LoadSceneFromString(string scene)
+    {
+        switch (scene)
+        {
+            case ("Menu"):
+                SetMusicVolNorm();
+                LoadScene(sceneName.MENU);
+                break;
+            case ("Weapon"):
+                SetMusicVolNorm();
+                LoadScene(sceneName.WEAPON);
+                break;
+            case ("Gameplay"):
+                SetMusicVolInGame(20);
+                LoadScene(sceneName.GAMEPLAY);
+                break;
+            case ("Gameover"):
+                SetMusicVolNorm();
+                LoadScene(sceneName.GAMEOVER);
+                break;
+            case ("Shop"):
+                SetMusicVolNorm();
+                LoadScene(sceneName.SHOP);
+                break;
+            case ("Setting"):
+                SetMusicVolNorm();
+                LoadScene(sceneName.SETTING);
+                break;
+            case ("Credit"):
+                SetMusicVolNorm();
+                LoadScene(sceneName.CREDIT);
+                break;
+            default:
+                break;
+        }
+    }
     public void ReloadScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
     }
+    public void SetMusicVolInGame(float musicVol)
+    {
+        if (SoundManager.Instance != null)
+        {
+            lastSoundVol = SoundManager.Instance.GetMusicVol();
+            SoundManager.Instance.SetMusicVol(musicVol);
+        }
+    }
+    public void SetMusicVolNorm()
+    {
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.SetMusicVol(lastSoundVol);
+        }
+    }
+
 }
 [Serializable]
 public enum sceneName

@@ -12,15 +12,4 @@ public class CheatScript : MonoBehaviour
     {
         PlayerData.Instance.ResetData();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

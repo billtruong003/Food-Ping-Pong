@@ -140,7 +140,7 @@ public class WeapInfo : MonoBehaviour
     private IEnumerator Cor_BuyItem()
     {
         yield return new WaitUntil(() => PlayerData.Instance != null);
-        if (PlayerData.Instance.GetMoneyInt() < int.Parse(price))
+        if (PlayerData.Instance.GetMoneyInt() <= int.Parse(price))
         {
             PopUpText();
             yield break;

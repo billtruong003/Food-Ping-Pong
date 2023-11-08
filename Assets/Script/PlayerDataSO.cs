@@ -10,17 +10,20 @@ public class PlayerDataSO : ScriptableObject
     public WeapID pickedWeap;
     public int money;
     public List<WeapID> unlockedWeapons;
-    public void AddMoney(int money)
-    {
-        this.money += money;
-    }
+
     public int GetMoneyInt()
     {
         return money;
     }
+    public void AddMoney(int money)
+    {
+        this.money += money;
+        PlayerData.Instance.PrefSaveMoney();
+    }
     public void DecreaseMoney(int moneyDec)
     {
         money -= moneyDec;
+        PlayerData.Instance.PrefSaveMoney();
     }
     public string GetMoney()
     {
@@ -31,6 +34,7 @@ public class PlayerDataSO : ScriptableObject
     public void UnlockWeap(WeapID weap)
     {
         unlockedWeapons.Add(weap);
+        PlayerData.Instance.PrefSaveUnlockWeap();
     }
     public WeapID GetPickedWeap()
     {
@@ -43,7 +47,11 @@ public class PlayerDataSO : ScriptableObject
     public void SetWeapUse(WeapID weap)
     {
         pickedWeap = weap;
+        PlayerData.Instance.PrefSavePickWeap();
     }
+
+
+    [Button]
     public void ResetData()
     {
         money = 0;

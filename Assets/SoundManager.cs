@@ -3,6 +3,7 @@ using UnityEngine.Audio;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using NaughtyAttributes;
 
 public class SoundManager : MonoBehaviour
 {
@@ -48,6 +49,10 @@ public class SoundManager : MonoBehaviour
     public void SetSoundVol(float volume)
     {
         SoundAudioSources[0].volume = volume / 100;
+    }
+    public float GetMusicVol()
+    {
+        return SoundAudioSources[0].volume;
     }
     private void Start()
     {

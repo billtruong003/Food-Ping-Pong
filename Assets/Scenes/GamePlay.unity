@@ -3725,7 +3725,7 @@ MonoBehaviour:
   SpawnPos: {fileID: 136535311}
   timeSpawn: 0
   Player: {fileID: 0}
-  CheatOpen: 1
+  CheatOpen: 0
   shakeData: {fileID: 11400000, guid: 768b622b79315604d836149f7e957720, type: 2}
 --- !u!1 &469932379
 GameObject:
@@ -5114,6 +5114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 630307060}
   - component: {fileID: 630307061}
+  - component: {fileID: 630307062}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -5156,6 +5157,19 @@ MonoBehaviour:
   playerTurnLeft: 0
   gameTurn: 1
   money: 0
+--- !u!114 &630307062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630307059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589ccbeadcafaa045a1a3cc05a1bfb4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: {fileID: 0}
 --- !u!1 &631477759
 GameObject:
   m_ObjectHideFlags: 0
@@ -7094,7 +7108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: {fileID: 10855057}
-  sceneController: {fileID: 0}
+  sceneController: {fileID: 630307062}
 --- !u!1 &878735187
 GameObject:
   m_ObjectHideFlags: 0
