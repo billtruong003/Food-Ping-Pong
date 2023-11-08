@@ -14,6 +14,7 @@ public class MainManager : MonoBehaviour
     [SerializeField] private Transform SpawnPos;
     [SerializeField] private int timeSpawn;
     [SerializeField] public GameObject Player;
+    [SerializeField] private bool CheatOpen;
     private GameState lastGameState;
     private bool gameOver = false;
 
@@ -76,7 +77,17 @@ public class MainManager : MonoBehaviour
 
     private void SpawnPlayer()
     {
-        GameObject WeapPrefab = gameConfig.GetWeapon(m_player);
+        StartCoroutine(Cor_SpawnPlayer());
+    }
+    public IEnumerator Cor_SpawnPlayer()
+    {
+        WeapID playerID = m_player;
+        if (!CheatOpen)
+        {
+            yield return new WaitUntil(() => PlayerData.Instance != null);
+            playerID = PlayerData.Instance.GetWeapInUse();
+        }
+        GameObject WeapPrefab = gameConfig.GetWeapon(playerID);
         Player = Instantiate(WeapPrefab, SpawnPos);
         Player.transform.localPosition = Vector3.zero;
         StartCoroutine(GameStart());
@@ -85,8 +96,7 @@ public class MainManager : MonoBehaviour
     public void SpawnMaterial()
     {
         m_currentState = GameState.RESPAWN_STATE;
-        timeSpawn = Random.Range(2, 5);
-        pickUpSpawner.SpawnPickUp(timeSpawn);
+        pickUpSpawner.SpawnPickUp();
     }
 
     public GameObject GetRawMaterial()

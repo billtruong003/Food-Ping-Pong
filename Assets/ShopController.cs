@@ -1,19 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using AirFishLab.ScrollingList;
+using NaughtyAttributes;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class ShopController : MonoBehaviour
 {
-    [SerializeField] GameObject pickedItem;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private WeapItem weapConfig;
+    [SerializeField] private WeapInfo pickedItem;
+    [SerializeField] private Transform containerShopItem;
+    [SerializeField] private GameObject itemWeap;
+    [SerializeField] private WeapID usingWeap;
+    [SerializeField] private List<WeapID> unlockWeap;
+
+    [Button]
+    private void UpdateInfoItems()
     {
+        for (int i = 0; i < weapConfig.GetItems(); i++)
+        {
+            int j = weapConfig.GetItems() - (1 + i);
+            GameObject items = containerShopItem.GetChild(j).gameObject;
+            items.name = $"item {j}";
+
+            WeapInfo info = items.GetComponent<WeapInfo>();
+            ItemShop item = weapConfig.GetItem(i);
+
+            if (item.weapID == PlayerData.Instance.GetWeapInUse())
+                pickedItem = info;
+
+            info.SetInfo(item.itemImg, item.name, item.rarity.ToString(), item.price, item.weapID);
+            info.SetRareColor(weapConfig.GetColor(item.rarity));
+            info.SetShopController(this);
+        }
+    }
+    public void ChangePickedItem(WeapID id, WeapInfo script)
+    {
+        pickedItem.Unlocked();
+        pickedItem = script;
+        PlayerData.Instance.SetWeapUse(id);
 
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
+        UpdateInfoItems();
+    }
+    [Button]
+    private void ClearItem()
+    {
+        if (containerShopItem.childCount == 0)
+            return;
+        foreach (Transform child in containerShopItem)
+        {
+            DestroyImmediate(child.gameObject);
+        }
+    }
+    private IEnumerator CheckWeapInUse()
+    {
+        yield return new WaitUntil(() => PlayerData.Instance != null);
 
     }
 }

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8724852412609532781}
   - component: {fileID: 8724852412609532755}
   m_Layer: 0
-  m_Name: KN002
+  m_Name: KN010
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8724852412609532773}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -84,7 +84,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc14231efc40c384ea470e5c723215de, type: 2}
+  - {fileID: 2100000, guid: c78b5dacb6e1a8343bb1dfe2c4161830, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -136,7 +136,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 0.4481132, g: 1, b: 0.8229406, a: 1}
-      key1: {r: 0, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 0.9916214, b: 0, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -191,7 +191,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc14231efc40c384ea470e5c723215de, type: 2}
+  - {fileID: 2100000, guid: d63774db53e2fee4b84a72da1c9f1096, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -311,7 +311,7 @@ MonoBehaviour:
   shootForce: 10
   state: 0
   directionPointer: {fileID: 8724852412957165108}
-  currentMouseWorldPos: {x: 0, y: 0, z: 0}
+  rotateLook: {x: 0, y: 0, z: 0}
   rotateToLookAt: {x: 0, y: 0, z: 0}
   line: {fileID: 0}
   canDrag: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473dc0ee9f374f44f9c3e02bcfcce2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bouncinessFriction: 0.698
+  bouncinessFriction: 0.8
   VFXManager: {fileID: 0}
 --- !u!114 &8724852412609532781
 MonoBehaviour:
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 8724852414468748069}
   - component: {fileID: 8724852414468748074}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Weap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -531,7 +531,7 @@ SpriteRenderer:
   m_SortingLayerID: 2056408957
   m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: -1041754904, guid: 6eb16e372762d6b4cb708c44ebfab931, type: 3}
+  m_Sprite: {fileID: 23267520, guid: 6eb16e372762d6b4cb708c44ebfab931, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

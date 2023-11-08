@@ -10,7 +10,8 @@ public class PlayerData : MonoBehaviour
     {
         Instance = this;
     }
-    private void OnDestroy() {
+    private void OnDestroy()
+    {
         Instance = null;
     }
     [SerializeField] private PlayerDataSO playerData;
@@ -18,9 +19,46 @@ public class PlayerData : MonoBehaviour
     public void AddMoney(int money)
     {
         playerData.AddMoney(money);
+        if (MenuController.Instance != null)
+        {
+            MenuController.Instance.MoneyUpdate();
+        }
+    }
+    public int GetMoneyInt()
+    {
+        return playerData.GetMoneyInt();
+    }
+    public void DecreaseMoney(int money)
+    {
+        playerData.DecreaseMoney(money);
+        if (MenuController.Instance != null)
+        {
+            MenuController.Instance.MoneyUpdate();
+        }
     }
     public string GetMoney()
     {
         return playerData.GetMoney();
     }
+    public WeapID GetWeapInUse()
+    {
+        return playerData.GetPickedWeap();
+    }
+    public void SetWeapUse(WeapID id)
+    {
+        playerData.SetWeapUse(id);
+    }
+    public List<WeapID> GetWeapUnlocked()
+    {
+        return playerData.GetUnlockWeap();
+    }
+    public void unlockItem(WeapID weap)
+    {
+        playerData.UnlockWeap(weap);
+    }
+    public void ResetData()
+    {
+        playerData.ResetData();
+    }
+
 }

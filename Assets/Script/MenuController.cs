@@ -1,37 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour
 {
+    public static MenuController Instance;
     [SerializeField] private TextMeshProUGUI money;
-    
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
     private void Start()
     {
         MoneyUpdate();
     }
-    public static MenuController Instance;
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-    
+
     private IEnumerator Cor_MoneyUpdate()
     {
         yield return new WaitUntil(() => PlayerData.Instance != null);
-        Debug.Log(PlayerData.Instance.GetMoney());
         money.text = PlayerData.Instance.GetMoney();
     }
-    private void MoneyUpdate()
+    public void MoneyUpdate()
     {
         if (money == null)
         {
