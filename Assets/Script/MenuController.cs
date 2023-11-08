@@ -11,15 +11,11 @@ public class MenuController : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
+    }
+    private void OnDestroy()
+    {
+        Instance = null;
     }
     private void Start()
     {
@@ -29,19 +25,11 @@ public class MenuController : MonoBehaviour
     private IEnumerator Cor_MoneyUpdate()
     {
         yield return new WaitUntil(() => PlayerData.Instance != null);
-
-        if (money != null)
-        {
-            money.text = PlayerData.Instance.GetMoney();
-        }
-
+        Debug.Log(money);
+        money.text = PlayerData.Instance.GetMoney();
     }
     public void MoneyUpdate()
     {
-        if (money == null)
-        {
-            return;
-        }
         StartCoroutine(Cor_MoneyUpdate());
     }
     public void LoadScene(sceneName sceneName)
