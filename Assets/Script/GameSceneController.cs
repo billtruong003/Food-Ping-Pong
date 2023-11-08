@@ -8,7 +8,7 @@ public class GameSceneController : MonoBehaviour
 {
     [SerializeField] private string currentScene;
     public static GameSceneController Instance;
-private void Awake()
+    private void Awake()
     {
         if (Instance == null)
         {
