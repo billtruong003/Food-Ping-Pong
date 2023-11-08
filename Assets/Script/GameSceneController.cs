@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameSceneController : MonoBehaviour
 {
-    [SerializeField] private string currentScene;
     public static GameSceneController Instance;
+    [SerializeField] private string currentScene;
+    public GameObject LoadingScreen;
     private void Awake()
     {
         if (Instance == null)
@@ -27,8 +28,16 @@ public class GameSceneController : MonoBehaviour
     }
     public void LoadScene(sceneName scene)
     {
-        string sceneLoad = GetSceneName(scene);
-        SceneManager.LoadScene(sceneLoad, LoadSceneMode.Single);
+        StartCoroutine(LoadSceneAsync(scene));
+    }
+
+    IEnumerator LoadSceneAsync(sceneName sceneId)
+    {
+        string sceneLoad = GetSceneName(sceneId);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneLoad, LoadSceneMode.Single);
+        LoadingScreen.SetActive(true);
+        yield return new WaitUntil(() => operation.isDone);
+        LoadingScreen.SetActive(false);
     }
     public string GetSceneName(sceneName scene)
     {
