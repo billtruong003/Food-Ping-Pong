@@ -311,7 +311,7 @@ MonoBehaviour:
   shootForce: 10
   state: 0
   directionPointer: {fileID: 8724852412957165108}
-  rotateLook: {x: 0, y: 0, z: 0}
+  currentMouseWorldPos: {x: 0, y: 0, z: 0}
   rotateToLookAt: {x: 0, y: 0, z: 0}
   line: {fileID: 0}
   canDrag: 0
@@ -531,7 +531,7 @@ SpriteRenderer:
   m_SortingLayerID: 2056408957
   m_SortingLayer: 1
   m_SortingOrder: 3
-  m_Sprite: {fileID: 1169189359, guid: 6eb16e372762d6b4cb708c44ebfab931, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b612590722c8dd47a6ce10a6531ba56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

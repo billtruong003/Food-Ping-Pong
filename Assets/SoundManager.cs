@@ -8,10 +8,15 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance;
     private void Awake()
     {
-        Instance = this;
-    }
-    private void OnDestroy() {
-        Instance = null;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public AudioSource[] SoundAudioSources;

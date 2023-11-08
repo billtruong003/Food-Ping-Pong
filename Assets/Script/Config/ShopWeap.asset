@@ -33,7 +33,7 @@ MonoBehaviour:
     rarity: 2
     weapID: 3
     itemImg: {fileID: 21300000, guid: 60c8b2ea5c66534499aa11157d1df073, type: 3}
-  - name: Spatula
+  - name: SPATULA
     price: 40000
     rarity: 3
     weapID: 4
