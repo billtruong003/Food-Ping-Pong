@@ -330,7 +330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bouncinessFriction: 0.913
-  VFXManager: {fileID: 0}
+  vFXManager: {fileID: 0}
+  wallCollideSound: {fileID: 8300000, guid: 347ee7e3995a8db4198372f8bec72192, type: 3}
 --- !u!114 &8724852412609532781
 MonoBehaviour:
   m_ObjectHideFlags: 0

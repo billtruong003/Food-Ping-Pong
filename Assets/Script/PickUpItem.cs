@@ -53,6 +53,7 @@ public class PickUpItem : MonoBehaviour
     {
         if (triggerPickUp)
             return;
+        SoundManager.Instance.PlaySFX(2);
         UIManager.Instance.CheckInventory(materialName);
         UIManager.Instance.PopPickUp(matSprite.sprite);
         StartCoroutine(PickUp());

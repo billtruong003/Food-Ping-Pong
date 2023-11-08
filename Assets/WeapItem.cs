@@ -111,3 +111,22 @@ public enum Rarity
     SRARE,
     SSRARE,
 }
+[Serializable]
+public enum WeapID
+{
+    KN001,
+    KN002,
+    KN003,
+    KN004,
+    KN005,
+    KN006,
+    KN007,
+    KN008,
+    KN009,
+    KN010,
+    KN011,
+    KN012,
+    KN013,
+    KN014,
+    KN015,
+}

@@ -118,7 +118,7 @@ public class DragShoot : MonoBehaviour
             // Bắt đầu kéo
             isDragging = true;
             dragStartPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            SoundManager.Instance.PlaySoundEffect(5);
+            SoundManager.Instance.PlaySFX(5);
             Debug.Log(dragStartPosition);
             StartCoroutine(Shoot());
         }

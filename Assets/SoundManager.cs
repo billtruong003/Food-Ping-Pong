@@ -25,7 +25,7 @@ public class SoundManager : MonoBehaviour
     public List<AudioClip> SoundAudioClips = new List<AudioClip>();
     public List<AudioClip> MusicAudioClips = new List<AudioClip>();
 
-    public void PlaySoundEffect(int index)
+    public void PlaySFX(int index)
     {
         SoundAudioSources[0].PlayOneShot(SoundAudioClips[index]);
     }

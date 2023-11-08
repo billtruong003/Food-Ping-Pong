@@ -52,7 +52,7 @@ public class PickUpSpawner : MonoBehaviour
     private IEnumerator Cor_SpawnPickUp(int numSpawn)
     {
         yield return new WaitUntil(() => MainManager.Instance != null);
-        SoundManager.Instance.PlaySoundEffect(2);
+        SoundManager.Instance.PlaySFX(4);
         positionX = Random.Range(LimitTopLeft.x, LimitDownRight.x);
         positionY = Random.Range(LimitTopLeft.y, LimitDownRight.y);
         GameObject pickUp = MainManager.Instance.GetRawMaterial();
