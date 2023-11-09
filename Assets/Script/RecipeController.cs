@@ -29,6 +29,8 @@ public class RecipeController : MonoBehaviour
     public void Cook()
     {
         RecipeInfo recipeInfo = cookItem.GetComponent<RecipeInfo>();
+        UIManager.Instance.MoneyPopUp(recipeInfo.GetMealInfo());
+        LevelManager.Instance.RemoveOrder(recipeInfo.GetMealName());
         LevelManager.Instance.AddMoney(recipeInfo.GetPrice());
         LevelManager.Instance.PlusTurn();
         LevelManager.Instance.CookApply(ProcessListString());
@@ -36,7 +38,7 @@ public class RecipeController : MonoBehaviour
     }
     public List<string> ProcessListString()
     {
-        int multiplier = (int)((LevelManager.Instance.GetGameTurn() / 20) + 1);
+        int multiplier = LevelManager.Instance.CalculateMaterial();
         List<string> multipliedList = new List<string>();
 
         foreach (string item in lstMaterial)

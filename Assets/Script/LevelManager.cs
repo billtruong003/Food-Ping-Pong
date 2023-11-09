@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance;
     [SerializeField] private List<string> inventory;
+    [SerializeField] private List<RecipeInfo> orders;
     [SerializeField] private int turn;
 
     [Header("Spawn Order")]
@@ -24,7 +25,8 @@ public class LevelManager : MonoBehaviour
     {
         Instance = this;
     }
-    private void OnDestroy() {
+    private void OnDestroy()
+    {
         Instance = null;
     }
     public void SetTurn()
@@ -39,7 +41,7 @@ public class LevelManager : MonoBehaviour
     }
     public int GetMoney()
     {
-        return this.money;
+        return this.money + (inventory.Count * 10);
     }
     public int GetGameTurn()
     {
@@ -54,7 +56,10 @@ public class LevelManager : MonoBehaviour
         inventory.Add(material);
         inventory.Sort();
     }
-
+    public List<RecipeInfo> GetOrder()
+    {
+        return orders;
+    }
     public void CookApply(List<string> materialUsed)
     {
         for (int i = 0; i < materialUsed.Count; i++)
@@ -91,6 +96,10 @@ public class LevelManager : MonoBehaviour
                 break;
             }
         }
+    }
+    public int CalculateMaterial()
+    {
+        return (int)((LevelManager.Instance.GetGameTurn() / 10) + 1);
     }
     private void InitTurn()
     {
@@ -136,6 +145,17 @@ public class LevelManager : MonoBehaviour
         weaponTurn = 3;
         UIManager.Instance.ResetWeaponCount();
     }
+    public void RemoveOrder(string mealName)
+    {
+        for (int i = 0; i < orders.Count; i++)
+        {
+            if (mealName == orders[i].GetMealName())
+            {
+                orders.RemoveAt(i);
+                return;
+            }
+        }
+    }
     private void SpawnFoodItem()
     {
         Meal meal = MainManager.Instance.GetMeal();
@@ -143,6 +163,12 @@ public class LevelManager : MonoBehaviour
         RecipeInfo MealInfo = order.GetComponent<RecipeInfo>();
         MealInfo.SetMealInfo(meal);
         UIManager.Instance.NoticeCookShow();
+        orders.Add(MealInfo);
+        if (orders.Count >= 10)
+        {
+            MainManager.Instance.InitState(2);
+        }
         InitTurn();
+        MainManager.Instance.SpawnMaterial();
     }
 }

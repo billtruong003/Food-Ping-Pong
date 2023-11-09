@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject popUpText;
     [SerializeField] private GameObject popUpPickUp;
+    [SerializeField] private GameObject moneyPopUp;
     [SerializeField] private Transform popUpTxtContainer;
     [SerializeField] private Transform noticeCook;
 
@@ -59,6 +60,19 @@ public class UIManager : MonoBehaviour
     public void PopUpText(string txt = "")
     {
         StartCoroutine(Cor_PopUpText(txt));
+    }
+    public void MoneyPopUp(Meal info)
+    {
+        StartCoroutine(Cor_MoneyPopUp(info));
+    }
+    public IEnumerator Cor_MoneyPopUp(Meal info)
+    {
+        string money = info.GetMoney().ToString();
+        GameObject popUp = Instantiate(moneyPopUp, popUpTxtContainer);
+        TextMeshProUGUI tmPro = popUp.GetComponent<TextMeshProUGUI>();
+        tmPro.text = money;
+        yield return new WaitForSeconds(1);
+        Destroy(popUp);
     }
     public IEnumerator Cor_PopUpText(string txt)
     {

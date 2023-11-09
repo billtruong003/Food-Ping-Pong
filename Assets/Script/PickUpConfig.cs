@@ -25,6 +25,23 @@ public class PickUpConfig : ScriptableObject
 
         return pickUpName.gameObject;
     }
+    public GameObject GetMaterialToCook(string name)
+    {
+        int index = 0;
+        for (int i = 0; i < RawMaterials.Count; i++)
+        {
+            if (name == RawMaterials[i].GetName())
+            {
+                index = i;
+                break;
+            }
+        }
+        Transform pickUpPref = Resources.Load<Transform>(pickUpPath);
+        PickUpItem pickUpName = pickUpPref.GetComponent<PickUpItem>();
+        pickUpName.SetMatSprite(RawMaterials[index].GetSprite());
+        pickUpName.SetMatName(RawMaterials[index].GetName());
+        return pickUpName.gameObject;
+    }
     public Meal GetRandomMeal()
     {
         int index = UnityEngine.Random.Range(0, DishesInformation.Count);
@@ -100,6 +117,10 @@ public class Meal
     public Sprite GetFoodIcon()
     {
         return FoodSprite;
+    }
+    public int GetMoney()
+    {
+        return Money;
     }
     public int GetNumRecipes()
     {
@@ -193,7 +214,7 @@ public class Meal
         }
         public int CalculateItemNeed()
         {
-            return (int)((LevelManager.Instance.GetGameTurn() / 20) + 1);
+            return (int)((LevelManager.Instance.GetGameTurn() / 10) + 1);
         }
     }
     [Serializable]

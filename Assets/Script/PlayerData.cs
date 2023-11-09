@@ -47,18 +47,22 @@ public class PlayerData : MonoBehaviour
         foreach (WeapID weap in playerData.unlockedWeapons)
         {
             unlockedWeaponsStrings.Add(weap.ToString());
+            Debug.Log($"Save Unlock Weap: {weap}");
         }
-        string unlockedWeaponsJSON = JsonUtility.ToJson(unlockedWeaponsStrings);
-        PlayerPrefs.SetString("unlockedWeapons", unlockedWeaponsJSON);
+        string jsonPack = ListTostring(unlockedWeaponsStrings);
+        PlayerPrefs.SetString("unlockedWeapons", jsonPack);
+        Debug.Log($"UnlockWeaponsLoad: {PlayerPrefs.GetString("unlockedWeapons", "")}");
         PrefSaveAll();
     }
     [Button]
     public void LoadUnlockedWeap()
     {
         string savedUnlockedWeaponsJSON = PlayerPrefs.GetString("unlockedWeapons", "");
-        Debug.Log(savedUnlockedWeaponsJSON);
+        Debug.Log($"UnlockWeaponsLoad: {savedUnlockedWeaponsJSON}");
+
         playerData.unlockedWeapons = new List<WeapID>();
-        List<string> savedUnlockedWeaponsStrings = JsonUtility.FromJson<List<string>>(savedUnlockedWeaponsJSON);
+
+        List<string> savedUnlockedWeaponsStrings = StringToLst(savedUnlockedWeaponsJSON);
 
         foreach (string weapString in savedUnlockedWeaponsStrings)
         {
@@ -83,9 +87,28 @@ public class PlayerData : MonoBehaviour
     public void PrefSavePickWeap()
     {
         PlayerPrefs.SetString("pickWeap", playerData.pickedWeap.ToString());
+        Debug.Log($"Save pick weap:{playerData.pickedWeap.ToString()}");
         PrefSaveAll();
     }
+    public string ListTostring(List<string> lst)
+    {
+        string result = string.Join(", ", lst);
+        Debug.Log(result);
+        return result;
+    }
+    public List<string> StringToLst(string lst)
+    {
 
+        string[] elements = lst.Split(new string[] { ", " }, StringSplitOptions.None);
+
+        List<string> myList = new List<string>(elements);
+
+        foreach (var item in myList)
+        {
+            Debug.Log(item);
+        }
+        return myList;
+    }
     public void PrefSaveAll()
     {
         PlayerPrefs.Save();

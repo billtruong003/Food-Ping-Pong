@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using Unity.VisualScripting;
 
 public class PickUpSpawner : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class PickUpSpawner : MonoBehaviour
     [SerializeField] private Vector2 LimitDownRight;
     [SerializeField] private bool CheatSpawn;
     [SerializeField] private int NumberSpawnCheat;
+    [SerializeField] private List<string> lstStringMaterials;
     private float positionX;
     private float positionY;
 
     public void SpawnPickUp()
     {
         int timeSpawn = NumberSpawnCase();
+        lstStringMaterials = MainManager.Instance.GetListMaterialToSpawn();
         if (CheatSpawn)
             timeSpawn = NumberSpawnCheat;
         for (int i = 0; i < timeSpawn; i++)
@@ -55,7 +58,7 @@ public class PickUpSpawner : MonoBehaviour
         SoundManager.Instance.PlaySFX(4);
         positionX = Random.Range(LimitTopLeft.x, LimitDownRight.x);
         positionY = Random.Range(LimitTopLeft.y, LimitDownRight.y);
-        GameObject pickUp = MainManager.Instance.GetRawMaterial();
+        GameObject pickUp = MainManager.Instance.GetRawMaterial(lstStringMaterials);
         Instantiate(pickUp, PickUpContainer.GetChild(0));
         pickUp.transform.localScale = Vector3.one;
         pickUp.transform.localPosition = new Vector3(positionX, positionY);

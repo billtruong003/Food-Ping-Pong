@@ -42,6 +42,18 @@ public class RecipeInfo : MonoBehaviour
     {
         return mealInfo.Money;
     }
+    public List<string> GetRawMaterialCooks()
+    {
+        return mealInfo.CookUse();
+    }
+    public string GetMealName()
+    {
+        return mealInfo.Food;
+    }
+    public Meal GetMealInfo()
+    {
+        return mealInfo;
+    }
     public void ShowDescription()
     {
         recipeController.AppearDescription(mealName, mealDescription);
