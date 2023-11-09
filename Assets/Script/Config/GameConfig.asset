@@ -412,3 +412,12 @@ MonoBehaviour:
   - WeaponName: KN009
     WeaponID: 8
     WeaponPath: Weapon/KN009
+  - WeaponName: KN010
+    WeaponID: 9
+    WeaponPath: Weapon/KN010
+  - WeaponName: KN011
+    WeaponID: 10
+    WeaponPath: Weapon/KN011
+  - WeaponName: KN012
+    WeaponID: 11
+    WeaponPath: Weapon/KN012

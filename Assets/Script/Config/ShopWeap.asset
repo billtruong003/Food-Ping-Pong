@@ -13,50 +13,65 @@ MonoBehaviour:
   m_Name: ShopWeap
   m_EditorClassIdentifier: 
   shopItems:
-  - name: DIRK
+  - name: DIRKY
     price: OWNED
     rarity: 1
     weapID: 0
     itemImg: {fileID: 21300000, guid: c12eb48e52bec2149a5ed6e75711356a, type: 2}
   - name: ROLLING PIN
-    price: 10000
-    rarity: 2
+    price: 100000
+    rarity: 1
     weapID: 1
     itemImg: {fileID: 21300000, guid: 1b612590722c8dd47a6ce10a6531ba56, type: 3}
   - name: SCISSOR
-    price: 15000
-    rarity: 2
+    price: 200000
+    rarity: 1
     weapID: 2
     itemImg: {fileID: 21300000, guid: 154554736f34ec64e91a5f332c63a072, type: 3}
-  - name: FRY PAN
-    price: 30000
+  - name: FRYPAN
+    price: 300000
     rarity: 2
     weapID: 3
     itemImg: {fileID: 21300000, guid: 60c8b2ea5c66534499aa11157d1df073, type: 3}
   - name: SPATULA
-    price: 40000
-    rarity: 3
+    price: 400000
+    rarity: 2
     weapID: 4
     itemImg: {fileID: 21300000, guid: 1ffa5fceaf82b8646b21929c46b519d3, type: 3}
-  - name: SAW BLADE SWORD
-    price: 50000
+  - name: GREENBLESS
+    price: 1000000
     rarity: 3
     weapID: 5
     itemImg: {fileID: 21300000, guid: a0315bf0ef9d2524fbf96c5cdef582bc, type: 2}
-  - name: HOLY SWORD
-    price: 100000
-    rarity: 4
+  - name: COLD BLOODED
+    price: 1000000
+    rarity: 2
     weapID: 6
-    itemImg: {fileID: 21300000, guid: c7cf8b96216bb45438b2f1744a4feda3, type: 2}
-  - name: FLAME BLADE
-    price: 100000
-    rarity: 4
+    itemImg: {fileID: 21300000, guid: 0b90daff7ecd0004b80ef75f24e27f12, type: 2}
+  - name: STAR CALLER
+    price: 1200000
+    rarity: 2
     weapID: 7
+    itemImg: {fileID: 21300000, guid: c7cf8b96216bb45438b2f1744a4feda3, type: 2}
+  - name: NIGHT EMERARD
+    price: 1200000
+    rarity: 4
+    weapID: 8
+    itemImg: {fileID: 21300000, guid: 310dce5ce13036641a81f376fb13bc4b, type: 2}
+  - name: THUNDERCLAP
+    price: 2000000
+    rarity: 4
+    weapID: 9
+    itemImg: {fileID: 21300000, guid: b2a4882531f7f2743afc9cb25547850e, type: 2}
+  - name: PLASMA KNIFE
+    price: 2000000
+    rarity: 4
+    weapID: 10
     itemImg: {fileID: 21300000, guid: 963260852a633ad43ac7648fe4b5f57c, type: 2}
   - name: CREDIT CARD
-    price: 300000
+    price: 9999999
     rarity: 0
-    weapID: 8
+    weapID: 11
     itemImg: {fileID: 21300000, guid: 8b07428cfdcad3d46ae1e6c1a4ae3ed3, type: 3}
   unique:
   - {r: 0.12954044, g: 1, b: 0, a: 1}
