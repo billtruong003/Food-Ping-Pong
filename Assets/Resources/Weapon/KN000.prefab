@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDragDistance: 9
-  shootForce: 33
+  shootForce: 25
   state: 0
   directionPointer: {fileID: 8724852412957165108}
   currentMouseWorldPos: {x: 0, y: 0, z: 0}

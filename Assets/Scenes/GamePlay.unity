@@ -3726,7 +3726,7 @@ MonoBehaviour:
   SpawnPos: {fileID: 136535311}
   timeSpawn: 0
   Player: {fileID: 0}
-  CheatOpen: 1
+  CheatOpen: 0
   shakeData: {fileID: 11400000, guid: 768b622b79315604d836149f7e957720, type: 2}
 --- !u!1 &469932379
 GameObject:

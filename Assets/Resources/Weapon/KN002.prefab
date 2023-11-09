@@ -5121,7 +5121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d195313ae64904d87e2549c0812403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDragDistance: 2
+  maxDragDistance: 4
   shootForce: 10
   state: 0
   directionPointer: {fileID: 8724852412957165108}

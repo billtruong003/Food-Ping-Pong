@@ -307,8 +307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d195313ae64904d87e2549c0812403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDragDistance: 4
-  shootForce: 7
+  maxDragDistance: 6
+  shootForce: 9
   state: 0
   directionPointer: {fileID: 8724852412957165108}
   currentMouseWorldPos: {x: 0, y: 0, z: 0}

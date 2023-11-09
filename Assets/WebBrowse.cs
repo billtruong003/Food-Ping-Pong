@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class WebBrowse : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void TeamWeb()
     {
-        
-    }
+        string url = "https://culinaryjourney.github.io/"; // Thay thế đường dẫn bằng địa chỉ trang web bạn muốn mở
 
-    // Update is called once per frame
-    void Update()
+        Application.OpenURL(url);
+    }
+    public void GithubReposite()
     {
-        
+        string url = "https://github.com/billtruong003/Food-Ping-Pong"; // Thay thế đường dẫn bằng địa chỉ trang web bạn muốn mở
+
+        Application.OpenURL(url);
     }
 }

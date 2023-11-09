@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3471249700931427473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.7195835, y: -2.356646, z: 0}
+  m_LocalPosition: {x: -5.932005, y: 9.159556, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -89,7 +89,7 @@ MonoBehaviour:
   pickUpVFX: {fileID: 3471249700625998157}
   matSprite: {fileID: 3471249701096067150}
   triggerPickUp: 0
-  materialName: Mushroom
+  materialName: Cheese
   wallLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -187,7 +187,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 645952611, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
+  m_Sprite: {fileID: -1014046484, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

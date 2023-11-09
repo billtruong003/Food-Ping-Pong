@@ -71,7 +71,7 @@ public class UIManager : MonoBehaviour
         GameObject popUp = Instantiate(moneyPopUp, popUpTxtContainer);
         TextMeshProUGUI tmPro = popUp.GetComponent<TextMeshProUGUI>();
         tmPro.text = money;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         Destroy(popUp);
     }
     public IEnumerator Cor_PopUpText(string txt)
