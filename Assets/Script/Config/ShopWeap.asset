@@ -52,7 +52,7 @@ MonoBehaviour:
     price: 1200000
     rarity: 2
     weapID: 7
-    itemImg: {fileID: 21300000, guid: 963260852a633ad43ac7648fe4b5f57c, type: 2}
+    itemImg: {fileID: 21300000, guid: c7cf8b96216bb45438b2f1744a4feda3, type: 2}
   - name: NIGHT EMERARD
     price: 1200000
     rarity: 4

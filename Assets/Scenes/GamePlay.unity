@@ -3722,7 +3722,7 @@ MonoBehaviour:
   m_currentState: 2
   pickUpSpawner: {fileID: 1102799843}
   gameConfig: {fileID: 11400000, guid: 46dd6aad68ad1444ab18e33a85118521, type: 2}
-  m_player: 7
+  m_player: 0
   SpawnPos: {fileID: 136535311}
   timeSpawn: 0
   Player: {fileID: 0}
