@@ -114,6 +114,7 @@ public enum Rarity
 [Serializable]
 public enum WeapID
 {
+    KN000,
     KN001,
     KN002,
     KN003,

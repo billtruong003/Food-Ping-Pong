@@ -3722,11 +3722,11 @@ MonoBehaviour:
   m_currentState: 2
   pickUpSpawner: {fileID: 1102799843}
   gameConfig: {fileID: 11400000, guid: 46dd6aad68ad1444ab18e33a85118521, type: 2}
-  m_player: 0
+  m_player: 12
   SpawnPos: {fileID: 136535311}
   timeSpawn: 0
   Player: {fileID: 0}
-  CheatOpen: 0
+  CheatOpen: 1
   shakeData: {fileID: 11400000, guid: 768b622b79315604d836149f7e957720, type: 2}
 --- !u!1 &469932379
 GameObject:

@@ -385,40 +385,43 @@ MonoBehaviour:
   - ObstacleName: 
     ObstaclesPath: 
   Weapons:
-  - WeaponName: KN001
+  - WeaponName: KN000
     WeaponID: 0
+    WeaponPath: Weapon/KN000
+  - WeaponName: KN001
+    WeaponID: 1
     WeaponPath: Weapon/KN001
   - WeaponName: KN002
-    WeaponID: 1
+    WeaponID: 2
     WeaponPath: Weapon/KN002
   - WeaponName: KN003
-    WeaponID: 2
+    WeaponID: 3
     WeaponPath: Weapon/KN003
   - WeaponName: KN004
-    WeaponID: 3
+    WeaponID: 4
     WeaponPath: Weapon/KN004
   - WeaponName: KN005
-    WeaponID: 4
+    WeaponID: 5
     WeaponPath: Weapon/KN005
   - WeaponName: KN006
-    WeaponID: 5
+    WeaponID: 6
     WeaponPath: Weapon/KN006
   - WeaponName: KN007
-    WeaponID: 6
+    WeaponID: 7
     WeaponPath: Weapon/KN007
   - WeaponName: KN008
-    WeaponID: 7
+    WeaponID: 8
     WeaponPath: Weapon/KN008
   - WeaponName: KN009
-    WeaponID: 8
+    WeaponID: 9
     WeaponPath: Weapon/KN009
   - WeaponName: KN010
-    WeaponID: 9
+    WeaponID: 10
     WeaponPath: Weapon/KN010
   - WeaponName: KN011
-    WeaponID: 10
+    WeaponID: 11
     WeaponPath: Weapon/KN011
   - WeaponName: KN012
-    WeaponID: 11
+    WeaponID: 12
     WeaponPath: Weapon/KN012
   moneyFill: 10000
