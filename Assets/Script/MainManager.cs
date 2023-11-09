@@ -66,7 +66,6 @@ public class MainManager : MonoBehaviour
     {
         LevelManager.Instance.ClearInventory();
         SpawnPlayer();
-        SpawnMaterial();
         InitWeapTurn();
     }
 
@@ -116,10 +115,34 @@ public class MainManager : MonoBehaviour
         pickUpSpawner.SpawnPickUp();
     }
 
-    public GameObject GetRawMaterial()
+    public List<string> GetListMaterialToSpawn()
     {
-        int rawMatNum = Random.Range(0, gameConfig.RawMaterials.Count);
-        GameObject rawMat = gameConfig.GetPickUpMaterial(rawMatNum);
+        List<List<string>> rawMats = new List<List<string>>();
+        List<string> RawMaterialToPick = new List<string>();
+        foreach (RecipeInfo recipeInfo in LevelManager.Instance.GetOrder())
+        {
+            rawMats.Add(recipeInfo.GetRawMaterialCooks());
+        }
+        foreach (List<string> lst in rawMats)
+        {
+            foreach (string i in lst)
+            {
+                if (!RawMaterialToPick.Contains(i))
+                {
+                    RawMaterialToPick.Add(i);
+                }
+            }
+        }
+        return RawMaterialToPick;
+    }
+    public GameObject GetRawMaterial(List<string> rawMats)
+    {
+        foreach (string item in rawMats)
+        {
+            Debug.Log(item);
+        }
+        int rawMatNum = Random.Range(0, rawMats.Count);
+        GameObject rawMat = gameConfig.GetMaterialToCook(rawMats[rawMatNum]);
         return rawMat;
     }
 

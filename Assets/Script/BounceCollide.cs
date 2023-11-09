@@ -25,7 +25,6 @@ public class BounceCollide : MonoBehaviour
     private void Update()
     {
         lastVel = rb.velocity;
-        // Debug.Log(lastVel.normalized);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
