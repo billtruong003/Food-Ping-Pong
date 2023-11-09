@@ -62,7 +62,9 @@ _"Drag & Slice: Culinary Journey"_ is a dynamic gaming experience that fuses exh
 - **Milk Shake Camera Shaker: [Unity Asset Store](https://assetstore.unity.com/packages/tools/camera/milkshake-camera-shaker-165604)** (Free Standard EULA)
 - **Firebase: [Firebase SDK For Unity](https://firebase.google.com/docs/unity/setup)** (Backend)
 
-**Monetization Strategy:** One-time purchase model. **Conclusion:**
+**Monetization Strategy:** One-time purchase model.
+
+**Conclusion:**
 
 - **"_Drag & Slice: Culinary Journey_"**: is a captivating game that combines action, simulation, and puzzle elements. Players can drag, shoot, collect, and cook their way through a unique culinary journey. The game also features role-playing, educational, and survival elements, providing a diverse and engaging experience.
   Tailor the game description to highlight specific features, mechanics, and target platforms and audience.
