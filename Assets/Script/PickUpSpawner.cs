@@ -29,23 +29,23 @@ public class PickUpSpawner : MonoBehaviour
     private int NumberSpawnCase()
     {
         int numCase = LevelManager.Instance.GetGameTurn();
-        if (numCase > 0 && numCase <= 10)
+        if (numCase > 0 && numCase <= 20)
         {
             return 4;
         }
-        else if (numCase > 10 && numCase <= 20)
+        else if (numCase > 20 && numCase <= 40)
         {
             return 5;
         }
-        else if (numCase > 20 && numCase <= 30)
+        else if (numCase > 40 && numCase <= 60)
         {
             return 6;
         }
-        else if (numCase > 30 && numCase <= 40)
+        else if (numCase > 60 && numCase <= 80)
         {
             return 7;
         }
-        else if (numCase > 40 && numCase <= 50)
+        else if (numCase > 80 && numCase <= 100)
         {
             return 8;
         }

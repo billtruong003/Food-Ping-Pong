@@ -80,6 +80,15 @@ public class PickUpConfig : ScriptableObject
         }
     }
 
+    [SerializeField] private int moneyFill;
+    [Button]
+    public void FillMoney()
+    {
+        foreach (Meal meal in DishesInformation)
+        {
+            meal.SetMoney(moneyFill);
+        }
+    }
     public int GetRandomPickUp()
     {
         int rndPickUp = UnityEngine.Random.Range(0, RawMaterials.Count);
@@ -134,6 +143,10 @@ public class Meal
             lstSprite.Add(item.MaterialName());
         }
         return lstSprite;
+    }
+    public void SetMoney(int money)
+    {
+        Money = money;
     }
     public List<Sprite> LstSpriteMat()
     {

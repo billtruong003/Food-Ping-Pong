@@ -15,7 +15,7 @@ MonoBehaviour:
   DishesInformation:
   - Food: Kimbap
     FoodSprite: {fileID: -1209626614, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: KOREAN SEAWEED RICE ROLLS
     Recipes:
     - RawMaterialName: Rice
@@ -32,7 +32,7 @@ MonoBehaviour:
       fillings; this very classic version is a great place to start.
   - Food: Kimchi
     FoodSprite: {fileID: -1639992205, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: NAPA CABBAGE KIMCHI
     Recipes:
     - RawMaterialName: Cabbage
@@ -50,7 +50,7 @@ MonoBehaviour:
       kimchi at home."
   - Food: 'Tteokbokki '
     FoodSprite: {fileID: -1402629079, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: SPICY STIR-FRIED RICE CAKES
     Recipes:
     - RawMaterialName: Rice
@@ -67,7 +67,7 @@ MonoBehaviour:
       slightly sweet, and chewy rice cakes are simply addictive!
   - Food: Bibimbap
     FoodSprite: {fileID: 2076728290, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: KOREAN RICE WITH MIXED VEGETABLES
     Recipes:
     - RawMaterialName: Rice
@@ -84,7 +84,7 @@ MonoBehaviour:
       gochujang sauce! You can omit the meat and egg for vegetarian or vegan bibimbap.
   - Food: Tempura
     FoodSprite: {fileID: -1828774190, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: JAPANESE FOOD LIGHTLY BATTERED AND DEEP FRIED
     Recipes:
     - RawMaterialName: Egg
@@ -102,7 +102,7 @@ MonoBehaviour:
       crunch
   - Food: Onigiri
     FoodSprite: {fileID: 291066433, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: JAPANESE RICE BALL SNACK
     Recipes:
     - RawMaterialName: Rice
@@ -120,7 +120,7 @@ MonoBehaviour:
       to use up leftover ingredients.
   - Food: Ramen
     FoodSprite: {fileID: -1435434020, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: JAPANESE FAVORITE YELLOW NOODLES
     Recipes:
     - RawMaterialName: Flour
@@ -139,7 +139,7 @@ MonoBehaviour:
       sub-culture of scavenger-hunt ramen shop tours and enthusiastic slurping.
   - Food: Pho
     FoodSprite: {fileID: -362889959, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: VIETNAMESE FAVORITE BEEF NOODLES SOUP
     Recipes:
     - RawMaterialName: Rice
@@ -156,7 +156,7 @@ MonoBehaviour:
       with this easy to follow traditional Vietnamese Pho recipe!
   - Food: Banh Mi
     FoodSprite: {fileID: 388877273, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: VIETNAMESE FAVORITE FILLED SANDWICH ( NOT BREAD)
     Recipes:
     - RawMaterialName: Flour
@@ -174,7 +174,7 @@ MonoBehaviour:
       all in a handy handful."
   - Food: Banh Xeo
     FoodSprite: {fileID: 919955451, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: VIETNAMESE SIZZLING CRISPY AND SAVORY CREPES
     Recipes:
     - RawMaterialName: Flour
@@ -192,7 +192,7 @@ MonoBehaviour:
       pork and shrimp, and sprinklings of mung bean, onions and bean sprouts."
   - Food: Goi Cuon
     FoodSprite: {fileID: -1774239687, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: VIETNAMESE FRESH SPRING ROLLS
     Recipes:
     - RawMaterialName: Rice
@@ -210,7 +210,7 @@ MonoBehaviour:
       together with a super flavorful hoisin and peanut dipping sauce."
   - Food: Pizza
     FoodSprite: {fileID: 1994293896, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: ITALIAN'S BEST DISH OF ALL THE TIME
     Recipes:
     - RawMaterialName: Flour
@@ -228,7 +228,7 @@ MonoBehaviour:
       to go! It yields a soft, chewy crust.
   - Food: Salad
     FoodSprite: {fileID: -525399211, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: EVERY VEGETARIAN'S FRIEND WITH BENEFIT
     Recipes:
     - RawMaterialName: Cabbage
@@ -246,7 +246,7 @@ MonoBehaviour:
       about crafting a filling, balanced meal that appeals to your tastes.
   - Food: Bo Kho
     FoodSprite: {fileID: 72086064, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: VIETNAMESE BRAISED BEEF STEW WITH RICE
     Recipes:
     - RawMaterialName: Rice
@@ -264,7 +264,7 @@ MonoBehaviour:
       rice noodles or a freshly baked baguette.
   - Food: Gyoza
     FoodSprite: {fileID: 1491568243, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: JAPANESE FAVORITE'S DUMPLING
     Recipes:
     - RawMaterialName: Flour
@@ -283,7 +283,7 @@ MonoBehaviour:
       at festivals.
   - Food: Banh Bao
     FoodSprite: {fileID: 1984094828, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: VIETNAMESE'S FAVORITE DUMPLING
     Recipes:
     - RawMaterialName: Flour
@@ -302,7 +302,7 @@ MonoBehaviour:
       as day one!"
   - Food: Taco
     FoodSprite: {fileID: -1964574575, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: MAKE TACOS AT HOME FOR TACO TUESDAY
     Recipes:
     - RawMaterialName: Flour
@@ -319,7 +319,7 @@ MonoBehaviour:
       right at home! Top with onion, cilantro + fresh lime juice! SO GOOD!
   - Food: Hamburger
     FoodSprite: {fileID: -377466882, guid: 9d005b8d0e9b3b840ade5a0b2f0723f3, type: 3}
-    Money: 200
+    Money: 10000
     Descriptions: EVERYBODY LOVE HAMBURGER!!!
     Recipes:
     - RawMaterialName: Flour
@@ -421,3 +421,4 @@ MonoBehaviour:
   - WeaponName: KN012
     WeaponID: 11
     WeaponPath: Weapon/KN012
+  moneyFill: 10000

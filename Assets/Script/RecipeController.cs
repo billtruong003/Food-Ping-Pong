@@ -29,6 +29,7 @@ public class RecipeController : MonoBehaviour
     public void Cook()
     {
         RecipeInfo recipeInfo = cookItem.GetComponent<RecipeInfo>();
+        SoundManager.Instance.PlaySFX(1);
         UIManager.Instance.MoneyPopUp(recipeInfo.GetMealInfo());
         LevelManager.Instance.RemoveOrder(recipeInfo.GetMealName());
         LevelManager.Instance.AddMoney(recipeInfo.GetPrice());

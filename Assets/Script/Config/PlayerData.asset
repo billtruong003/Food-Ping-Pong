@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   pickedWeap: 0
-  money: 6800
+  money: 0
   unlockedWeapons: 00000000

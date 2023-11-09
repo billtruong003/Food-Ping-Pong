@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour
     }
     public int GetMoney()
     {
-        return this.money + (inventory.Count * 10);
+        return this.money + (inventory.Count * 100);
     }
     public int GetGameTurn()
     {
@@ -68,6 +68,22 @@ public class LevelManager : MonoBehaviour
             UIManager.Instance.DecreaseMaterial(materialUsed[i]);
         }
     }
+    public int DecideTurn()
+    {
+        if (GetGameTurn() >= 0 && GetGameTurn() <= 10)
+        {
+            return 2;
+        }
+        else if (GetGameTurn() > 10 && GetGameTurn() <= 30)
+        {
+            return 3;
+        }
+        else
+        {
+            return 3;
+        }
+
+    }
 
     [Button]
     public void ClearInventory()
@@ -92,7 +108,7 @@ public class LevelManager : MonoBehaviour
         {
             if (name == inventory[i])
             {
-                inventory.RemoveAt(i);
+                inventory.Remove(inventory[i]);
                 break;
             }
         }
@@ -103,7 +119,7 @@ public class LevelManager : MonoBehaviour
     }
     private void InitTurn()
     {
-        int turnNum = Random.Range(2, 5);
+        int turnNum = DecideTurn();
         turn = turnNum;
     }
     public void DecreaseTurn()
@@ -151,7 +167,7 @@ public class LevelManager : MonoBehaviour
         {
             if (mealName == orders[i].GetMealName())
             {
-                orders.RemoveAt(i);
+                orders.Remove(orders[i]);
                 return;
             }
         }

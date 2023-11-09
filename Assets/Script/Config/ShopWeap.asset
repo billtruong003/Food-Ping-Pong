@@ -52,7 +52,7 @@ MonoBehaviour:
     price: 1200000
     rarity: 2
     weapID: 7
-    itemImg: {fileID: 21300000, guid: c7cf8b96216bb45438b2f1744a4feda3, type: 2}
+    itemImg: {fileID: 21300000, guid: 963260852a633ad43ac7648fe4b5f57c, type: 2}
   - name: NIGHT EMERARD
     price: 1200000
     rarity: 4
@@ -63,11 +63,11 @@ MonoBehaviour:
     rarity: 4
     weapID: 9
     itemImg: {fileID: 21300000, guid: b2a4882531f7f2743afc9cb25547850e, type: 2}
-  - name: PLASMA KNIFE
+  - name: FLAME KNIFE
     price: 2000000
     rarity: 4
     weapID: 10
-    itemImg: {fileID: 21300000, guid: 963260852a633ad43ac7648fe4b5f57c, type: 2}
+    itemImg: {fileID: 21300000, guid: 58b846f87a4544f42b3ef3fe36b1dbec, type: 2}
   - name: CREDIT CARD
     price: 9999999
     rarity: 0
