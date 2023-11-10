@@ -389,8 +389,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "B\u1EA1n c\u0169ng c\xF3 th\u1EC3 ki\u1EC3m tra c\xE1c nguy\xEAn li\u1EC7u
-    c\u1EE7a m\xECnh \u1EDF trong t\xFAi \u0111\u1ED3"
+  m_text: "Khi n\u1EA5u \u0111\u01B0\u1EE3c 1 m\xF3n th\xEC s\u1EBD \u0111\u01B0\u1EE3c
+    c\u1ED9ng th\xEAm 1 l\u01B0\u1EE3t v\u0169 kh\xED, v\xE0 s\u1ED1 l\u01B0\u1EE3t
+    n\xE9m b\u1EA5t k\u1EC3 l\xE0 1 hay 2 hay 3 th\xEC s\u1EBD \u0111\u1EC1u \u0111\u01B0\u1EE3c
+    kh\xF4i ph\u1EE5c v\u1EC1 3. \u0110\u1ED3ng th\u1EDDi m\u1ED7i m\xF3n \u0103n
+    s\u1EBD t\u0103ng cho ng\u01B0\u1EDDi ch\u01A1i 20000VND"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -417,7 +420,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70.65
+  m_fontSize: 49.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -886,10 +889,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "M\u1ED9t m\u1EB9o nh\u1ECF khi ch\u01A1i game l\xE0 h\xE3y \u0111\u1EE3i
-    khi s\u1ED1 dao c\xF2n 1 r\u1ED3i m\u1EDBi n\u1EA5u \u0103n, nh\u01B0 v\u1EADy
-    s\u1EBD t\u1ED1i \u01B0u \u0111\u01B0\u1EE3c s\u1ED1 dao c\u1EA7n d\xF9ng v\xE0
-    s\u1EBD gi\xFAp ng\u01B0\u1EDDi ch\u01A1i s\u1ED1ng s\xF3t l\xE2u h\u01A1n."
+  m_text: "Khi game over, n\u1EBFu c\xE1c nguy\xEAn li\u1EC7u kh\xF4ng n\u1EA5u h\u1EBFt
+    s\u1EBD \u0111\u01B0\u1EE3c b\xE1n m\u1ED7i nguy\xEAn li\u1EC7u c\xF3 gi\xE1
+    l\xE0 100VN\u0110"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -916,7 +918,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.85
+  m_fontSize: 61.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1779,16 +1781,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 656594262}
-        m_TargetAssemblyTypeName: HandleScene, Assembly-CSharp
-        m_MethodName: InitScene
-        m_Mode: 5
+      - m_Target: {fileID: 656594260}
+        m_TargetAssemblyTypeName: TutorialController, Assembly-CSharp
+        m_MethodName: CheckNewPlayer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Gameplay
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &446553714
@@ -2633,11 +2635,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Khi n\u1EA5u \u0111\u01B0\u1EE3c 1 m\xF3n th\xEC s\u1EBD \u0111\u01B0\u1EE3c
-    c\u1ED9ng th\xEAm 1 l\u01B0\u1EE3t v\u0169 kh\xED, v\xE0 s\u1ED1 l\u01B0\u1EE3t
-    n\xE9m b\u1EA5t k\u1EC3 l\xE0 1 hay 2 hay 3 th\xEC s\u1EBD \u0111\u1EC1u \u0111\u01B0\u1EE3c
-    kh\xF4i ph\u1EE5c v\u1EC1 3. \u0110\u1ED3ng th\u1EDDi m\u1ED7i m\xF3n \u0103n
-    s\u1EBD t\u0103ng cho ng\u01B0\u1EDDi ch\u01A1i 20000VND\n"
+  m_text: "M\u1ED7i 10 turn s\u1ED1 nguy\xEAn li\u1EC7u c\u1EA7n cho 1 m\xF3n \u0103n
+    s\u1EBD t\u0103ng l\xEAn 1, h\xE3y t\u1EADn d\u1EE5ng t\xE0i nguy\xEAn \u0111\u1EC3
+    n\u1EA5u c\xE0ng nhi\u1EC1u m\xF3n c\xE0ng t\u1ED1t."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -2664,7 +2664,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.6
+  m_fontSize: 58.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4840,9 +4840,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Khi game over, n\u1EBFu c\xE1c nguy\xEAn li\u1EC7u kh\xF4ng n\u1EA5u h\u1EBFt
-    s\u1EBD \u0111\u01B0\u1EE3c b\xE1n m\u1ED7i nguy\xEAn li\u1EC7u c\xF3 gi\xE1
-    l\xE0 100VN\u0110"
+  m_text: "B\u1EA1n c\u0169ng c\xF3 th\u1EC3 ki\u1EC3m tra c\xE1c nguy\xEAn li\u1EC7u
+    c\u1EE7a m\xECnh \u1EDF trong t\xFAi \u0111\u1ED3"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -4869,7 +4868,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.2
+  m_fontSize: 70.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6180,11 +6179,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ngo\xE0i ra v\u1EABn c\xF2n r\u1EA5t nhi\u1EC1u th\u1EE9 th\xFA v\u1ECB
-    ch\u1EDD c\xE1c b\u1EA1n t\u1EF1 m\xECnh kh\xE1m ph\xE1! Ph\u1EA7n h\u01B0\u1EDBng
-    d\u1EABn n\xE0y ch\u1EC9 xu\u1EA5t hi\u1EC7n \u1EDF l\u1EA7n \u0111\u1EA7u c\xE1c
-    b\u1EA1n ch\u01A1i game, n\u1EBFu mu\u1ED1n xem l\u1EA1i h\u01B0\u1EDBng d\u1EABn
-    c\xF3 th\u1EC3 v\xE0o t\u1EEB m\u1EE5c setting.\n"
+  m_text: "M\u1ED9t m\u1EB9o nh\u1ECF khi ch\u01A1i game l\xE0 h\xE3y \u0111\u1EE3i
+    khi s\u1ED1 dao c\xF2n 1 r\u1ED3i m\u1EDBi n\u1EA5u \u0103n, nh\u01B0 v\u1EADy
+    s\u1EBD t\u1ED1i \u01B0u \u0111\u01B0\u1EE3c s\u1ED1 dao c\u1EA7n d\xF9ng v\xE0
+    s\u1EBD gi\xFAp ng\u01B0\u1EDDi ch\u01A1i s\u1ED1ng s\xF3t l\xE2u h\u01A1n.\n\nNgo\xE0i
+    ra v\u1EABn c\xF2n r\u1EA5t nhi\u1EC1u th\u1EE9 th\xFA v\u1ECB ch\u1EDD c\xE1c
+    b\u1EA1n t\u1EF1 m\xECnh kh\xE1m ph\xE1! Ph\u1EA7n h\u01B0\u1EDBng d\u1EABn n\xE0y
+    ch\u1EC9 xu\u1EA5t hi\u1EC7n \u1EDF l\u1EA7n \u0111\u1EA7u c\xE1c b\u1EA1n ch\u01A1i
+    game, n\u1EBFu mu\u1ED1n xem l\u1EA1i h\u01B0\u1EDBng d\u1EABn c\xF3 th\u1EC3
+    v\xE0o t\u1EEB m\u1EE5c setting.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -6211,7 +6214,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45.45
+  m_fontSize: 34.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -7,7 +7,7 @@ using System;
 public class PlayerData : MonoBehaviour
 {
     public static PlayerData Instance;
-    public bool NewPlay;
+    public bool NewPlay = true;
     private void Awake()
     {
         if (Instance == null)
@@ -21,10 +21,6 @@ public class PlayerData : MonoBehaviour
         }
         InitData();
     }
-    private void Start()
-    {
-        NewPlay = true;
-    }
     private void InitData()
     {
 
@@ -37,6 +33,7 @@ public class PlayerData : MonoBehaviour
         {
             playerData.money = savedMoney;
             playerData.pickedWeap = (WeapID)Enum.Parse(typeof(WeapID), savedPickWeap);
+            NewPlay = bool.Parse(PlayerPrefs.GetString("newplay", ""));
             LoadUnlockedWeap();
             Debug.Log("PlayerPrefs data loaded.");
         }
@@ -45,6 +42,7 @@ public class PlayerData : MonoBehaviour
             PrefSaveMoney();
             PrefSavePickWeap();
             PrefSaveUnlockWeap();
+            PrefSaveNewPlay();
             Debug.Log(playerData.money);
         }
     }
@@ -91,6 +89,12 @@ public class PlayerData : MonoBehaviour
         PlayerPrefs.SetInt("money", playerData.money);
         PrefSaveAll();
     }
+    public void PrefSaveNewPlay()
+    {
+        PlayerPrefs.SetString("newplay", NewPlay.ToString());
+        PrefSaveAll();
+    }
+
     public void PrefSavePickWeap()
     {
         PlayerPrefs.SetString("pickWeap", playerData.pickedWeap.ToString());

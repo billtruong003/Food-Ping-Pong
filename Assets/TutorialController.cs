@@ -27,5 +27,7 @@ public class TutorialController : MonoBehaviour
     public void CheckNewPlayer()
     {
         PlayerData.Instance.NewPlay = false;
+        PlayerData.Instance.PrefSaveNewPlay();
+        GetComponent<HandleScene>().InitScene("Gameplay");
     }
 }
