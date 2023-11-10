@@ -29,6 +29,11 @@ public class GameSceneController : MonoBehaviour
     }
     public void LoadScene(sceneName scene)
     {
+        if (scene == sceneName.GAMEPLAY && PlayerData.Instance.NewPlay)
+        {
+            StartCoroutine(LoadSceneAsync(sceneName.TUTORIAL));
+            return;
+        }
         StartCoroutine(LoadSceneAsync(scene));
     }
 
@@ -54,10 +59,8 @@ public class GameSceneController : MonoBehaviour
                 return "CreditScene";
             case (sceneName.WEAPON):
                 return "ChooseWeap";
-            case (sceneName.SHOP):
-                return "ShopScene";
-            case (sceneName.GAMEOVER):
-                return "ShopScene";
+            case (sceneName.TUTORIAL):
+                return "Tutorial";
         }
         return currentScene;
     }
@@ -77,14 +80,6 @@ public class GameSceneController : MonoBehaviour
                 SetMusicVolInGame(20);
                 LoadScene(sceneName.GAMEPLAY);
                 break;
-            case ("Gameover"):
-                SetMusicVolNorm();
-                LoadScene(sceneName.GAMEOVER);
-                break;
-            case ("Shop"):
-                SetMusicVolNorm();
-                LoadScene(sceneName.SHOP);
-                break;
             case ("Setting"):
                 SetMusicVolNorm();
                 LoadScene(sceneName.SETTING);
@@ -92,6 +87,10 @@ public class GameSceneController : MonoBehaviour
             case ("Credit"):
                 SetMusicVolNorm();
                 LoadScene(sceneName.CREDIT);
+                break;
+            case ("Tutorial"):
+                SetMusicVolNorm();
+                LoadScene(sceneName.TUTORIAL);
                 break;
             default:
                 break;
@@ -128,6 +127,5 @@ public enum sceneName
     WEAPON,
     SETTING,
     CREDIT,
-    SHOP,
-    GAMEOVER
+    TUTORIAL,
 }

@@ -16,6 +16,10 @@ public class HandleScene : MonoBehaviour
     {
         GameSceneController.Instance.LoadScene(sceneName);
     }
+    public void LoadSceneFromString(string sceneName)
+    {
+        GameSceneController.Instance.LoadSceneFromString(sceneName);
+    }
     public void InitScene(string scene)
     {
         StartCoroutine(Cor_InitScene(scene));
@@ -33,12 +37,6 @@ public class HandleScene : MonoBehaviour
                 break;
             case ("Gameplay"):
                 LoadScene(sceneName.GAMEPLAY);
-                break;
-            case ("Gameover"):
-                LoadScene(sceneName.GAMEOVER);
-                break;
-            case ("Shop"):
-                LoadScene(sceneName.SHOP);
                 break;
             case ("Setting"):
                 LoadScene(sceneName.SETTING);

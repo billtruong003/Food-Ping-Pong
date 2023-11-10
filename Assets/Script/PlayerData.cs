@@ -7,6 +7,7 @@ using System;
 public class PlayerData : MonoBehaviour
 {
     public static PlayerData Instance;
+    public bool NewPlay;
     private void Awake()
     {
         if (Instance == null)
@@ -20,8 +21,14 @@ public class PlayerData : MonoBehaviour
         }
         InitData();
     }
+    private void Start()
+    {
+        NewPlay = true;
+    }
     private void InitData()
     {
+
+
         int savedMoney = PlayerPrefs.GetInt("money", 0);
         string savedPickWeap = PlayerPrefs.GetString("pickWeap", "");
         string savedUnlockedWeaponsJSON = PlayerPrefs.GetString("unlockedWeapons", "");

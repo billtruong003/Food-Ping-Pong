@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b993505b10417499303069a46c8936, type: 3}
+  m_Name: TutoConfig
+  m_EditorClassIdentifier: 
+  noticeInfo:
+  - "Ch\u1ECDn m\u1ED9t \u0111i\u1EC3m b\u1EA5t k\xEC tr\xEAn m\xE0n h\xECnh sau
+    \u0111\xF3 k\xE9o ng\u01B0\u1EE3c h\u01B0\u1EDBng c\u1EA7n b\u1EAFn, sau khi
+    \u0111\xE3 nh\u1EAFm \u0111\xFAng v\u1ECB tr\xED mu\u1ED1n b\u1EAFn th\xEC th\u1EA3
+    tay ra \u0111\u1EC3 n\xE9m v\u0169 kh\xED v\u1EC1 h\u01B0\u1EDBng c\xF3 nguy\xEAn
+    li\u1EC7u c\u1EA7n thu th\u1EADp."
+  - "M\u1ED7i l\u01B0\u1EE3t v\u0169 kh\xED s\u1EBD \u0111\u01B0\u1EE3c n\xE9m 3
+    l\u1EA7n, n\u1EBFu h\u1EBFt 3 l\u1EA7n th\xEC s\u1EBD m\u1EA5t \u0111i 1 l\u01B0\u1EE3t."
+  - "Khi xu\u1EA5t hi\u1EC7n d\u1EA5u ch\u1EA5m than l\xE0 l\xFAc \u0111\xF3 c\xF3
+    m\u1ED9t m\xF3n \u0103n m\u1EDBi c\u1EA7n \u0111\u01B0\u1EE3c n\u1EA5u.\nB\u1EA5m
+    v\xE0o n\xFAt \u0111\u1EC3 \u0111\u1ECDc c\xE1c \u0111\u01A1n order."
+  - "S\u1EBD xu\u1EA5t hi\u1EC7n c\xE1c \u0111\u01A1n order, ng\u01B0\u1EDDi ch\u01A1i
+    s\u1EBD ph\u1EA3i b\u1EA5m v\xE0o t\u1EEBng n\xFAt cook \u0111\u1EC3 xem nguy\xEAn
+    li\u1EC7u c\u1EA7n thi\u1EBFt cho vi\u1EC7c n\u1EA5u m\xF3n \u0103n. L\u01B0u
+    \xFD nh\u1EDB lu\xF4n ki\u1EC3m tra c\u1EA9n th\u1EADn, n\u1EBFu \u0111\u01A1n
+    order v\u01B0\u1EE3t qu\xE1 10 th\xEC game over"
+  - "Lu\xF4n ki\u1EC3m tra \u0111\u01A1n h\xE0ng xem \u0111\xE3 \u0111\u1EE7 ch\u01B0a
+    hay c\xF2n thi\u1EBFu m\xF3n n\xE0o \u0111\u1EC3 trong qu\xE1 tr\xECnh ch\u01A1i
+    c\xF3 th\u1EC3 mau ch\xFA \xFD v\xE0 thu th\u1EADp nh\u1EEFng nguy\xEAn li\u1EC7u
+    thi\u1EBFu.V\xED d\u1EE5: \u0111\u1EE7."
+  - "Lu\xF4n ki\u1EC3m tra \u0111\u01A1n h\xE0ng xem \u0111\xE3 \u0111\u1EE7 ch\u01B0a
+    hay c\xF2n thi\u1EBFu m\xF3n n\xE0o \u0111\u1EC3 trong qu\xE1 tr\xECnh ch\u01A1i
+    c\xF3 th\u1EC3 mau ch\xFA \xFD v\xE0 thu th\u1EADp nh\u1EEFng nguy\xEAn li\u1EC7u
+    thi\u1EBFu.V\xED d\u1EE5: thi\u1EBFu."
+  - "M\u1ED7i 10 turn s\u1ED1 nguy\xEAn li\u1EC7u c\u1EA7n cho 1 m\xF3n \u0103n s\u1EBD
+    t\u0103ng l\xEAn 1, h\xE3y t\u1EADn d\u1EE5ng t\xE0i nguy\xEAn \u0111\u1EC3 n\u1EA5u
+    c\xE0ng nhi\u1EC1u m\xF3n c\xE0ng t\u1ED1t."
+  - "Khi n\u1EA5u \u0111\u01B0\u1EE3c 1 m\xF3n th\xEC s\u1EBD \u0111\u01B0\u1EE3c
+    c\u1ED9ng th\xEAm 1 l\u01B0\u1EE3t v\u0169 kh\xED, v\xE0 s\u1ED1 l\u01B0\u1EE3t
+    n\xE9m b\u1EA5t k\u1EC3 l\xE0 1 hay 2 hay 3 th\xEC s\u1EBD \u0111\u1EC1u \u0111\u01B0\u1EE3c
+    kh\xF4i ph\u1EE5c v\u1EC1 3. \u0110\u1ED3ng th\u1EDDi m\u1ED7i m\xF3n \u0103n
+    s\u1EBD t\u0103ng cho ng\u01B0\u1EDDi ch\u01A1i 20000VND"
+  - "B\u1EA1n c\u0169ng c\xF3 th\u1EC3 ki\u1EC3m tra c\xE1c nguy\xEAn li\u1EC7u c\u1EE7a
+    m\xECnh \u1EDF trong t\xFAi \u0111\u1ED3"
+  - "Khi game over, n\u1EBFu c\xE1c nguy\xEAn li\u1EC7u kh\xF4ng n\u1EA5u h\u1EBFt
+    s\u1EBD \u0111\u01B0\u1EE3c b\xE1n m\u1ED7i nguy\xEAn li\u1EC7u c\xF3 gi\xE1
+    l\xE0 100VN\u0110"
+  - "M\u1ED9t m\u1EB9o nh\u1ECF khi ch\u01A1i game l\xE0 h\xE3y \u0111\u1EE3i khi
+    s\u1ED1 dao c\xF2n 1 r\u1ED3i m\u1EDBi n\u1EA5u \u0103n, nh\u01B0 v\u1EADy s\u1EBD
+    t\u1ED1i \u01B0u \u0111\u01B0\u1EE3c s\u1ED1 dao c\u1EA7n d\xF9ng v\xE0 s\u1EBD
+    gi\xFAp ng\u01B0\u1EDDi ch\u01A1i s\u1ED1ng s\xF3t l\xE2u h\u01A1n.\n\nNgo\xE0i
+    ra v\u1EABn c\xF2n r\u1EA5t nhi\u1EC1u th\u1EE9 th\xFA v\u1ECB ch\u1EDD c\xE1c
+    b\u1EA1n t\u1EF1 m\xECnh kh\xE1m ph\xE1! Ph\u1EA7n h\u01B0\u1EDBng d\u1EABn n\xE0y
+    ch\u1EC9 xu\u1EA5t hi\u1EC7n \u1EDF l\u1EA7n \u0111\u1EA7u c\xE1c b\u1EA1n ch\u01A1i
+    game, n\u1EBFu mu\u1ED1n xem l\u1EA1i h\u01B0\u1EDBng d\u1EABn c\xF3 th\u1EC3
+    v\xE0o t\u1EEB m\u1EE5c setting.\n"
+  tutoInfos:
+  - step: 1
+    pathImage: Pack/1
+    info: "Ch\u1ECDn m\u1ED9t \u0111i\u1EC3m b\u1EA5t k\xEC tr\xEAn m\xE0n h\xECnh
+      sau \u0111\xF3 k\xE9o ng\u01B0\u1EE3c h\u01B0\u1EDBng c\u1EA7n b\u1EAFn, sau
+      khi \u0111\xE3 nh\u1EAFm \u0111\xFAng v\u1ECB tr\xED mu\u1ED1n b\u1EAFn th\xEC
+      th\u1EA3 tay ra \u0111\u1EC3 n\xE9m v\u0169 kh\xED v\u1EC1 h\u01B0\u1EDBng
+      c\xF3 nguy\xEAn li\u1EC7u c\u1EA7n thu th\u1EADp."
+  - step: 2
+    pathImage: Pack/2
+    info: "M\u1ED7i l\u01B0\u1EE3t v\u0169 kh\xED s\u1EBD \u0111\u01B0\u1EE3c n\xE9m
+      3 l\u1EA7n, n\u1EBFu h\u1EBFt 3 l\u1EA7n th\xEC s\u1EBD m\u1EA5t \u0111i 1
+      l\u01B0\u1EE3t."
+  - step: 3
+    pathImage: Pack/3
+    info: "Khi xu\u1EA5t hi\u1EC7n d\u1EA5u ch\u1EA5m than l\xE0 l\xFAc \u0111\xF3
+      c\xF3 m\u1ED9t m\xF3n \u0103n m\u1EDBi c\u1EA7n \u0111\u01B0\u1EE3c n\u1EA5u.\nB\u1EA5m
+      v\xE0o n\xFAt \u0111\u1EC3 \u0111\u1ECDc c\xE1c \u0111\u01A1n order."
+  - step: 4
+    pathImage: Pack/4
+    info: "S\u1EBD xu\u1EA5t hi\u1EC7n c\xE1c \u0111\u01A1n order, ng\u01B0\u1EDDi
+      ch\u01A1i s\u1EBD ph\u1EA3i b\u1EA5m v\xE0o t\u1EEBng n\xFAt cook \u0111\u1EC3
+      xem nguy\xEAn li\u1EC7u c\u1EA7n thi\u1EBFt cho vi\u1EC7c n\u1EA5u m\xF3n \u0103n.
+      L\u01B0u \xFD nh\u1EDB lu\xF4n ki\u1EC3m tra c\u1EA9n th\u1EADn, n\u1EBFu \u0111\u01A1n
+      order v\u01B0\u1EE3t qu\xE1 10 th\xEC game over"
+  - step: 5
+    pathImage: Pack/5
+    info: "Lu\xF4n ki\u1EC3m tra \u0111\u01A1n h\xE0ng xem \u0111\xE3 \u0111\u1EE7
+      ch\u01B0a hay c\xF2n thi\u1EBFu m\xF3n n\xE0o \u0111\u1EC3 trong qu\xE1 tr\xECnh
+      ch\u01A1i c\xF3 th\u1EC3 mau ch\xFA \xFD v\xE0 thu th\u1EADp nh\u1EEFng nguy\xEAn
+      li\u1EC7u thi\u1EBFu.V\xED d\u1EE5: \u0111\u1EE7."
+  - step: 6
+    pathImage: Pack/6
+    info: "Lu\xF4n ki\u1EC3m tra \u0111\u01A1n h\xE0ng xem \u0111\xE3 \u0111\u1EE7
+      ch\u01B0a hay c\xF2n thi\u1EBFu m\xF3n n\xE0o \u0111\u1EC3 trong qu\xE1 tr\xECnh
+      ch\u01A1i c\xF3 th\u1EC3 mau ch\xFA \xFD v\xE0 thu th\u1EADp nh\u1EEFng nguy\xEAn
+      li\u1EC7u thi\u1EBFu.V\xED d\u1EE5: thi\u1EBFu."
+  - step: 7
+    pathImage: Pack/7
+    info: "Khi n\u1EA5u \u0111\u01B0\u1EE3c 1 m\xF3n th\xEC s\u1EBD \u0111\u01B0\u1EE3c
+      c\u1ED9ng th\xEAm 1 l\u01B0\u1EE3t v\u0169 kh\xED, v\xE0 s\u1ED1 l\u01B0\u1EE3t
+      n\xE9m b\u1EA5t k\u1EC3 l\xE0 1 hay 2 hay 3 th\xEC s\u1EBD \u0111\u1EC1u \u0111\u01B0\u1EE3c
+      kh\xF4i ph\u1EE5c v\u1EC1 3. \u0110\u1ED3ng th\u1EDDi m\u1ED7i m\xF3n \u0103n
+      s\u1EBD t\u0103ng cho ng\u01B0\u1EDDi ch\u01A1i 20000VND\n"
+  - step: 8
+    pathImage: Pack/8
+    info: "B\u1EA1n c\u0169ng c\xF3 th\u1EC3 ki\u1EC3m tra c\xE1c nguy\xEAn li\u1EC7u
+      c\u1EE7a m\xECnh \u1EDF trong t\xFAi \u0111\u1ED3"
+  - step: 9
+    pathImage: Pack/9
+    info: "Khi game over, n\u1EBFu c\xE1c nguy\xEAn li\u1EC7u kh\xF4ng n\u1EA5u h\u1EBFt
+      s\u1EBD \u0111\u01B0\u1EE3c b\xE1n m\u1ED7i nguy\xEAn li\u1EC7u c\xF3 gi\xE1
+      l\xE0 100VN\u0110"
+  - step: 10
+    pathImage: Pack/10
+    info: "M\u1ED9t m\u1EB9o nh\u1ECF khi ch\u01A1i game l\xE0 h\xE3y \u0111\u1EE3i
+      khi s\u1ED1 dao c\xF2n 1 r\u1ED3i m\u1EDBi n\u1EA5u \u0103n, nh\u01B0 v\u1EADy
+      s\u1EBD t\u1ED1i \u01B0u \u0111\u01B0\u1EE3c s\u1ED1 dao c\u1EA7n d\xF9ng v\xE0
+      s\u1EBD gi\xFAp ng\u01B0\u1EDDi ch\u01A1i s\u1ED1ng s\xF3t l\xE2u h\u01A1n."
+  - step: 11
+    pathImage: Pack/11
+    info: "Ngo\xE0i ra v\u1EABn c\xF2n r\u1EA5t nhi\u1EC1u th\u1EE9 th\xFA v\u1ECB
+      ch\u1EDD c\xE1c b\u1EA1n t\u1EF1 m\xECnh kh\xE1m ph\xE1! Ph\u1EA7n h\u01B0\u1EDBng
+      d\u1EABn n\xE0y ch\u1EC9 xu\u1EA5t hi\u1EC7n \u1EDF l\u1EA7n \u0111\u1EA7u
+      c\xE1c b\u1EA1n ch\u01A1i game, n\u1EBFu mu\u1ED1n xem l\u1EA1i h\u01B0\u1EDBng
+      d\u1EABn c\xF3 th\u1EC3 v\xE0o t\u1EEB m\u1EE5c setting.\n"
