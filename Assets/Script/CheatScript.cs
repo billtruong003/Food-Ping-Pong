@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CheatScript : MonoBehaviour
 {
-    public void CheatMoney()
+    public void CheatMoney(int money)
     {
-        PlayerData.Instance.AddMoney(999999);
+        PlayerData.Instance.AddMoney(money);
     }
     public void ResetData()
     {
