@@ -1,7 +1,7 @@
 ﻿# README.md
 
 <p align="center">
-    <img src="Assets/Resources/IconGame/IconGame.png" alt="Drag & Slice: Culinary Journey">
+    <img src="Assets/Resources/IconGame/project.png" alt="Drag & Slice: Culinary Journey" style="width: 250px; height: 250px;">
 </p>
 
 **Title:“Drag & Slice: Culinary Journey”**
