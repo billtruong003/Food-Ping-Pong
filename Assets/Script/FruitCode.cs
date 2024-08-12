@@ -1,0 +1,19 @@
+using UnityEngine;
+
+public class FruitCode : MonoBehaviour
+{
+    [SerializeField] private string dayLaCodeCuaSora;
+    [SerializeField] private string dayLaCodeCuaND;
+
+    public void HamCuaND()
+    {
+        dayLaCodeCuaSora = "sora";
+    }
+    // Code code cac thu....
+    // Code code cac thu....
+    // Code code cac thu....
+    // Code code cac thu....
+    // Code code cac thu....
+    // Code code cac thu....
+
+}
